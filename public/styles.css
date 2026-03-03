@@ -1,0 +1,47 @@
+/* Dawley Asphalt: The Architectural Design System */
+:root {
+    --primary: #1a1a1a;   /* Deep Asphalt */
+    --accent: #d4d4d4;    /* Audi Silver */
+    --bg: #ffffff;        /* Clean Gallery White */
+    --glass: rgba(255, 255, 255, 0.7);
+}
+
+body {
+    font-family: 'Source Serif Pro', serif;
+    background-color: var(--bg);
+    color: var(--primary);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, .nav-item {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+/* The iPhone-Style Floating Action Button */
+.glass-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 15px 30px;
+    background: var(--glass);
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 40px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.3s ease;
+}
+
+.glass-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+}
