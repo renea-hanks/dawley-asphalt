@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-functions-compat.js"></script>
-
-<script>
-  // This is the "Hook" that connects your site to the backend.
-  // We will fill in these keys once we hit the "Deploy" phase.
-  const firebaseConfig = {
-    apiKey: "AIzaSy...",
-    authDomain: "dawley-asphalt.firebaseapp.com",
-    projectId: "dawley-asphalt",
-  };
-  firebase.initializeApp(firebaseConfig);
-  const functions = firebase.functions();
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inquiry | Consult with the Principal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-functions-compat.js"></script>
 </head>
 <body>
 
@@ -29,61 +18,53 @@
             <a href="index.html" style="text-decoration: none; color: #000; margin-right: 20px;">HOME</a>
             <a href="about.html" style="text-decoration: none; color: #000; margin-right: 20px;">PHILOSOPHY</a>
             <a href="services.html" style="text-decoration: none; color: #000; margin-right: 20px;">SERVICES</a>
-            <a href="portfolio.html" style="text-decoration: none; color: #000;">PORTFOLIO</a>
+            <a href="portfolio.html" style="text-decoration: none; color: #000; margin-right: 20px;">PORTFOLIO</a>
+            <a href="contact.html" style="text-decoration: none; color: #000; border-bottom: 1px solid #000;">INQUIRY</a>
         </div>
     </nav>
 
     <main style="padding: 5% 10%; max-width: 800px;">
-        <h2 style="margin-bottom: 2rem; font-weight: 300; font-family: 'Montserrat';">Inquiry</h2>
+        <h2 style="margin-bottom: 2rem; font-family: 'Montserrat'; font-weight: 300; text-transform: uppercase; letter-spacing: 0.2rem;">Inquiry</h2>
         
-        <p style="font-size: 1.2rem; margin-bottom: 3rem; line-height: 1.6;">
-            To maintain our standard of "Business Balance," we personally review every project inquiry. Please provide the initial details of your commercial or residential asset below.
+        <p style="font-family: 'Source Serif Pro'; font-size: 1.2rem; margin-bottom: 3rem; line-height: 1.6;">
+            To maintain our 31-year standard of "Business Balance," the Principal reviews every ledger inquiry personally. Please provide the logistical details for your project below.
         </p>
 
         <div style="background: #fff; border: 1px solid #eee; padding: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.02);">
-            <form>
+            <form id="inquiryForm">
                 <div style="margin-bottom: 2rem;">
-                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem;">FULL NAME</label>
-                    <input type="text" style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro';">
+                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem; color: #888;">FULL NAME</label>
+                    <input type="text" id="userName" required style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro'; font-size: 1.1rem;">
                 </div>
                 <div style="margin-bottom: 2rem;">
-                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem;">PROJECT LOCATION (NEIGHBORHOOD)</label>
-                    <input type="text" style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro';">
+                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem; color: #888;">PROJECT LOCATION</label>
+                    <input type="text" id="userLocation" required style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro'; font-size: 1.1rem;">
                 </div>
                 <div style="margin-bottom: 3rem;">
-                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem;">NATURE OF INQUIRY</label>
-                    <textarea rows="4" style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro'; resize: none;"></textarea>
+                    <label style="display: block; font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; margin-bottom: 0.5rem; color: #888;">NATURE OF INQUIRY</label>
+                    <textarea id="userMessage" rows="4" required style="width: 100%; border: none; border-bottom: 1px solid #ddd; padding: 0.5rem 0; outline: none; font-family: 'Source Serif Pro'; font-size: 1.1rem; resize: none;"></textarea>
                 </div>
                 
-                <button type="button" style="background: #1a1a1a; color: #fff; border: none; padding: 1rem 3rem; font-family: 'Montserrat'; font-size: 0.7rem; letter-spacing: 0.2rem; cursor: pointer;">
+                <button type="submit" style="background: #1a1a1a; color: #fff; border: none; padding: 1.2rem 3rem; font-family: 'Montserrat'; font-size: 0.7rem; letter-spacing: 0.2rem; cursor: pointer; transition: 0.3s;">
                     SUBMIT TO PRINCIPAL
                 </button>
             </form>
         </div>
-
-        <p style="margin-top: 4rem; font-size: 0.8rem; color: #888; font-family: 'Montserrat';">
-            ESTABLISHED 1999 &bull; COLORADO SPRINGS, CO
-        </p>
     </main>
-<script>
-  async function sendInquiry() {
-    const name = document.querySelector('input[type="text"]').value;
-    const location = document.querySelectorAll('input[type="text"]')[1].value;
-    const message = document.querySelector('textarea').value;
-    
-    const processInquiry = functions.httpsCallable('processInquiry');
-    
-    try {
-      const result = await processInquiry({ name, location, message });
-      alert(result.data.response);
-    } catch (error) {
-      console.error(error);
-      alert("Jerry's office is currently offline. Please try again shortly.");
-    }
-  }
 
-  // Attach the function to the button
-  document.querySelector('button').onclick = sendInquiry;
-</script>
+    <footer style="padding: 5% 5%; border-top: 1px solid #f0f0f0; margin-top: 5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+            <div style="font-family: 'Montserrat'; font-size: 0.7rem; letter-spacing: 0.1rem; line-height: 2;">
+                <strong>DAWLEY ASPHALT</strong><br>
+                ESTABLISHED JUNE 1, 1994<br>
+                COLORADO SPRINGS, CO
+            </div>
+            <div style="font-family: 'Montserrat'; font-size: 0.6rem; letter-spacing: 0.1rem; color: #888; text-align: right;">
+                &copy; 2026 THE DAWLEY ARCHITECTURAL LEDGER.<br>
+                ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
