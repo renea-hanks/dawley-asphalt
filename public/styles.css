@@ -4,21 +4,74 @@
     --accent: #d4d4d4;    /* Audi Silver */
     --bg: #ffffff;        /* Clean Gallery White */
     --glass: rgba(255, 255, 255, 0.7);
+    --border: #f0f0f0;
 }
 
+/* Base Foundation */
 body {
     font-family: 'Source Serif Pro', serif;
     background-color: var(--bg);
     color: var(--primary);
     margin: 0;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, .nav-item {
+/* Navigation Architecture */
+.main-nav {
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
+    letter-spacing: 0.3rem;
     text-transform: uppercase;
-    letter-spacing: 0.15rem;
+}
+
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
+    text-decoration: none;
+    color: var(--primary);
+    margin-left: 25px;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #666;
+}
+
+.nav-links a.active {
+    border-bottom: 1px solid var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    padding: 10% 5%;
+}
+
+.hero h1 {
+    font-family: 'Source Serif Pro', serif; /* Keeps the quote intellectual/heritage */
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    text-transform: none; /* Quote feels better in sentence case */
+    letter-spacing: normal;
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
 }
 
 /* The iPhone-Style Floating Action Button */
@@ -26,9 +79,9 @@ h1, h2, .nav-item {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    padding: 15px 30px;
-    background: var(--glass);
+    z-index: 1000;
     padding: 1rem 2rem;
+    background: var(--glass);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0,0,0,0.1);
@@ -38,10 +91,10 @@ h1, h2, .nav-item {
     color: var(--primary);
     font-size: 0.7rem;
     font-family: 'Montserrat', sans-serif;
-    transition: 0.3s ease;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
 }
 
 .glass-btn:hover {
-    background: rgba(255, 255, 255, 0.9);
-    transform: translateY(-3px);
-}
+    background: rgba(255, 255, 255, 0
