@@ -21,6 +21,7 @@ body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    padding: 0; /* ensure no padding ever applies */
 }
 
 .hero-video video {
@@ -112,8 +113,8 @@ body {
 /* SECTION SPACING — FIXED AND TIGHTENED */
 /* ------------------------------------------------------ */
 
-/* All sections keep the 6rem rhythm */
-section {
+/* Apply spacing to all sections EXCEPT the hero */
+section:not(.hero-video) {
     padding: 6rem 5%;
 }
 
@@ -122,20 +123,20 @@ section h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 2.2rem;
-    margin-bottom: 0.75rem; /* tightened */
+    margin-bottom: 0.75rem;
 }
 
 /* Tightened subheading spacing */
 section p,
 .ledger-intro,
 .investment-sub {
-    margin-bottom: 2rem; /* tightened from 4rem */
+    margin-bottom: 2rem;
 }
 
 /* Tightened spacing before multi-column blocks */
 .ledger-columns,
 .investment-columns {
-    margin-top: 2rem; /* tightened from 4rem */
+    margin-top: 2rem;
 }
 
 /* ------------------------------------------------------ */
@@ -154,7 +155,7 @@ section p,
 .ledger-columns {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* slightly reduced */
+    gap: 3rem;
 }
 
 .ledger-columns div {
@@ -187,7 +188,7 @@ section p,
 .investment-columns {
     display: flex;
     justify-content: center;
-    gap: 3rem; /* reduced */
+    gap: 3rem;
 }
 
 .investment-columns div {
@@ -198,7 +199,7 @@ section p,
 .investment-columns h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    margin-bottom: 0.75rem; /* tightened */
+    margin-bottom: 0.75rem;
 }
 
 .investment-columns ul {
@@ -227,7 +228,7 @@ section p,
         font-size: 2.6rem;
     }
 
-    section {
+    section:not(.hero-video) {
         padding: 5rem 7%;
     }
 
@@ -262,7 +263,7 @@ section p,
         font-size: 1rem;
     }
 
-    section {
+    section:not(.hero-video) {
         padding: 4.5rem 8%;
     }
 
