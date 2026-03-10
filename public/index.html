@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawley Asphalt | Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <title>Dawley Asphalt | Precision Paving Colorado Springs</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PaveItService",
+      "name": "Dawley Asphalt",
+      "areaServed": "Colorado Springs, CO",
+      "description": "High-precision asphalt engineering based on the John Ruskin principle of business balance."
+    }
+    </script>
 </head>
 <body>
+
+    <!-- HERO VIDEO -->
+    <section class="hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="hero.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- NAVIGATION -->
     <nav class="main-nav">
         <div class="logo">DAWLEY</div>
         <div class="nav-links">
             <a href="index.html" class="active">HOME</a>
-            <a href="about.html">THE STANDARD</a>
+            <a href="about.html">PHILOSOPHY</a>
+            <a href="services.html">SERVICES</a>
             <a href="portfolio.html">PORTFOLIO</a>
-            <a href="contact.html">CONTACT</a>
         </div>
     </nav>
-    <main>
-        <h1>It is unwise to pay too much,<br>but it’s worse to pay too little.</h1>
-        <p class="hero-subtext">The Architectural Ledger of Dawley Asphalt. Precision-engineered surfaces for Colorado Springs since 1994.</p>
+
+    <!-- MAIN CONTENT -->
+    <main class="hero-content">
+        <h1>
+            It is unwise to pay too much,<br>
+            but it’s worse to pay too little.
+        </h1>
+        <p class="subtext">
+            The Architectural Ledger of Dawley Asphalt. Precision-engineered surfaces for the Colorado Springs landscape.
+        </p>
     </main>
-    <footer class="tripod-footer">
-        <div class="footer-left"><p>Dawley Asphalt & Paving<br>Colorado Springs, CO</p></div>
-        <div class="footer-center"></div>
-        <div class="footer-right"><a href="contact.html" class="glass-btn-float">CONSULT WITH JERRY</a></div>
-    </footer>
+
+    <!-- FLOATING CTA -->
+    <a href="contact.html" class="glass-btn">CONSULT WITH THE PRINCIPAL</a>
+
 </body>
 </html>
