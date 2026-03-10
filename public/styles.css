@@ -1,13 +1,11 @@
-/* Dawley Asphalt: The Architectural Design System */
+/* Dawley Asphalt: Architectural Design System */
 :root {
     --primary: #1a1a1a;   
-    --accent: #d4d4d4;    
     --bg: #ffffff;        
-    --glass: rgba(255, 255, 255, 0.9); 
+    --glass: rgba(255, 255, 255, 0.95); 
     --border: #f0f0f0;
 }
 
-/* Base Foundation */
 body {
     font-family: 'Source Serif Pro', serif;
     background-color: var(--bg);
@@ -15,69 +13,64 @@ body {
     margin: 0;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
-    min-height: 100vh;
 }
 
-/* Layout Clearance: Ensures content never gets trapped under the Tripod */
+/* Fixes the "mess" by ensuring content never hides behind the footer */
 main {
-    padding-bottom: 180px; 
+    padding: 0 5% 180px 5%; 
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* --- NAVIGATION ARCHITECTURE --- */
+/* --- NAVIGATION --- */
 .main-nav {
     padding: 3.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border);
+    margin-bottom: 4rem;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    letter-spacing: 0.5rem; /* Ultra-wide for luxury feel */
+    letter-spacing: 0.5rem;
     text-transform: uppercase;
 }
 
 .nav-links a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     letter-spacing: 0.2rem;
     text-decoration: none;
     color: var(--primary);
-    margin-left: 40px;
-    transition: 0.4s ease;
+    margin-left: 35px;
     text-transform: uppercase;
     opacity: 0.5;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a.active {
     opacity: 1;
     border-bottom: 1px solid var(--primary);
 }
 
-/* --- CONTENT HIERARCHY --- */
-.hero {
-    padding: 10% 5% 5% 5%;
-    max-width: 1100px;
-}
-
-.hero h1 {
+/* --- TEXT CONTENT --- */
+h1 {
     font-size: 3.2rem;
     line-height: 1.1;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     font-weight: 400;
-    letter-spacing: -0.03rem;
 }
 
-.hero p {
+.hero-subtext {
     max-width: 600px;
     font-size: 1.15rem;
     color: #666;
-    margin-bottom: 2.5rem;
+    font-style: italic;
 }
 
-.hero h2 {
+h2 {
     font-family: 'Source Serif Pro', serif;
     font-weight: 400;
     font-size: 1.8rem;
@@ -85,7 +78,7 @@ main {
     margin-bottom: 1.5rem;
 }
 
-/* --- THE TRIPOD UI: REFINED COCKPIT --- */
+/* --- THE TRIPOD UI (FIXED TO BOTTOM) --- */
 .tripod-footer {
     position: fixed;
     bottom: 0;
@@ -96,67 +89,34 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background: linear-gradient(to top, rgba(255,255,255,1) 50%, rgba(255,255,255,0));
+    background: linear-gradient(to top, white 60%, transparent);
     z-index: 1000;
     pointer-events: none;
+    box-sizing: border-box;
 }
 
 .tripod-footer > * { pointer-events: auto; }
 
-.footer-left {
-    flex: 1;
-}
-
 .footer-left p {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.6rem;
-    line-height: 1.6;
     letter-spacing: 0.05rem;
     color: #888;
-    text-transform: none;
     margin: 0;
 }
 
-.footer-center {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* High-End Glass Button */
 .glass-btn-float {
     padding: 1.1rem 2.2rem;
     background: var(--glass);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 50px;
     text-decoration: none;
     color: var(--primary);
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.6rem;
-    letter-spacing: 0.2rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.15rem;
     text-transform: uppercase;
-    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-}
-
-.glass-btn-float:hover {
-    background: #fff;
-    transform: translateY(-4px);
-    box-shadow: 0 15px 45px rgba(0,0,0,0.08);
-}
-
-/* Portfolio Masonry & Divider */
-.portfolio-divider {
-    border: 0;
-    border-top: 1px solid var(--border);
-    margin: 6rem auto;
-    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
