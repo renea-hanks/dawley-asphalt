@@ -108,46 +108,65 @@ body {
     transform: translateY(-5px);
 }
 
-/* SECTION 2 — ARCHITECTURAL LEDGER */
-.ledger {
+/* ------------------------------------------------------ */
+/* SECTION SPACING — FIXED AND TIGHTENED */
+/* ------------------------------------------------------ */
+
+/* All sections keep the 6rem rhythm */
+section {
     padding: 6rem 5%;
-    text-align: center;
 }
 
-.ledger h2 {
+/* Tightened heading spacing */
+section h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 2.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem; /* tightened */
+}
+
+/* Tightened subheading spacing */
+section p,
+.ledger-intro,
+.investment-sub {
+    margin-bottom: 2rem; /* tightened from 4rem */
+}
+
+/* Tightened spacing before multi-column blocks */
+.ledger-columns,
+.investment-columns {
+    margin-top: 2rem; /* tightened from 4rem */
+}
+
+/* ------------------------------------------------------ */
+/* SECTION 2 — ARCHITECTURAL LEDGER */
+/* ------------------------------------------------------ */
+
+.ledger {
+    text-align: center;
 }
 
 .ledger-intro {
     font-style: italic;
     color: #555;
-    margin-bottom: 4rem;
 }
 
 .ledger-columns {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem; /* slightly reduced */
 }
 
 .ledger-columns div {
     max-width: 300px;
 }
 
+/* ------------------------------------------------------ */
 /* SECTION 3 — QUIET EXCELLENCE */
-.quiet-excellence {
-    padding: 6rem 5%;
-    text-align: center;
-}
+/* ------------------------------------------------------ */
 
-.quiet-excellence h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
+.quiet-excellence {
+    text-align: center;
 }
 
 .quiet-excellence p {
@@ -157,29 +176,18 @@ body {
     line-height: 1.6;
 }
 
+/* ------------------------------------------------------ */
 /* SECTION 4 — INVESTMENT PHILOSOPHY */
+/* ------------------------------------------------------ */
+
 .investment {
-    padding: 6rem 5%;
     text-align: center;
-}
-
-.investment h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-}
-
-.investment-sub {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 4rem;
 }
 
 .investment-columns {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 3rem; /* reduced */
 }
 
 .investment-columns div {
@@ -190,7 +198,7 @@ body {
 .investment-columns h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem; /* tightened */
 }
 
 .investment-columns ul {
@@ -198,9 +206,11 @@ body {
     line-height: 1.6;
 }
 
+/* ------------------------------------------------------ */
 /* SECTION 5 — AUTHORITY */
+/* ------------------------------------------------------ */
+
 .authority {
-    padding: 6rem 5%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -208,58 +218,42 @@ body {
 }
 
 /* ------------------------------------------------------ */
-/* 📱 RESPONSIVE DESIGN — OPTION C (Desktop-Aligned) */
+/* RESPONSIVE DESIGN — OPTION C (Desktop-Aligned) */
 /* ------------------------------------------------------ */
 
 @media (max-width: 900px) {
 
-    /* Typography */
     .headline {
         font-size: 2.6rem;
     }
 
-    .ledger h2,
-    .quiet-excellence h2,
-    .investment h2 {
-        font-size: 2rem;
-    }
-
-    /* Section spacing */
-    .ledger,
-    .quiet-excellence,
-    .investment,
-    .authority {
+    section {
         padding: 5rem 7%;
     }
 
-    /* Columns collapse */
     .ledger-columns,
     .investment-columns {
         flex-direction: column;
-        gap: 3rem;
+        gap: 2.5rem;
         align-items: center;
     }
 
-    /* Navigation tightening */
     .nav-links a {
         margin-left: 1rem;
         letter-spacing: 0.1rem;
         font-size: 0.7rem;
     }
 
-    /* CTA adjustment */
     .glass-btn {
         bottom: 30px;
         right: 7%;
         padding: 1rem 2rem;
         font-size: 0.6rem;
-        letter-spacing: 0.15rem;
     }
 }
 
 @media (max-width: 600px) {
 
-    /* Even more refined scaling */
     .headline {
         font-size: 2.3rem;
     }
@@ -268,15 +262,10 @@ body {
         font-size: 1rem;
     }
 
-    /* Section spacing */
-    .ledger,
-    .quiet-excellence,
-    .investment,
-    .authority {
+    section {
         padding: 4.5rem 8%;
     }
 
-    /* Navigation */
     .logo {
         font-size: 1rem;
         letter-spacing: 0.35rem;
@@ -287,7 +276,6 @@ body {
         font-size: 0.65rem;
     }
 
-    /* CTA */
     .glass-btn {
         bottom: 25px;
         right: 8%;
