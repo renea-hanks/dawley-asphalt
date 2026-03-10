@@ -1,9 +1,9 @@
-/* Dawley Asphalt: Restored Architectural Design */
+/* Dawley Asphalt — Architectural Quiet Luxury Design */
 :root {
     --bg: #FDFDFD;
     --text: #1A1A1A;
     --accent: #C0C0C0;
-    --nav-hover: #555; /* elegant dark gray */
+    --nav-hover: #555;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* HERO VIDEO — full bleed + crop to hide bottom-right watermark */
+/* HERO VIDEO */
 .hero-video {
     position: relative;
     width: 100%;
@@ -46,7 +46,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* NAV LINKS */
 .nav-links a {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
@@ -62,7 +61,7 @@ body {
     color: var(--nav-hover);
 }
 
-/* HERO TEXT BLOCK — centered and raised 96px */
+/* HERO CONTENT */
 .hero-content {
     padding: 8% 5%;
     text-align: center;
@@ -74,7 +73,6 @@ body {
     font-weight: 300;
     font-size: 3rem;
     line-height: 1.1;
-    letter-spacing: -0.02rem;
     margin-bottom: 2rem;
 }
 
@@ -86,7 +84,7 @@ body {
     font-style: italic;
 }
 
-/* FIXED GLASS BUTTON */
+/* GLASS CTA */
 .glass-btn {
     position: fixed;
     bottom: 40px;
@@ -94,8 +92,6 @@ body {
     padding: 1.2rem 2.5rem;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -103,10 +99,110 @@ body {
     font-size: 0.65rem;
     color: #000;
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 0.4s ease;
     z-index: 2000;
 }
 
 .glass-btn:hover {
-    background: rgba
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px);
+}
+
+/* SECTION 2 — ARCHITECTURAL LEDGER */
+.ledger {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.ledger h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.ledger-intro {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 4rem;
+}
+
+.ledger-columns {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.ledger-columns div {
+    max-width: 300px;
+}
+
+/* SECTION 3 — QUIET EXCELLENCE */
+.quiet-excellence {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.quiet-excellence h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.quiet-excellence p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* SECTION 4 — INVESTMENT PHILOSOPHY */
+.investment {
+    padding: 8rem 5%;
+    text-align: center;
+}
+
+.investment h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.investment-sub {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 4rem;
+}
+
+.investment-columns {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.investment-columns div {
+    max-width: 300px;
+    text-align: left;
+}
+
+.investment-columns h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.investment-columns ul {
+    padding-left: 1.2rem;
+    line-height: 1.6;
+}
+
+/* SECTION 5 — AUTHORITY */
+.authority {
+    padding: 4rem 5%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #444;
+}
