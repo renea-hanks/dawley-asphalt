@@ -33,149 +33,82 @@ body {
 }
 
 /* --------------------------------------------- */
-/* NAVIGATION (BELOW HERO, STATIC, TRANSPARENT) */
+/* NAVIGATION (CENTERED, STATIC, TRANSPARENT) */
 /* --------------------------------------------- */
 
 .main-nav {
     width: 100%;
     padding: 24px 0;
-    background: transparent; /* transparent background */
+    background: transparent;
 }
 
 .nav-inner {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;      /* center stack */
+    flex-direction: column;
     align-items: center;
     gap: 12px;
 }
 
 .logo {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: 4px;
-    color: #000000; /* black */
+    color: #000000;
 }
 
 .nav-links {
     display: flex;
-    gap: 24px;
+    gap: 32px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #000000;          /* black font */
+    color: #000000;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 13px;
+    font-size: 14px;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #555555;          /* dark gray hover, clearly different */
+    color: #555555;
 }
 
 /* --------------------------------------------- */
-/* GLOBAL SECTION SPACING */
+/* GLOBAL SECTION LAYOUT */
 /* --------------------------------------------- */
 
-section {
-    padding: 120px 80px;
-}
-
-.hero-video {
-    padding: 0; /* hero uses full viewport, no extra padding */
-}
-
-/* --------------------------------------------- */
-/* LEDGER SECTION */
-/* --------------------------------------------- */
-
-.ledger {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.ledger h2 {
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 16px;
-}
-
-.ledger-intro {
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.ledger-columns {
-    display: flex;
-    gap: 40px;
-}
-
-.ledger-columns div h3 {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 8px;
-}
-
-/* --------------------------------------------- */
-/* QUIET EXCELLENCE */
-/* --------------------------------------------- */
-
-.quiet-excellence {
+.section {
     max-width: 900px;
     margin: 0 auto;
+    padding: 120px 40px;
+    text-align: center;
 }
 
-.quiet-excellence h2 {
+.section h2 {
     font-size: 32px;
     font-weight: 300;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-/* --------------------------------------------- */
-/* INVESTMENT SECTION */
-/* --------------------------------------------- */
-
-.investment {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.investment h2 {
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 16px;
-}
-
-.investment-sub {
+.section p {
     font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.investment-columns {
-    display: flex;
-    gap: 40px;
-}
-
-.investment-columns h3 {
-    font-size: 20px;
     font-weight: 300;
-    margin-bottom: 8px;
 }
 
 /* --------------------------------------------- */
-/* AUTHORITY SECTION */
+/* SERVICES LIST */
 /* --------------------------------------------- */
 
-.authority {
-    max-width: 900px;
-    margin: 0 auto;
+.service-list {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
 }
 
-.authority h2 {
-    font-size: 32px;
-    font-weight: 300;
-    margin-bottom: 16px;
+.service-list li {
+    margin-bottom: 12px;
 }
