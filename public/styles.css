@@ -14,7 +14,23 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Nav with the wide-spaced 200 weight brand */
+/* HERO VIDEO — full bleed + crop to hide bottom-right watermark */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full screen height */
+    overflow: hidden;
+}
+
+.hero-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills container */
+    object-position: left top; 
+    /* ↑ This shifts the crop upward and left, removing the bottom-right “VEO” watermark */
+}
+
+/* NAVIGATION */
 nav {
     padding: 4rem 5% 2rem 5%;
     display: flex;
@@ -30,7 +46,7 @@ nav {
     font-size: 1.2rem;
 }
 
-/* Headline with the 300 weight and tight line-height */
+/* HERO TEXT BLOCK */
 .hero {
     padding: 10% 5%;
     max-width: 900px;
@@ -52,7 +68,7 @@ nav {
     font-style: italic;
 }
 
-/* The Fixed Glass-morphism Button */
+/* FIXED GLASS BUTTON */
 .glass-btn {
     position: fixed;
     bottom: 40px;
