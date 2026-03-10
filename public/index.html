@@ -1,52 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dawley Asphalt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+/* BASE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
 
-    <!-- HERO VIDEO ONLY -->
-    <section class="hero-video">
-        <video autoplay muted loop playsinline>
-            <source src="video/dawley-hero.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
+/* HERO VIDEO */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    <!-- CENTERED NAV -->
-    <nav class="main-nav">
-        <div class="nav-inner">
-            <div class="logo">DAWLEY ASPHALT</div>
-            <div class="nav-links">
-                <a href="philosophy.html">Philosophy</a>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="quality.html">Quality</a>
-                <a href="services.html">Services</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </nav>
+.hero-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    <!-- SINGLE THREE-COLUMN SECTION -->
-    <section class="intro">
-        <h2>Asphalt, Engineered With Intention</h2>
-        <div class="intro-columns">
-            <div class="intro-col">
-                <p>Dawley Asphalt exists for clients who care about structure, not shortcuts. Every project begins with sub‑grade, drainage, and long‑term performance—not just a surface pour.</p>
-            </div>
-            <div class="intro-col">
-                <p>The work is quiet, precise, and disciplined. Materials, thickness, and sequencing are chosen for how they will live over years of weather, weight, and use—not just how they look on day one.</p>
-            </div>
-            <div class="intro-col">
-                <p>This homepage is a threshold, not a catalog. When you’re ready to go deeper, Philosophy, Portfolio, Quality, and Services each stand on their own, with the same level of intention.</p>
-            </div>
-        </div>
-    </section>
+/* NAVIGATION */
+.main-nav {
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
+}
 
-</body>
-</html>
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #000000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #555555;
+}
+
+/* INTRO SECTION (ONE SECTION, THREE COLUMNS) */
+.intro {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.intro-columns {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.intro-col {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* SIMPLE RESPONSIVE BEHAVIOR */
+@media (max-width: 900px) {
+    .intro-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .intro {
+        margin: 80px auto;
+    }
+}
