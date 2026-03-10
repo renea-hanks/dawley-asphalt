@@ -3,49 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Dawley Asphalt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Source+Serif+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio — Dawley Asphalt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
+
 <body>
-    <nav class="main-nav">
-        <div class="logo">DAWLEY</div>
-        <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="about.html">THE STANDARD</a>
-            <a href="services.html">SERVICES</a>
-            <a href="portfolio.html" class="active">PORTFOLIO</a>
-            <a href="contact.html">CONTACT</a>
+
+    <!-- INTRO COPY -->
+    <section class="portfolio-intro">
+        <h1>Portfolio: The Architectural Record</h1>
+        <h2>The work is the word.</h2>
+        <p>
+            Below are the ledgers of our history. On the left, commercial and on the right, 
+            the private estates we have helped shape. Open either to see the standard of 
+            treatment in practice.
+        </p>
+    </section>
+
+    <!-- TWO BOOKS -->
+    <section class="books-section">
+
+        <!-- COMMERCIAL BOOK -->
+        <div class="book-container">
+            <div class="book" id="commercialBook">
+                <div class="page cover" style="background-image:url('portfolio/commercial/cover.jpg')">
+                    <div class="page-title">Volume I: Public Infrastructure</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/commercial/page-1.jpg')">
+                    <div class="page-text">01 / Municipal Arterials<br>High‑traffic resilience engineered for city standards.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/commercial/page-2.jpg')">
+                    <div class="page-text">02 / Industrial Hubs<br>Heavy‑load surfaces designed for logistics and durability.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/commercial/page-3.jpg')">
+                    <div class="page-text">03 / Retail Centers<br>Precision grading and seamless transitions for public safety.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/commercial/page-4.jpg')"></div>
+                <div class="page" style="background-image:url('portfolio/commercial/page-5.jpg')"></div>
+                <div class="page" style="background-image:url('portfolio/commercial/page-6.jpg')"></div>
+
+                <div class="page final" style="background-image:url('portfolio/commercial/final.jpg')">
+                    <div class="final-text">
+                        Thank you for viewing.<br><br>
+                        <a href="https://blog.dawleyasphalt.com">View deeper project archives</a><br>
+                        <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a complimentary consult with Jerry</a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    <main>
-        <h1>The Portfolio</h1>
-        <p class="hero-subtext">Infrastructure and private estate surfacing across the Colorado Front Range since 1994.</p>
+        <!-- PRIVATE RESIDENCE BOOK -->
+        <div class="book-container">
+            <div class="book" id="privateBook">
+                <div class="page cover" style="background-image:url('portfolio/private/cover.jpg')">
+                    <div class="page-title">Volume II: Private Residences</div>
+                </div>
 
-        <section style="margin-top: 4rem;">
-            <h2 style="font-family: 'Montserrat'; font-weight: 200; font-size: 0.8rem; letter-spacing: 0.2rem; text-transform: uppercase;">Commercial Infrastructure</h2>
-            <div class="masonry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 2rem;">
-                <div style="background: #f9f9f9; aspect-ratio: 16/9;"></div>
-                <div style="background: #f9f9f9; aspect-ratio: 4/5;"></div>
+                <div class="page" style="background-image:url('portfolio/private/page-1.jpg')">
+                    <div class="page-text">01 / Custom Approaches<br>Elegant, sweeping entries that define the property.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/private/page-2.jpg')">
+                    <div class="page-text">02 / Rural Acreage<br>Long‑range drives engineered for Colorado’s seasonal shifts.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/private/page-3.jpg')">
+                    <div class="page-text">03 / Specialty Finishes<br>Dense, commercial‑grade surfaces for the private home.</div>
+                </div>
+
+                <div class="page" style="background-image:url('portfolio/private/page-4.jpg')"></div>
+                <div class="page" style="background-image:url('portfolio/private/page-5.jpg')"></div>
+                <div class="page" style="background-image:url('portfolio/private/page-6.jpg')"></div>
+
+                <div class="page final" style="background-image:url('portfolio/private/final.jpg')">
+                    <div class="final-text">
+                        Thank you for viewing.<br><br>
+                        <a href="https://blog.dawleyasphalt.com">View deeper project archives</a><br>
+                        <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a complimentary consult with Jerry</a>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
 
-        <hr class="portfolio-divider" style="border: 0; border-top: 1px solid #f0f0f0; margin: 5rem 0;">
+    </section>
 
-        <section>
-            <h2 style="font-family: 'Montserrat'; font-weight: 200; font-size: 0.8rem; letter-spacing: 0.2rem; text-transform: uppercase;">Private Estates</h2>
-            <div class="masonry-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 2rem;">
-                <div style="background: #f9f9f9; aspect-ratio: 1; "></div>
-                <div style="background: #f9f9f9; aspect-ratio: 3/2;"></div>
-            </div>
-        </section>
-    </main>
+    <!-- DIVIDER -->
+    <hr class="divider">
 
-    <footer class="tripod-footer">
-        <div class="footer-left"><p>Dawley Asphalt & Paving<br>Serving Colorado Springs since 1994.</p></div>
-        <div class="footer-center"></div>
-        <div class="footer-right"><a href="contact.html" class="glass-btn-float">CONSULT WITH JERRY</a></div>
+    <!-- HIGHLIGHT GALLERY (VERTICAL, PORTRAIT) -->
+    <section class="highlight-gallery">
+
+        <h3>Featured Project Records</h3>
+
+        <div class="gallery-vertical">
+
+            <a class="gallery-item-vertical" href="https://blog.dawleyasphalt.com">
+                <img src="portfolio/highlights/industrial-complex.jpg" alt="">
+                <div class="gallery-title">Project: Industrial Complex</div>
+                <div class="gallery-focus">Load‑bearing integrity.</div>
+            </a>
+
+            <a class="gallery-item-vertical" href="https://blog.dawleyasphalt.com">
+                <img src="portfolio/highlights/retail-infrastructure.jpg" alt="">
+                <div class="gallery-title">Project: Retail Infrastructure</div>
+                <div class="gallery-focus">High‑volume wear course.</div>
+            </a>
+
+            <a class="gallery-item-vertical" href="https://blog.dawleyasphalt.com">
+                <img src="portfolio/highlights/foothills-estate.jpg" alt="">
+                <div class="gallery-title">Project: Foothills Estate</div>
+                <div class="gallery-focus">Drainage & Aesthetics.</div>
+            </a>
+
+            <a class="gallery-item-vertical" href="https://blog.dawleyasphalt.com">
+                <img src="portfolio/highlights/high-plains-drive.jpg" alt="">
+                <div class="gallery-title">Project: High‑Plains Drive</div>
+                <div class="gallery-focus">Sub‑grade stabilization.</div>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <a href="https://blog.dawleyasphalt.com" class="cta-link">
+            View more projects in our portfolio
+        </a>
+    </section>
+
+    <!-- FOOTER (IDENTICAL TO HOMEPAGE) -->
+    <footer class="site-footer">
+        <p>Dawley Asphalt & Paving  Colorado Springs, CO | Licensed & Insured  719‑632‑2080</p>
+        <p>© 2024 Dawley Asphalt & Paving. All rights reserved.</p>
     </footer>
+
+    <script src="portfolio.js"></script>
+
 </body>
 </html>
