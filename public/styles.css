@@ -1,82 +1,111 @@
-/* ADDING THE SERIF FOR AUTHORITY */
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap');
-
-:root {
-    --bg: #FDFDFD;
-    --text: #1A1A1A;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BASE */
 body {
-    background-color: var(--bg);
-    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
 }
 
-/* OVERLAY NAV LOGIC */
-.main-nav {
+/* HERO VIDEO */
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video video {
     position: absolute;
-    top: 0;
-    z-index: 100;
-    padding: 40px 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* NAVIGATION */
+.main-nav {
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo {
-    font-size: 14px; /* Smaller is more "premium" */
-    letter-spacing: 0.6rem; /* High-end tracking */
-}
-
-/* VIDEO OVERLAY TEXT */
-.video-overlay {
-    position: absolute;
-    bottom: 10%;
-    left: 5%;
-    color: white;
-}
-
-.video-overlay h1 {
-    font-family: 'Source Serif Pro', serif;
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: 18px;
     font-weight: 300;
+    letter-spacing: 4px;
+    color: #000000;
 }
 
-/* THREE COLUMN REFINEMENT */
-.intro h2 {
-    font-family: 'Source Serif Pro', serif;
-    font-size: 2.2rem;
-    margin-bottom: 80px;
+.nav-links {
+    display: flex;
+    gap: 32px;
 }
 
-.intro-col span {
-    display: block;
-    font-family: 'Montserrat';
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-.intro-col p {
-    font-weight: 300;
-    color: #444;
-    line-height: 1.8;
-}
-
-/* THE CROWN JEWEL: THE GLASS BUTTON */
-.glass-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 5%;
-    padding: 20px 45px;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    color: #000;
+.nav-links a {
     text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    z-index: 1000;
-    transition: 0.4s;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #555555;
+}
+
+/* INTRO SECTION */
+.intro {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.intro-columns {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.intro-col {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .intro-columns {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .intro {
+        margin: 80px auto;
+    }
 }
