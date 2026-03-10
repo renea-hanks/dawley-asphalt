@@ -1,4 +1,4 @@
-//* Dawley Asphalt: Restored Architectural Design */
+/* Dawley Asphalt: Restored Architectural Design */
 :root {
     --bg: #FDFDFD;
     --text: #1A1A1A;
@@ -62,10 +62,11 @@ body {
     color: var(--nav-hover);
 }
 
-/* HERO TEXT BLOCK — centered */
+/* HERO TEXT BLOCK — centered and raised 96px */
 .hero-content {
     padding: 8% 5%;
     text-align: center;
+    transform: translateY(-96px);
 }
 
 .headline {
@@ -108,7 +109,4 @@ body {
 }
 
 .glass-btn:hover {
-    background: rgba(255, 255, 255, 0.8);
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
+    background: rgba
