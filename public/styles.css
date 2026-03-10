@@ -98,9 +98,42 @@ body {
     font-weight: 300;
 }
 
+/* HOVER BLOCKS */
+.hover-blocks {
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+}
+
+.hover-block {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 60px 20px;
+    text-decoration: none;
+    color: #111111;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.block-content {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .intro-columns {
+    .intro-columns,
+    .hover-blocks {
         flex-direction: column;
         gap: 24px;
     }
