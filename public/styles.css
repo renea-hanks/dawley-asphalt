@@ -15,6 +15,7 @@ body {
     margin: 0;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
 }
 
 /* Navigation Architecture */
@@ -58,12 +59,12 @@ body {
 }
 
 .hero h1 {
-    font-family: 'Source Serif Pro', serif; /* Keeps the quote intellectual/heritage */
+    font-family: 'Source Serif Pro', serif;
     font-size: 2.5rem;
     line-height: 1.2;
     margin-bottom: 2rem;
     font-weight: 400;
-    text-transform: none; /* Quote feels better in sentence case */
+    text-transform: none;
     letter-spacing: normal;
 }
 
@@ -74,27 +75,122 @@ body {
     margin-bottom: 2rem;
 }
 
-/* The iPhone-Style Floating Action Button */
-.glass-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 1000;
+/* Primary Call to Action */
+.glass-btn-hero {
+    display: inline-block;
     padding: 1rem 2rem;
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.2rem;
+    transition: 0.4s ease;
+}
+
+.glass-btn-hero:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+/* --- THE TRIPOD UI: BOTTOM COCKPIT --- */
+.tripod-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem 5%;
+    background: transparent;
+    z-index: 1000;
+    pointer-events: none; /* Content behind remains scrollable */
+}
+
+.tripod-footer > * {
+    pointer-events: auto; /* Buttons remain clickable */
+}
+
+/* Left: Identity Anchor (Sentence Case) */
+.footer-left p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    color: var(--primary);
+    text-transform: none; 
+    margin: 0;
+}
+
+/* Center: Rosie AI Alignment */
+.footer-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+/* Right: The Floating Consult Button */
+.glass-btn-float {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
     background: var(--glass);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 40px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.05);
     text-decoration: none;
     color: var(--primary);
-    font-size: 0.7rem;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
+    font-size: 0.65rem;
+    letter-spacing: 0.1rem;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.glass-btn:hover {
-    background: rgba(255, 255, 255, 0
+.glass-btn-float:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+/* --- PORTFOLIO STRUCTURAL ELEMENTS --- */
+.portfolio-divider {
+    border: 0;
+    border-top: 1px solid #d3d3d3; /* Fine gray line */
+    margin: 4rem auto;
+    width: 90%;
+}
+
+.masonry-grid {
+    column-count: 3;
+    column-gap: 20px;
+    padding: 0 5% 10% 5%;
+}
+
+.masonry-item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.masonry-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+    .masonry-grid { column-count: 2; }
+}
+
+@media (max-width: 600px) {
+    .masonry-grid { column-count: 1; }
+    .tripod-footer { 
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+        padding-bottom: 30px; 
+        position: relative; /* Unfix on very small screens if necessary */
+    }
+}
