@@ -20,11 +20,12 @@ document.querySelectorAll(".book-container").forEach(book => {
 
         pages.forEach(page => {
             const img = document.createElement("img");
-            img.src = `public/portfolio/${type}/${page}`;
+            img.src = `portfolio/${type}/${page}`;
             img.classList.add("book-page");
             container.appendChild(img);
         });
 
+        // click anywhere on expanded book to close
         container.addEventListener("click", () => container.remove());
 
         document.body.appendChild(container);

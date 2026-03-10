@@ -46,6 +46,8 @@ body {
     z-index: 9999;
     width: 90%;
     max-width: 480px;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .book-page {
