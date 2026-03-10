@@ -1,286 +1,224 @@
-/* Dawley Asphalt — Architectural Quiet Luxury Design */
-:root {
-    --bg: #FDFDFD;
-    --text: #1A1A1A;
-    --accent: #C0C0C0;
-    --nav-hover: #555;
-}
-
-body {
+/* RESET */
+* {
     margin: 0;
     padding: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    font-family: 'Source Serif Pro', serif;
-    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
 }
 
-/* HERO VIDEO */
+/* BASE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------- */
+/* HERO VIDEO (TOP OF PAGE) */
+/* --------------------------------------------- */
+
 .hero-video {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    padding: 0; /* ensure no padding ever applies */
 }
 
 .hero-video video {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: left top;
 }
 
-/* NAVIGATION */
-.main-nav {
-    padding: 4rem 5% 2rem 5%;
+.hero-overlay {
+    position: relative;
+    z-index: 1;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    letter-spacing: 0.5rem;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-.nav-links a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    text-decoration: none;
-    color: #000;
-    margin-left: 2rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.15rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--nav-hover);
-}
-
-/* HERO CONTENT */
-.hero-content {
-    padding: 8% 5%;
     text-align: center;
-    transform: translateY(-96px);
+    color: #ffffff;
+    padding: 0 24px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.55)
+    );
 }
 
 .headline {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 2rem;
+    font-size: 44px;
+    font-weight: 200;
+    margin-bottom: 12px;
 }
 
 .subtext {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-    font-style: italic;
-}
-
-/* GLASS CTA */
-.glass-btn {
-    position: fixed;
-    bottom: 40px;
-    right: 5%;
-    padding: 1.2rem 2.5rem;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(15px);
-    border-radius: 50px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.2rem;
-    font-size: 0.65rem;
-    color: #000;
-    text-decoration: none;
-    transition: 0.4s ease;
-    z-index: 2000;
-}
-
-.glass-btn:hover {
-    background: rgba(255, 255, 255, 0.8);
-    transform: translateY(-5px);
-}
-
-/* ------------------------------------------------------ */
-/* SECTION SPACING — FIXED AND TIGHTENED */
-/* ------------------------------------------------------ */
-
-/* Apply spacing to all sections EXCEPT the hero */
-section:not(.hero-video) {
-    padding: 6rem 5%;
-}
-
-/* Tightened heading spacing */
-section h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
     font-weight: 300;
-    font-size: 2.2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 24px;
 }
 
-/* Tightened subheading spacing */
-section p,
-.ledger-intro,
-.investment-sub {
-    margin-bottom: 2rem;
+.glass-btn {
+    padding: 12px 32px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 999px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 300;
 }
 
-/* Tightened spacing before multi-column blocks */
-.ledger-columns,
-.investment-columns {
-    margin-top: 2rem;
+/* --------------------------------------------- */
+/* NAVIGATION (BELOW HERO, STATIC) */
+/* --------------------------------------------- */
+
+.main-nav {
+    width: 100%;
+    padding: 24px 0;
+    background: transparent;
 }
 
-/* ------------------------------------------------------ */
-/* SECTION 2 — ARCHITECTURAL LEDGER */
-/* ------------------------------------------------------ */
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    color: #000000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 13px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #555555; /* dark gray, clearly different from black */
+}
+
+/* --------------------------------------------- */
+/* GLOBAL SECTION SPACING */
+/* --------------------------------------------- */
+
+section {
+    padding: 160px 80px;
+}
+
+section:first-of-type {
+    padding: 0; /* hero uses full viewport, no extra padding */
+}
+
+/* --------------------------------------------- */
+/* LEDGER SECTION */
+/* --------------------------------------------- */
 
 .ledger {
-    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.ledger h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 16px;
 }
 
 .ledger-intro {
-    font-style: italic;
-    color: #555;
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 .ledger-columns {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    gap: 40px;
 }
 
-.ledger-columns div {
-    max-width: 300px;
+.ledger-columns div h3 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 8px;
 }
 
-/* ------------------------------------------------------ */
-/* SECTION 3 — QUIET EXCELLENCE */
-/* ------------------------------------------------------ */
+/* --------------------------------------------- */
+/* QUIET EXCELLENCE */
+/* --------------------------------------------- */
 
 .quiet-excellence {
-    text-align: center;
-}
-
-.quiet-excellence p {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
-    font-size: 1.2rem;
-    line-height: 1.6;
 }
 
-/* ------------------------------------------------------ */
-/* SECTION 4 — INVESTMENT PHILOSOPHY */
-/* ------------------------------------------------------ */
+.quiet-excellence h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+/* --------------------------------------------- */
+/* INVESTMENT SECTION */
+/* --------------------------------------------- */
 
 .investment {
-    text-align: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.investment h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.investment-sub {
+    font-size: 18px;
+    margin-bottom: 40px;
 }
 
 .investment-columns {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-}
-
-.investment-columns div {
-    max-width: 300px;
-    text-align: left;
+    gap: 40px;
 }
 
 .investment-columns h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     font-weight: 300;
-    margin-bottom: 0.75rem;
+    margin-bottom: 8px;
 }
 
-.investment-columns ul {
-    padding-left: 1.2rem;
-    line-height: 1.6;
-}
-
-/* ------------------------------------------------------ */
-/* SECTION 5 — AUTHORITY */
-/* ------------------------------------------------------ */
+/* --------------------------------------------- */
+/* AUTHORITY SECTION */
+/* --------------------------------------------- */
 
 .authority {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.authority h2 {
+    font-size: 32px;
     font-weight: 300;
-    color: #444;
-}
-
-/* ------------------------------------------------------ */
-/* RESPONSIVE DESIGN — OPTION C (Desktop-Aligned) */
-/* ------------------------------------------------------ */
-
-@media (max-width: 900px) {
-
-    .headline {
-        font-size: 2.6rem;
-    }
-
-    section:not(.hero-video) {
-        padding: 5rem 7%;
-    }
-
-    .ledger-columns,
-    .investment-columns {
-        flex-direction: column;
-        gap: 2.5rem;
-        align-items: center;
-    }
-
-    .nav-links a {
-        margin-left: 1rem;
-        letter-spacing: 0.1rem;
-        font-size: 0.7rem;
-    }
-
-    .glass-btn {
-        bottom: 30px;
-        right: 7%;
-        padding: 1rem 2rem;
-        font-size: 0.6rem;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .headline {
-        font-size: 2.3rem;
-    }
-
-    .subtext {
-        font-size: 1rem;
-    }
-
-    section:not(.hero-video) {
-        padding: 4.5rem 8%;
-    }
-
-    .logo {
-        font-size: 1rem;
-        letter-spacing: 0.35rem;
-    }
-
-    .nav-links a {
-        margin-left: 0.8rem;
-        font-size: 0.65rem;
-    }
-
-    .glass-btn {
-        bottom: 25px;
-        right: 8%;
-        padding: 0.9rem 1.8rem;
-        font-size: 0.58rem;
-    }
+    margin-bottom: 16px;
 }
