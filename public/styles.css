@@ -3,6 +3,7 @@
     --bg: #FDFDFD;
     --text: #1A1A1A;
     --accent: #C0C0C0;
+    --nav-hover: #555; /* elegant dark gray */
 }
 
 body {
@@ -18,27 +19,26 @@ body {
 .hero-video {
     position: relative;
     width: 100%;
-    height: 100vh; /* full screen height */
+    height: 100vh;
     overflow: hidden;
 }
 
 .hero-video video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* fills container */
-    object-position: left top; 
-    /* ↑ This shifts the crop upward and left, removing the bottom-right “VEO” watermark */
+    object-fit: cover;
+    object-position: left top;
 }
 
 /* NAVIGATION */
-nav {
+.main-nav {
     padding: 4rem 5% 2rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand {
+.logo {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
     letter-spacing: 0.5rem;
@@ -46,10 +46,26 @@ nav {
     font-size: 1.2rem;
 }
 
-/* HERO TEXT BLOCK */
-.hero {
-    padding: 10% 5%;
-    max-width: 900px;
+/* NAV LINKS */
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: #000;
+    margin-left: 2rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--nav-hover);
+}
+
+/* HERO TEXT BLOCK — centered */
+.hero-content {
+    padding: 8% 5%;
+    text-align: center;
 }
 
 .headline {
@@ -64,7 +80,8 @@ nav {
 .subtext {
     font-size: 1.1rem;
     color: #666;
-    max-width: 500px;
+    max-width: 600px;
+    margin: 0 auto;
     font-style: italic;
 }
 
