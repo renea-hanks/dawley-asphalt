@@ -169,6 +169,7 @@ body {
     font-weight: 300;
     color: #555;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* HOVER BLOCKS */
@@ -222,10 +223,19 @@ body {
 .footer {
     padding: 40px 0;
     text-align: center;
-    font-size: 13px;
     font-weight: 300;
-    color: #777;
+    color: #555;
     border-top: 1px solid #eee;
+}
+
+.footer-top {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    font-size: 13px;
+    color: #777;
 }
 
 /* RESPONSIVE */
