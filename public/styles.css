@@ -206,3 +206,92 @@ body {
     font-weight: 300;
     color: #444;
 }
+
+/* ------------------------------------------------------ */
+/* 📱 RESPONSIVE DESIGN — OPTION C (Desktop-Aligned) */
+/* ------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+    /* Typography */
+    .headline {
+        font-size: 2.6rem;
+    }
+
+    .ledger h2,
+    .quiet-excellence h2,
+    .investment h2 {
+        font-size: 2rem;
+    }
+
+    /* Section spacing */
+    .ledger,
+    .quiet-excellence,
+    .investment,
+    .authority {
+        padding: 5rem 7%;
+    }
+
+    /* Columns collapse */
+    .ledger-columns,
+    .investment-columns {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    /* Navigation tightening */
+    .nav-links a {
+        margin-left: 1rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.7rem;
+    }
+
+    /* CTA adjustment */
+    .glass-btn {
+        bottom: 30px;
+        right: 7%;
+        padding: 1rem 2rem;
+        font-size: 0.6rem;
+        letter-spacing: 0.15rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Even more refined scaling */
+    .headline {
+        font-size: 2.3rem;
+    }
+
+    .subtext {
+        font-size: 1rem;
+    }
+
+    /* Section spacing */
+    .ledger,
+    .quiet-excellence,
+    .investment,
+    .authority {
+        padding: 4.5rem 8%;
+    }
+
+    /* Navigation */
+    .logo {
+        font-size: 1rem;
+        letter-spacing: 0.35rem;
+    }
+
+    .nav-links a {
+        margin-left: 0.8rem;
+        font-size: 0.65rem;
+    }
+
+    /* CTA */
+    .glass-btn {
+        bottom: 25px;
+        right: 8%;
+        padding: 0.9rem 1.8rem;
+        font-size: 0.58rem;
+    }
+}
