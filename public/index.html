@@ -128,6 +128,154 @@
             © Dawley Asphalt &amp; Paving — Colorado Springs, CO
         </div>
     </footer>
+<style>
+    .rosie-circle-launcher {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 65px;
+        height: 65px;
+        background: #1A1A1A;
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        z-index: 9999;
+        border: 1px solid rgba(255,255,255,0.1);
+        animation: rosieFloat 4s ease-in-out infinite;
+        transition: transform 0.3s ease;
+    }
 
+    @keyframes rosieFloat {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .rosie-circle-launcher:hover {
+        animation-play-state: paused;
+        transform: scale(1.05);
+        background: #333;
+    }
+
+    .rosie-initial {
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 1;
+    }
+
+    .rosie-label {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 4px;
+        font-weight: 300;
+    }
+
+    #rosie-window {
+        display: none;
+        position: fixed;
+        bottom: 110px;
+        right: 30px;
+        width: 360px;
+        height: 580px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        z-index: 9998;
+        flex-direction: column;
+        border: 1px solid #eee;
+        overflow: hidden;
+    }
+
+    .rosie-header {
+        padding: 25px;
+        border-bottom: 1px solid #f9f9f9;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rosie-header h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 10px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #111;
+        margin: 0 auto; /* Centers the text */
+    }
+
+    .rosie-body {
+        flex-grow: 1;
+        padding: 35px;
+        overflow-y: auto;
+        font-family: 'Source Serif Pro', serif;
+        line-height: 1.8;
+        color: #444;
+        font-size: 1.05rem;
+    }
+
+    .rosie-footer {
+        padding: 25px;
+        background: #fff;
+        border-top: 1px solid #f9f9f9;
+    }
+
+    .context-btn {
+        display: block;
+        width: 100%;
+        padding: 18px;
+        background: #111;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 2px;
+    }
+</style>
+
+<div class="rosie-circle-launcher" onclick="toggleRosie()">
+    <div class="rosie-initial">R</div>
+    <div class="rosie-label">Rosie</div>
+</div>
+
+<div id="rosie-window">
+    <div class="rosie-header">
+        <h3>Assistant</h3>
+    </div>
+    
+    <div class="rosie-body">
+        <p>Hello, I’m Rosie, your AI Assistant.</p>
+        <p>I am here to listen and help you explore the technical requirements for your property. Since 1994, Jerry has approached paving as a matter of geological integrity and quiet craftsmanship.</p>
+        <p>While I cannot provide quotes or manage Jerry's calendar, I can certainly help translate your property's needs into a technical brief for his review.</p>
+    </div>
+
+    <div class="rosie-footer">
+        <a href="https://form.typeform.com/to/FLnFxHJD" class="context-btn" onclick="sendTextToJerry()">Provide Property Context</a>
+    </div>
+</div>
+
+<script>
+function toggleRosie() {
+    const win = document.getElementById('rosie-window');
+    win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+}
+
+function sendTextToJerry() {
+    // This is where the logic to notify Jerry's phone (719-632-2080) will eventually live.
+    console.log("Notifying Jerry of a qualified technical inquiry...");
+}
+</script>
 </body>
 </html>
