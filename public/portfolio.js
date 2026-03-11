@@ -1,6 +1,5 @@
-// LANDSCAPE FLIPBOOK WITH SUBTLE PAGE-TURN ANIMATION
+// LANDSCAPE FLIPBOOK WITH REAL BOOK PAGE TURN
 
-// Update these filenames to match your actual images
 const BOOK_PAGES = {
     commercial: [
         "cover.jpg",
@@ -33,11 +32,10 @@ const btnClose = document.getElementById("book-close");
 
 let currentBook = null;
 let currentIndex = 0;
-const FLIP_DURATION = 400; // ms, matches CSS 0.4s
+const FLIP_DURATION = 600; // ms, matches CSS 0.6s
 
 function renderPage() {
     if (!currentBook) return;
-
     const pages = BOOK_PAGES[currentBook];
     const filename = pages[currentIndex];
 
@@ -60,16 +58,15 @@ function closeBook() {
     currentBook = null;
 }
 
-// Flip with animation
+// Flip with real book animation: right page turns left on next, left page turns right on prev
 function flipPage(direction) {
     if (!currentBook) return;
 
     const pages = BOOK_PAGES[currentBook];
     const newIndex = currentIndex + direction;
-
     if (newIndex < 0 || newIndex >= pages.length) return;
 
-    const animClass = direction > 0 ? "flip-next" : "flip-prev";
+    const animClass = direction > 0 ? "turning-next" : "turning-prev";
 
     pageImage.classList.add(animClass);
 
@@ -83,7 +80,7 @@ function flipPage(direction) {
     }, FLIP_DURATION);
 }
 
-// Book cards → open book
+// Attach click handlers to book cards
 document.querySelectorAll(".book-card").forEach(card => {
     card.addEventListener("click", () => {
         const bookKey = card.dataset.book;
@@ -93,11 +90,16 @@ document.querySelectorAll(".book-card").forEach(card => {
     });
 });
 
-// Navigation
-btnPrev.addEventListener("click", () => flipPage(-1));
-btnNext.addEventListener("click", () => flipPage(1));
+// Navigation buttons
+btnPrev.addEventListener("click", () => {
+    flipPage(-1);
+});
 
-// Close
+btnNext.addEventListener("click", () => {
+    flipPage(1);
+});
+
+// Close button and overlay click
 btnClose.addEventListener("click", closeBook);
 overlay.addEventListener("click", (e) => {
     if (e.target === overlay) {

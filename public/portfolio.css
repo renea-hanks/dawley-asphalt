@@ -1,4 +1,10 @@
 /* BASE */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -7,14 +13,40 @@ body {
     color: #111;
 }
 
-/* TWO LANDSCAPE BOOKS, SIDE-BY-SIDE */
+/* INTRO */
+.portfolio-intro {
+    max-width: 720px;
+    margin: 40px auto 20px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.portfolio-intro h1 {
+    margin: 0 0 10px 0;
+    font-size: 2rem;
+    letter-spacing: 0.03em;
+}
+
+.portfolio-intro p {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* TWO LANDSCAPE BOOKS, SIDE-BY-SIDE ALWAYS */
 .portfolio-books {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    padding: 60px 20px 40px 20px;
+    padding: 40px 20px 40px 20px;
+    flex-wrap: nowrap;
+}
+
+/* allow horizontal scroll on very small screens instead of stacking */
+.portfolio-books {
+    overflow-x: auto;
 }
 
 .book-card {
@@ -23,14 +55,23 @@ body {
     align-items: center;
     max-width: 420px;
     cursor: pointer;
+    flex: 0 0 auto;
 }
 
 .book-label {
     font-size: 0.95rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #444;
+}
+
+.book-description {
+    max-width: 420px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0 0 14px 0;
 }
 
 .book-cover-frame {
@@ -49,6 +90,46 @@ body {
 
 .book-card:hover .book-cover {
     transform: scale(1.03);
+}
+
+/* DIVIDER */
+.divider-line {
+    width: 80%;
+    height: 1px;
+    background: #d1d1d1;
+    margin: 30px auto 40px auto;
+}
+
+/* VERTICAL HIGHLIGHT GALLERY (PORTRAIT) */
+.highlight-gallery {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.highlight-item img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+.highlight-item h3 {
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.highlight-item p {
+    margin: 0;
+    font-size: 1rem;
+    color: #444;
 }
 
 /* LANDSCAPE FLIPBOOK OVERLAY */
@@ -72,7 +153,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.25);
     width: 90%;
-    max-width: 640px; /* landscape frame */
+    max-width: 640px;
     max-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -94,7 +175,7 @@ body {
 .book-page-wrapper {
     width: 100%;
     max-width: 640px;
-    aspect-ratio: 16 / 9; /* landscape feel */
+    aspect-ratio: 16 / 9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,39 +191,28 @@ body {
     backface-visibility: hidden;
 }
 
-/* SUBTLE PAGE-TURN ANIMATION */
-.book-page.flip-next {
-    animation: pageFlipNext 0.4s ease-in-out;
-    transform-origin: left center;
-}
-
-.book-page.flip-prev {
-    animation: pageFlipPrev 0.4s ease-in-out;
+/* REAL BOOK PAGE TURN — RIGHT PAGE TURNING LEFT */
+.book-page.turning-next {
+    animation: turnNext 0.6s ease-in-out;
     transform-origin: right center;
 }
 
-@keyframes pageFlipNext {
-    0% {
-        transform: rotateY(0deg);
-    }
-    50% {
-        transform: rotateY(-90deg);
-    }
-    100% {
-        transform: rotateY(0deg);
-    }
+@keyframes turnNext {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(-90deg); }
+    100% { transform: rotateY(0deg); }
 }
 
-@keyframes pageFlipPrev {
-    0% {
-        transform: rotateY(0deg);
-    }
-    50% {
-        transform: rotateY(90deg);
-    }
-    100% {
-        transform: rotateY(0deg);
-    }
+/* GOING BACKWARD — LEFT PAGE TURNING RIGHT */
+.book-page.turning-prev {
+    animation: turnPrev 0.6s ease-in-out;
+    transform-origin: left center;
+}
+
+@keyframes turnPrev {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(90deg); }
+    100% { transform: rotateY(0deg); }
 }
 
 /* BOOK CONTROLS */
@@ -174,49 +244,12 @@ body {
     color: #555;
 }
 
-/* DIVIDER */
-.divider-line {
-    width: 80%;
-    height: 1px;
-    background: #d1d1d1;
-    margin: 40px auto;
-}
-
-/* VERTICAL HIGHLIGHT GALLERY (PORTRAIT) */
-.highlight-gallery {
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto 80px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.highlight-item img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
-
-.highlight-item h3 {
-    margin-top: 14px;
-    margin-bottom: 4px;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.highlight-item p {
-    margin: 0;
-    font-size: 1rem;
-    color: #444;
-}
-
 /* FOOTER */
 footer {
     text-align: center;
     padding: 40px 0;
     font-size: 0.9rem;
     color: #333;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
 }
