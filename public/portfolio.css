@@ -1,255 +1,253 @@
-/* BASE */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter", sans-serif;
-    background: #ffffff;
-    color: #111;
+    font-family: 'Source Serif Pro', serif;
+    background: #FDFDFD;
+    color: #1A1A1A;
+    line-height: 1.6;
 }
 
-/* INTRO */
-.portfolio-intro {
-    max-width: 720px;
-    margin: 40px auto 20px auto;
-    padding: 0 20px;
-    text-align: left;
+/* NAV */
+.main-nav {
+    padding: 40px 5%;
+    background: #FDFDFD;
 }
-
-.portfolio-intro h1 {
-    margin: 0 0 10px 0;
-    font-size: 2rem;
-    letter-spacing: 0.03em;
-}
-
-.portfolio-intro p {
-    margin: 0;
-    font-size: 1rem;
-    color: #444;
-}
-
-/* TWO LANDSCAPE BOOKS, SIDE-BY-SIDE ALWAYS */
-.portfolio-books {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 40px 20px 40px 20px;
-    flex-wrap: nowrap;
-}
-
-/* allow horizontal scroll on very small screens instead of stacking */
-.portfolio-books {
-    overflow-x: auto;
-}
-
-.book-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 420px;
-    cursor: pointer;
-    flex: 0 0 auto;
-}
-
-.book-label {
-    font-size: 0.95rem;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    color: #444;
-}
-
-.book-description {
-    max-width: 420px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #444;
-    margin: 0 0 14px 0;
-}
-
-.book-cover-frame {
-    width: 100%;
-    max-width: 420px;
-}
-
-.book-cover {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
-}
-
-.book-card:hover .book-cover {
-    transform: scale(1.03);
-}
-
-/* DIVIDER */
-.divider-line {
-    width: 80%;
-    height: 1px;
-    background: #d1d1d1;
-    margin: 30px auto 40px auto;
-}
-
-/* VERTICAL HIGHLIGHT GALLERY (PORTRAIT) */
-.highlight-gallery {
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto 80px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.highlight-item img {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-}
-
-.highlight-item h3 {
-    margin-top: 14px;
-    margin-bottom: 6px;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.highlight-item p {
-    margin: 0;
-    font-size: 1rem;
-    color: #444;
-}
-
-/* LANDSCAPE FLIPBOOK OVERLAY */
-.book-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.55);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-.book-overlay.active {
-    display: flex;
-}
-
-.book-viewer {
-    background: #ffffff;
-    padding: 20px 20px 24px 20px;
-    border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
-    width: 90%;
-    max-width: 640px;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* CLOSE BUTTON */
-.book-close {
-    align-self: flex-end;
-    border: none;
-    background: transparent;
-    font-size: 1.6rem;
-    cursor: pointer;
-    line-height: 1;
-    margin-bottom: 8px;
-}
-
-/* LANDSCAPE PAGE AREA */
-.book-page-wrapper {
-    width: 100%;
-    max-width: 640px;
-    aspect-ratio: 16 / 9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1200px;
-}
-
-.book-page {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 4px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
-    backface-visibility: hidden;
-}
-
-/* REAL BOOK PAGE TURN — RIGHT PAGE TURNING LEFT */
-.book-page.turning-next {
-    animation: turnNext 0.6s ease-in-out;
-    transform-origin: right center;
-}
-
-@keyframes turnNext {
-    0% { transform: rotateY(0deg); }
-    50% { transform: rotateY(-90deg); }
-    100% { transform: rotateY(0deg); }
-}
-
-/* GOING BACKWARD — LEFT PAGE TURNING RIGHT */
-.book-page.turning-prev {
-    animation: turnPrev 0.6s ease-in-out;
-    transform-origin: left center;
-}
-
-@keyframes turnPrev {
-    0% { transform: rotateY(0deg); }
-    50% { transform: rotateY(90deg); }
-    100% { transform: rotateY(0deg); }
-}
-
-/* BOOK CONTROLS */
-.book-controls {
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-top: 12px;
-    gap: 10px;
+}
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    font-size: 14px;
+}
+.nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: #1A1A1A;
+    font-size: 10px;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-left: 30px;
 }
 
-.book-nav {
-    padding: 6px 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background: #f7f7f7;
-    cursor: pointer;
-    font-size: 0.9rem;
+/* HEADER */
+.portfolio-header {
+    max-width: 800px;
+    margin: 80px auto 60px;
+    padding: 0 5%;
+    text-align: center;
 }
-
-.book-nav:disabled {
-    opacity: 0.4;
-    cursor: default;
+.portfolio-header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
 }
-
-.book-indicator {
-    font-size: 0.9rem;
+.portfolio-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
     color: #555;
 }
 
-/* FOOTER */
-footer {
+/* THE TWO LEDGERS */
+.ledger-section {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+    flex-wrap: wrap;
+}
+.ledger-book {
+    width: 400px;
+    cursor: pointer;
     text-align: center;
-    padding: 40px 0;
-    font-size: 0.9rem;
-    color: #333;
-    border-top: 1px solid #eee;
-    margin-top: 20px;
+    transition: transform 0.4s ease;
+}
+.ledger-book:hover { transform: translateY(-5px); }
+
+.volume-tag {
+    display: block;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    letter-spacing: 0.3rem;
+    color: #999;
+    margin-bottom: 10px;
+}
+.ledger-book h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.book-cover {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.ledger-book:hover .book-cover img { transform: scale(1.05); }
+
+.ledger-book p {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+.click-instruction {
+    font-family: 'Montserrat';
+    font-size: 9px;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
+}
+
+/* DIVIDER */
+.divider {
+    width: 80%;
+    max-width: 1000px;
+    height: 1px;
+    background: #EAEAEA;
+    margin: 0 auto 80px;
+}
+
+/* FEATURED RECORDS (Portrait Grid) */
+.featured-records {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+    padding: 0 5%;
+}
+.record-category {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    color: #999;
+    border-bottom: 1px solid #EAEAEA;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.archival-card { margin-bottom: 50px; }
+
+/* THE PORTRAIT FRAME (Tall and Narrow) */
+.portrait-frame {
+    width: 60%; /* Keeps it narrow */
+    aspect-ratio: 2/3; /* Forces portrait orientation */
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+}
+.portrait-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the frame without stretching */
+    filter: grayscale(20%); /* Adds a slight archival feel */
+}
+
+.archival-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+.archival-card p {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    color: #666;
+}
+
+/* GLOBAL ARCHIVE BUTTON */
+.archive-action {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.outline-btn {
+    font-family: 'Montserrat';
+    font-size: 11px;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    padding: 15px 30px;
+    transition: 0.3s;
+}
+.outline-btn:hover { background: #1A1A1A; color: #FFF; }
+
+/* MODALS */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(253, 253, 253, 0.98); /* Solid white/frosted feel */
+    z-index: 2000;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+.modal-content {
+    max-width: 900px;
+    width: 90%;
+    height: 80vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+    text-align: center;
+}
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+.modal-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+.modal-intro { font-family: 'Montserrat'; color: #666; margin-bottom: 40px; }
+
+.modal-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.modal-footer { margin-top: 40px; border-top: 1px solid #EAEAEA; padding-top: 40px; }
+.modal-footer p { font-size: 1.5rem; margin-bottom: 20px; }
+.modal-actions a {
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-size: 11px;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #1a1a1a;
+    text-decoration: none;
+    padding: 15px 30px;
 }

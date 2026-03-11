@@ -1,127 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio: The Architectural Record</title>
-    <link rel="stylesheet" href="portfolio.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Dawley Asphalt</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
 </head>
-
 <body>
 
-    <!-- PAGE INTRO COPY -->
-    <section class="portfolio-intro">
-        <h1>Portfolio: The Architectural Record</h1>
-        <p>
-            A curated record of commercial and private asphalt engineering across the Colorado Front Range.
-            Every project reflects the same standard: technical precision, structural integrity, and long‑term performance.
-        </p>
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <div class="logo">DAWLEY</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">The Standard</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="portfolio-header">
+        <h1>The work is the word.</h1>
+        <p>Below are the ledgers of our history. On the left, the infrastructure that supports the Front Range. On the right, the private estates we have helped shape.</p>
+    </header>
+
+    <section class="ledger-section">
+        <div class="ledger-book" onclick="openModal('commercial-modal')">
+            <span class="volume-tag">VOLUME I</span>
+            <h2>Commercial & Municipal</h2>
+            <div class="book-cover">
+                <img src="portfolio/highlights/industrial-complex.jpg" alt="Commercial Portfolio">
+            </div>
+            <p>High-traffic resilience and industrial-grade engineering.</p>
+            <span class="click-instruction">CLICK TO OPEN LEDGER</span>
+        </div>
+
+        <div class="ledger-book" onclick="openModal('private-modal')">
+            <span class="volume-tag">VOLUME II</span>
+            <h2>Private Estates</h2>
+            <div class="book-cover">
+                <img src="portfolio/highlights/foothills-estate.jpg" alt="Private Portfolio">
+            </div>
+            <p>Custom approaches and residential longevity.</p>
+            <span class="click-instruction">CLICK TO OPEN LEDGER</span>
+        </div>
     </section>
 
-    <!-- LANDSCAPE BOOKS: TWO CONTAINERS, SIDE-BY-SIDE -->
-    <section class="portfolio-books">
+    <div class="divider"></div>
 
-        <!-- COMMERCIAL BOOK -->
-        <div class="book-card" data-book="commercial">
-            <div class="book-label">Commercial Portfolio Book</div>
-            <p class="book-description">
-                A landscape presentation of high‑volume, high‑demand commercial work across retail, industrial,
-                and municipal environments. Includes grading, subgrade stabilization, structural asphalt design,
-                and long‑term maintenance planning.
-            </p>
-            <div class="book-cover-frame">
-                <img
-                    src="portfolio/commercial/cover.jpg"
-                    class="book-cover"
-                    alt="Commercial Portfolio Book"
-                />
+    <section class="featured-records">
+        <div class="record-col">
+            <h3 class="record-category">Commercial Records</h3>
+            
+            <div class="archival-card">
+                <div class="portrait-frame">
+                    <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
+                </div>
+                <h4>Record 049: Industrial Complex</h4>
+                <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
+            </div>
+
+            <div class="archival-card">
+                <div class="portrait-frame">
+                    <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
+                </div>
+                <h4>Record 082: Retail Infrastructure</h4>
+                <p>Focus: High-Volume Wear Course. Precision grading for rapid moisture drainage.</p>
             </div>
         </div>
 
-        <!-- PRIVATE BOOK -->
-        <div class="book-card" data-book="private">
-            <div class="book-label">Private Portfolio Book</div>
-            <p class="book-description">
-                A landscape presentation of private estates, rural properties, and residential infrastructure.
-                Focused on aesthetics, drainage control, slope management, and long‑term durability.
-            </p>
-            <div class="book-cover-frame">
-                <img
-                    src="portfolio/private/cover.jpg"
-                    class="book-cover"
-                    alt="Private Portfolio Book"
-                />
-            </div>
-        </div>
+        <div class="record-col">
+            <h3 class="record-category">Private Estate Records</h3>
 
-    </section>
-
-    <div class="divider-line"></div>
-
-    <!-- VERTICAL HIGHLIGHT GALLERY (PORTRAIT ORIENTATION) -->
-    <section class="highlight-gallery">
-
-        <div class="highlight-item">
-            <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex" />
-            <h3>Industrial Complex</h3>
-            <p>
-                A multi‑phase commercial project requiring structural asphalt design, load‑bearing analysis,
-                and high‑traffic durability.
-            </p>
-        </div>
-
-        <div class="highlight-item">
-            <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure" />
-            <h3>Retail Infrastructure</h3>
-            <p>
-                A retail corridor engineered for continuous vehicle turnover, thermal cycling,
-                and long‑term surface stability.
-            </p>
-        </div>
-
-        <div class="highlight-item">
-            <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate" />
-            <h3>Foothills Estate</h3>
-            <p>
-                A private estate requiring slope management, drainage control,
-                and aesthetic integration with natural terrain.
-            </p>
-        </div>
-
-        <div class="highlight-item">
-            <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines" />
-            <h3>Cathedral Pines</h3>
-            <p>
-                A forest‑edge residential project requiring subgrade stabilization,
-                freeze‑thaw resilience, and precision grading.
-            </p>
-        </div>
-
-    </section>
-
-    <!-- LANDSCAPE FLIPBOOK OVERLAY -->
-    <div class="book-overlay" id="book-overlay">
-        <div class="book-viewer">
-            <button class="book-close" id="book-close" aria-label="Close book">&times;</button>
-
-            <div class="book-page-wrapper">
-                <img id="book-page-image" class="book-page" alt="Portfolio page" />
+            <div class="archival-card">
+                <div class="portrait-frame">
+                    <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
+                </div>
+                <h4>Record 112: Cathedral Pines</h4>
+                <p>Focus: Subgrade Stabilization. Navigating forest-edge terrain and freeze-thaw cycles.</p>
             </div>
 
-            <div class="book-controls">
-                <button id="book-prev" class="book-nav">Previous</button>
-                <span id="book-page-indicator" class="book-indicator">Page 1 of 1</span>
-                <button id="book-next" class="book-nav">Next</button>
+            <div class="archival-card">
+                <div class="portrait-frame">
+                    <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate">
+                </div>
+                <h4>Record 105: Foothills Estate</h4>
+                <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="archive-action">
+        <a href="https://blog.dawleyasphalt.com" class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</a>
+    </div>
+
+    <div id="commercial-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('commercial-modal')">×</button>
+            <h2>Volume I: Commercial</h2>
+            <p class="modal-intro">Engineering for the realities of Front Range logistics and public traffic.</p>
+            
+            <div class="modal-gallery">
+                <img src="portfolio/highlights/industrial-complex.jpg" alt="Project">
+                <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Project">
+            </div>
+
+            <div class="modal-footer">
+                <p>Thank you for viewing.</p>
+                <div class="modal-actions">
+                    <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a Complimentary Consult with Jerry</a>
+                </div>
             </div>
         </div>
     </div>
 
-    <footer>
-        <p>Dawley Asphalt & Paving</p>
-        <p>Colorado Springs, CO | Licensed & Insured</p>
-        <p>719‑432‑2020</p>
-        <p>© 2020 Dawley Asphalt & Paving. All rights reserved.</p>
-    </footer>
+    <div id="private-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('private-modal')">×</button>
+            <h2>Volume II: Private Residences</h2>
+            <p class="modal-intro">Custom approaches engineered for longevity and aesthetic integration.</p>
+            
+            <div class="modal-gallery">
+                <img src="portfolio/highlights/cathedral-pines.jpg" alt="Project">
+                <img src="portfolio/highlights/foothills-estate.jpg" alt="Project">
+            </div>
+
+            <div class="modal-footer">
+                <p>Thank you for viewing.</p>
+                <div class="modal-actions">
+                    <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a Complimentary Consult with Jerry</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="portfolio.js"></script>
 </body>
