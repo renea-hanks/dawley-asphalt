@@ -2,17 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | Dawley Asphalt & Paving</title>
-    
     <link rel="icon" type="image/png" href="favicon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css">
+    <style>
+        /* Force hidden state for modals on load */
+        .modal-overlay {
+            display: none !important;
+            opacity: 0;
+            visibility: hidden;
+        }
+        /* State when ledger is active */
+        .modal-overlay.is-visible {
+            display: flex !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+            z-index: 99999 !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,11 +42,11 @@
     <header class="portfolio-header">
         <h1>Portfolio</h1>
         <h2 class="subheadline">The work is the word.</h2>
-        <p>Below are the ledgers of our history. On the left, commercial projects we've been entrusted with through the years. On the right, private estates we have helped shape.</p>
+        <p>Below are the ledgers of our history. On the left, commercial projects; on the right, private estates.</p>
     </header>
 
     <section class="ledger-section">
-        <div class="ledger-book" onclick="openModal('commercial-modal')">
+        <div class="ledger-book" id="trigger-commercial">
             <span class="volume-tag">VOLUME I</span>
             <h2>Commercial</h2>
             <div class="book-cover">
@@ -45,7 +55,7 @@
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
 
-        <div class="ledger-book" onclick="openModal('private-modal')">
+        <div class="ledger-book" id="trigger-private">
             <span class="volume-tag">VOLUME II</span>
             <h2>Private Estates</h2>
             <div class="book-cover">
@@ -55,38 +65,89 @@
         </div>
     </section>
 
-    <div class="divider"></div>
+    <footer class="footer">
+        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; 719-632-2080</div>
+        <div class="footer-bottom">© Dawley Asphalt &amp; Paving</div>
+    </footer>
 
-    <section class="featured-section">
-        <h2 class="featured-heading">Featured Projects</h2>
-        
-        <div class="featured-records">
-            <div class="record-col">
-                <h3 class="record-category">Commercial</h3>
-                
-                <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
-                    </div>
-                    <h4>Project: Industrial Complex</h4>
-                    <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
-                </div>
-
-                <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
-                    </div>
-                    <h4>Project: Retail Infrastructure</h4>
-                    <p>Focus: High-Volume Wear Course. Precision grading for rapid moisture drainage.</p>
-                </div>
+    <div id="commercial-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" data-close="commercial-modal">&times;</button>
+            <h2>Volume I: Commercial</h2>
+            <div class="modal-gallery">
+                <img src="portfolio/commercial/cover.jpg">
+                <img src="portfolio/commercial/page-1.jpg">
+                <img src="portfolio/commercial/page-2.jpg">
+                <img src="portfolio/commercial/page-3.jpg">
+                <img src="portfolio/commercial/page-4.jpg">
+                <img src="portfolio/commercial/page-5.jpg">
+                <img src="portfolio/commercial/page-6.jpg">
+                <img src="portfolio/commercial/final.jpg">
             </div>
+        </div>
+    </div>
 
-            <div class="record-col">
-                <h3 class="record-category">Private Estates</h3>
+    <div id="private-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" data-close="private-modal">&times;</button>
+            <h2>Volume II: Private Estates</h2>
+            <div class="modal-gallery">
+                <img src="portfolio/private/cover.jpg">
+                <img src="portfolio/private/page-1.jpg">
+                <img src="portfolio/private/page-2.jpg">
+                <img src="portfolio/private/page-3.jpg">
+                <img src="portfolio/private/page-4.jpg">
+                <img src="portfolio/private/page-5.jpg">
+                <img src="portfolio/private/page-6.jpg">
+                <img src="portfolio/private/final.jpg">
+            </div>
+        </div>
+    </div>
 
-                <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
-                    </div>
-                    <h4>Project: Cathedral Pines</h4>
-                    <p>Focus: Sub
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const commercialTrigger = document.getElementById('trigger-commercial');
+            const privateTrigger = document.getElementById('trigger-private');
+            const commModal = document.getElementById('commercial-modal');
+            const privModal = document.getElementById('private-modal');
+
+            // Open Commercial
+            commercialTrigger.addEventListener('click', function() {
+                commModal.classList.add('is-visible');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Open Private
+            privateTrigger.addEventListener('click', function() {
+                privModal.classList.add('is-visible');
+                document.body.style.overflow = 'hidden';
+            });
+
+            // Universal Close Logic
+            document.querySelectorAll('.close-btn, .modal-overlay').forEach(element => {
+                element.addEventListener('click', function(e) {
+                    if (e.target === this || this.classList.contains('close-btn')) {
+                        commModal.classList.remove('is-visible');
+                        privModal.classList.remove('is-visible');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            });
+        });
+    </script>
+
+    <style>
+        .rosie-circle-launcher { position: fixed; bottom: 126px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; animation: rosieFloat 4s ease-in-out infinite; }
+        @keyframes rosieFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        #rosie-window { display: none; position: fixed; bottom: 206px; right: 30px; width: 360px; height: 480px; background: #fff; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); z-index: 10001; flex-direction: column; border: 1px solid #eee; }
+        .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; color: #444; }
+    </style>
+    <div class="rosie-circle-launcher" onclick="document.getElementById('rosie-window').style.display = (document.getElementById('rosie-window').style.display === 'flex' ? 'none' : 'flex')">
+        <div style="color:white; font-family:'Montserrat'; font-size:22px;">R</div>
+        <div style="color:white; font-family:'Montserrat'; font-size:8px;">Rosie</div>
+    </div>
+    <div id="rosie-window">
+        <div class="rosie-body">Hello, I'm Rosie. How may I assist you today?</div>
+    </div>
+</body>
+</html>
