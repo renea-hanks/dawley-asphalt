@@ -99,9 +99,144 @@
         <div class="featured-records">
             <div class="record-col">
                 <h3 class="record-category">Commercial</h3>
+                
                 <div class="archival-card">
-                    <div class="portrait-frame"><img src="portfolio/highlights/industrial-complex.jpg"></div>
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
+                    </div>
                     <h4>Project: Industrial Complex</h4>
                     <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
                 </div>
-                <div class="archival
+
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
+                    </div>
+                    <h4>Project: Retail Infrastructure</h4>
+                    <p>Focus: High-Volume Wear Course. Precision grading for moisture drainage.</p>
+                </div>
+            </div>
+
+            <div class="record-col">
+                <h3 class="record-category">Private Estates</h3>
+                
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
+                    </div>
+                    <h4>Project: Cathedral Pines</h4>
+                    <p>Focus: Subgrade Stabilization. Engineered for forest terrain and freeze-thaw cycles.</p>
+                </div>
+
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate">
+                    </div>
+                    <h4>Project: Foothills Estate</h4>
+                    <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="archive-action">
+        <a href="https://blog.dawleyasphalt.com" class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</a>
+    </div>
+
+    <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
+
+    <footer class="footer">
+        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; 719-632-2080</div>
+        <div class="footer-bottom">© Dawley Asphalt &amp; Paving</div>
+    </footer>
+
+    <div id="commercial-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('commercial-modal')">&times;</button>
+            <h2>Volume I: Commercial</h2>
+            <div class="modal-gallery">
+                <img src="portfolio/commercial/cover.jpg">
+                <img src="portfolio/commercial/page-1.jpg">
+                <img src="portfolio/commercial/page-2.jpg">
+                <img src="portfolio/commercial/page-3.jpg">
+                <img src="portfolio/commercial/page-4.jpg">
+                <img src="portfolio/commercial/page-5.jpg">
+                <img src="portfolio/commercial/page-6.jpg">
+                <img src="portfolio/commercial/final.jpg">
+            </div>
+        </div>
+    </div>
+
+    <div id="private-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('private-modal')">&times;</button>
+            <h2>Volume II: Private Estates</h2>
+            <div class="modal-gallery">
+                <img src="portfolio/private/cover.jpg">
+                <img src="portfolio/private/page-1.jpg">
+                <img src="portfolio/private/page-2.jpg">
+                <img src="portfolio/private/page-3.jpg">
+                <img src="portfolio/private/page-4.jpg">
+                <img src="portfolio/private/page-5.jpg">
+                <img src="portfolio/private/page-6.jpg">
+                <img src="portfolio/private/final.jpg">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const commModal = document.getElementById('commercial-modal');
+        const privModal = document.getElementById('private-modal');
+
+        document.getElementById('trigger-commercial').onclick = function() {
+            commModal.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+        };
+
+        document.getElementById('trigger-private').onclick = function() {
+            privModal.classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+        };
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('is-visible');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                commModal.classList.remove('is-visible');
+                privModal.classList.remove('is-visible');
+                document.body.style.overflow = 'auto';
+            }
+        };
+    </script>
+
+    <style>
+        .rosie-circle-launcher { position: fixed; bottom: 126px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; animation: rosieFloat 4s ease-in-out infinite; border: 1px solid rgba(255,255,255,0.1); }
+        @keyframes rosieFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        #rosie-window { display: none; position: fixed; bottom: 206px; right: 30px; width: 360px; height: 500px; background: #fff; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); z-index: 10001; flex-direction: column; border: 1px solid #eee; overflow: hidden; }
+        .rosie-header { padding: 20px; border-bottom: 1px solid #f9f9f9; text-align: center; }
+        .rosie-header h3 { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin: 0; }
+        .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; color: #444; }
+        .rosie-input-area { padding: 20px; border-top: 1px solid #f0f0f0; }
+        .rosie-input-area input { width: 100%; padding: 12px; border: 1px solid #eee; font-family: 'Montserrat', sans-serif; font-size: 12px; margin-bottom: 10px; outline: none; }
+        .context-btn-rosie { display: block; width: 100%; padding: 15px; background: #111; color: #fff; text-align: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
+    </style>
+    <div class="rosie-circle-launcher" onclick="document.getElementById('rosie-window').style.display = (document.getElementById('rosie-window').style.display === 'flex' ? 'none' : 'flex')">
+        <div style="color:white; font-family:'Montserrat'; font-size:22px; font-weight:200;">R</div>
+        <div style="color:white; font-family:'Montserrat'; font-size:8px; text-transform:uppercase; letter-spacing:1px;">Rosie</div>
+    </div>
+    <div id="rosie-window">
+        <div class="rosie-header"><h3>Assistant</h3></div>
+        <div class="rosie-body" id="rosie-chat-history">
+            <p>Hello, I’m Rosie, your AI Assistant.</p>
+            <p>How may I assist you today?</p>
+        </div>
+        <div class="rosie-input-area">
+            <input type="text" id="rosie-user-input" placeholder="Ask a question..." onkeypress="if(event.key === 'Enter') { document.getElementById('rosie-chat-history').innerHTML += '<p style=\'text-align:right; font-style:italic; color:#888; margin-top:10px;\'>' + this.value + '</p><p>I hear you. I am being prepared with Jerry\'s engineering standards to answer you. For now, please use the button below.</p>'; this.value=''; }">
+            <a href="https://form.typeform.com/to/FLnFxHJD" class="context-btn-rosie">Provide Property Context</a>
+        </div>
+    </div>
+</body>
+</html>
