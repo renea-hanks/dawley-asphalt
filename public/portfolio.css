@@ -63,17 +63,18 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.4rem;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 20px;
     text-transform: uppercase;
     color: #555;
 }
 .subheadline {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 600; /* Bolded as requested */
+    font-size: 2.2rem;
+    font-weight: 300; /* Revised weight */
     margin-bottom: 30px;
     color: #1A1A1A;
+    letter-spacing: 1px;
 }
 .portfolio-header p {
     font-family: 'Montserrat', sans-serif;
@@ -110,7 +111,7 @@ body {
 }
 .ledger-book h2 {
     font-size: 1.8rem;
-    font-weight: 400;
+    font-weight: 300; /* Revised weight */
     margin-bottom: 20px;
 }
 .book-cover {
@@ -149,18 +150,19 @@ body {
 .featured-section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Forces container contents to center */
+    align-items: center;
     text-align: center;
     padding: 0 5%;
     width: 100%;
 }
 .featured-heading {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.8rem; /* Made larger */
-    font-weight: 200; /* Removed bold */
+    font-size: 1.8rem; /* Scaled down */
+    font-weight: 300; /* Revised weight */
     margin-bottom: 60px;
     text-align: center;
     width: 100%;
+    letter-spacing: 2px;
 }
 
 .featured-records {
@@ -170,7 +172,7 @@ body {
     width: 100%;
     max-width: 900px;
     margin: 0 auto 80px;
-    justify-content: center; /* Bulletproofs the grid alignment */
+    justify-content: center;
 }
 .record-col {
     display: flex;
@@ -211,7 +213,7 @@ body {
 .archival-card h4 {
     font-size: 1.1rem;
     margin-bottom: 8px;
-    font-weight: 400;
+    font-weight: 300; /* Revised weight */
 }
 .archival-card p {
     font-family: 'Montserrat', sans-serif;
@@ -251,7 +253,7 @@ body {
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    font-weight: 400;
+    font-weight: 300; /* Revised weight */
     letter-spacing: 0.2rem;
     color: #000;
     text-decoration: none;
@@ -321,7 +323,7 @@ body {
     font-weight: 200;
     color: #555;
 }
-.modal-content h2 { font-size: 2rem; margin-bottom: 40px; }
+.modal-content h2 { font-size: 1.8rem; font-weight: 300; margin-bottom: 40px; }
 
 .modal-gallery img {
     width: auto;
@@ -334,4 +336,4 @@ body {
 }
 
 .modal-footer { margin-top: 40px; border-top: 1px solid #EAEAEA; padding-top: 40px; }
-.modal-footer p { font-size: 1.2rem; color: #555; }
+.modal-footer p { font-size: 1.2rem; font-weight: 300; color: #555; }
