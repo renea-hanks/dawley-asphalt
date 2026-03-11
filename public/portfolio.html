@@ -9,23 +9,38 @@
 
 <body>
 
+    <!-- LANDSCAPE BOOKS: TWO CONTAINERS, SIDE-BY-SIDE -->
     <section class="portfolio-books">
 
         <!-- COMMERCIAL BOOK -->
-        <div class="book-container" data-book="commercial">
-            <img src="portfolio/commercial/cover.jpg" class="book-cover" alt="Commercial Portfolio Book" />
+        <div class="book-card" data-book="commercial">
+            <div class="book-label">Commercial Portfolio Book</div>
+            <div class="book-cover-frame">
+                <img
+                    src="portfolio/commercial/cover.jpg"
+                    class="book-cover"
+                    alt="Commercial Portfolio Book"
+                />
+            </div>
         </div>
 
         <!-- PRIVATE BOOK -->
-        <div class="book-container" data-book="private">
-            <img src="portfolio/private/cover.jpg" class="book-cover" alt="Private Portfolio Book" />
+        <div class="book-card" data-book="private">
+            <div class="book-label">Private Portfolio Book</div>
+            <div class="book-cover-frame">
+                <img
+                    src="portfolio/private/cover.jpg"
+                    class="book-cover"
+                    alt="Private Portfolio Book"
+                />
+            </div>
         </div>
 
     </section>
 
     <div class="divider-line"></div>
 
-    <!-- HIGHLIGHT GALLERY -->
+    <!-- VERTICAL HIGHLIGHT GALLERY (PORTRAIT ORIENTATION) -->
     <section class="highlight-gallery">
 
         <div class="highlight-item">
@@ -53,6 +68,23 @@
         </div>
 
     </section>
+
+    <!-- LANDSCAPE FLIPBOOK OVERLAY -->
+    <div class="book-overlay" id="book-overlay">
+        <div class="book-viewer">
+            <button class="book-close" id="book-close" aria-label="Close book">&times;</button>
+
+            <div class="book-page-wrapper">
+                <img id="book-page-image" class="book-page" alt="Portfolio page" />
+            </div>
+
+            <div class="book-controls">
+                <button id="book-prev" class="book-nav">Previous</button>
+                <span id="book-page-indicator" class="book-indicator">Page 1 of 1</span>
+                <button id="book-next" class="book-nav">Next</button>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <p>Dawley Asphalt & Paving</p>
