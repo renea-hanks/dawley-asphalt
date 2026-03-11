@@ -1,29 +1,23 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-admin.initializeApp();
+const { onCall } = require("firebase-functions/v2/https");
+const Anthropic = require("@anthropic-ai/sdk");
 
-exports.processInquiry = functions.https.onCall(async (data, context) => {
-    // Establishing the 31-year legacy in the response
-    const legacyNote = "Since June 1, 1994, we have treated every surface as a capital asset.";
-
-    const inquiryData = {
-        name: data.name,
-        location: data.location,
-        message: data.message,
-        receivedAt: admin.firestore.FieldValue.serverTimestamp(),
-        status: "PENDING_REVIEW"
-    };
-
+exports.processInquiry = onCall({ secrets: ["ANTHROPIC_API_KEY"] }, async (request) => {
     try {
-        // Saving the entry to your new Firebase Database
-        await admin.firestore().collection('inquiries').add(inquiryData);
+        const anthropic = new Anthropic({
+            apiKey: process.env.ANTHROPIC_API_KEY,
+        });
 
-        return {
-            success: true,
-            response: `${legacyNote} Jerry Dawley has received your details and will review the engineering requirements for your project shortly.`
-        };
+        const msg = await anthropic.messages.create({
+            model: "claude-3-5-sonnet-20240620",
+            max_tokens: 1024,
+            system: "You are Rosie, an expert engineering assistant for Dawley Asphalt. Provide technical, high-level responses regarding Colorado soil (clay mitigation, granitic sub-base) and Jerry's 30-year paving legacy.",
+            messages: [{ role: "user", content: request.data.text }],
+        });
+
+        return { text: msg.content[0].text };
     } catch (error) {
-        console.error("Inquiry Error:", error);
-        throw new functions.https.HttpsError('internal', 'The ledger is currently unavailable.');
+        // Log the actual error for the developer to see in Firebase Console
+        console.error("ANTHROPIC_CONNECTION_ERROR:", error);
+        return { text: "TECHNICAL ERROR: Backend unable to verify security credentials." };
     }
 });
