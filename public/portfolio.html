@@ -11,10 +11,11 @@
 
     <nav class="main-nav">
         <div class="nav-inner">
-            <div class="logo">DAWLEY</div>
+            <div class="logo">DAWLEY ASPHALT</div>
             <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">The Standard</a>
+                <a href="philosophy.html">Philosophy</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="quality.html">Quality</a>
                 <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -22,18 +23,18 @@
     </nav>
 
     <header class="portfolio-header">
-        <h1>The work is the word.</h1>
-        <p>Below are the ledgers of our history. On the left, the infrastructure that supports the Front Range. On the right, the private estates we have helped shape.</p>
+        <h1>Portfolio</h1>
+        <h2 class="subheadline">The word is the word.</h2>
+        <p>Below are the ledgers of our history. On the left, commercial projects we've been entrusted with through the years. On the right, private estates we have helped shape.</p>
     </header>
 
     <section class="ledger-section">
         <div class="ledger-book" onclick="openModal('commercial-modal')">
             <span class="volume-tag">VOLUME I</span>
-            <h2>Commercial & Municipal</h2>
+            <h2>Commercial</h2>
             <div class="book-cover">
-                <img src="portfolio/highlights/industrial-complex.jpg" alt="Commercial Portfolio">
+                <img src="portfolio/commercial/cover.jpg" alt="Commercial Portfolio Cover">
             </div>
-            <p>High-traffic resilience and industrial-grade engineering.</p>
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
 
@@ -41,53 +42,56 @@
             <span class="volume-tag">VOLUME II</span>
             <h2>Private Estates</h2>
             <div class="book-cover">
-                <img src="portfolio/highlights/foothills-estate.jpg" alt="Private Portfolio">
+                <img src="portfolio/private/cover.jpg" alt="Private Portfolio Cover">
             </div>
-            <p>Custom approaches and residential longevity.</p>
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
     </section>
 
     <div class="divider"></div>
 
-    <section class="featured-records">
-        <div class="record-col">
-            <h3 class="record-category">Commercial Records</h3>
-            
-            <div class="archival-card">
-                <div class="portrait-frame">
-                    <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
+    <section class="featured-section">
+        <h2 class="featured-heading">Featured Projects</h2>
+        
+        <div class="featured-records">
+            <div class="record-col">
+                <h3 class="record-category">Commercial</h3>
+                
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
+                    </div>
+                    <h4>Project: Industrial Complex</h4>
+                    <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
                 </div>
-                <h4>Record 049: Industrial Complex</h4>
-                <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
+
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
+                    </div>
+                    <h4>Project: Retail Infrastructure</h4>
+                    <p>Focus: High-Volume Wear Course. Precision grading for rapid moisture drainage.</p>
+                </div>
             </div>
 
-            <div class="archival-card">
-                <div class="portrait-frame">
-                    <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
-                </div>
-                <h4>Record 082: Retail Infrastructure</h4>
-                <p>Focus: High-Volume Wear Course. Precision grading for rapid moisture drainage.</p>
-            </div>
-        </div>
+            <div class="record-col">
+                <h3 class="record-category">Private Estates</h3>
 
-        <div class="record-col">
-            <h3 class="record-category">Private Estate Records</h3>
-
-            <div class="archival-card">
-                <div class="portrait-frame">
-                    <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
+                    </div>
+                    <h4>Project: Cathedral Pines</h4>
+                    <p>Focus: Subgrade Stabilization. Navigating forest-edge terrain and freeze-thaw cycles.</p>
                 </div>
-                <h4>Record 112: Cathedral Pines</h4>
-                <p>Focus: Subgrade Stabilization. Navigating forest-edge terrain and freeze-thaw cycles.</p>
-            </div>
 
-            <div class="archival-card">
-                <div class="portrait-frame">
-                    <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate">
+                <div class="archival-card">
+                    <div class="portrait-frame">
+                        <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate">
+                    </div>
+                    <h4>Project: Foothills Estate</h4>
+                    <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
                 </div>
-                <h4>Record 105: Foothills Estate</h4>
-                <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
             </div>
         </div>
     </section>
@@ -96,42 +100,57 @@
         <a href="https://blog.dawleyasphalt.com" class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</a>
     </div>
 
+    <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
+
+    <footer class="footer">
+        <div class="footer-top">
+            Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; 719-632-2080
+        </div>
+        <div class="footer-bottom">
+            © Dawley Asphalt &amp; Paving — Colorado Springs, CO
+        </div>
+    </footer>
+
     <div id="commercial-modal" class="modal-overlay">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('commercial-modal')">×</button>
+            <button class="close-btn" onclick="closeModal('commercial-modal')">&times;</button>
             <h2>Volume I: Commercial</h2>
-            <p class="modal-intro">Engineering for the realities of Front Range logistics and public traffic.</p>
             
             <div class="modal-gallery">
-                <img src="portfolio/highlights/industrial-complex.jpg" alt="Project">
-                <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Project">
+                <img src="portfolio/commercial/cover.jpg" alt="Commercial Cover">
+                <img src="portfolio/commercial/page-1.jpg" alt="Commercial Page 1">
+                <img src="portfolio/commercial/page-2.jpg" alt="Commercial Page 2">
+                <img src="portfolio/commercial/page-3.jpg" alt="Commercial Page 3">
+                <img src="portfolio/commercial/page-4.jpg" alt="Commercial Page 4">
+                <img src="portfolio/commercial/page-5.jpg" alt="Commercial Page 5">
+                <img src="portfolio/commercial/page-6.jpg" alt="Commercial Page 6">
+                <img src="portfolio/commercial/final.jpg" alt="Commercial Final">
             </div>
-
+            
             <div class="modal-footer">
-                <p>Thank you for viewing.</p>
-                <div class="modal-actions">
-                    <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a Complimentary Consult with Jerry</a>
-                </div>
+                <p>Thank you for viewing. Would you like to learn more about <a href="https://blog.dawleyasphalt.com" style="color: #1A1A1A; text-decoration: underline;">previous projects completed</a> or schedule a <a href="https://form.typeform.com/to/FLnFxHJD" style="color: #1A1A1A; text-decoration: underline;">complimentary consult</a>?</p>
             </div>
         </div>
     </div>
 
     <div id="private-modal" class="modal-overlay">
         <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('private-modal')">×</button>
-            <h2>Volume II: Private Residences</h2>
-            <p class="modal-intro">Custom approaches engineered for longevity and aesthetic integration.</p>
+            <button class="close-btn" onclick="closeModal('private-modal')">&times;</button>
+            <h2>Volume II: Private Estates</h2>
             
             <div class="modal-gallery">
-                <img src="portfolio/highlights/cathedral-pines.jpg" alt="Project">
-                <img src="portfolio/highlights/foothills-estate.jpg" alt="Project">
+                <img src="portfolio/private/cover.jpg" alt="Private Cover">
+                <img src="portfolio/private/page-1.jpg" alt="Private Page 1">
+                <img src="portfolio/private/page-2.jpg" alt="Private Page 2">
+                <img src="portfolio/private/page-3.jpg" alt="Private Page 3">
+                <img src="portfolio/private/page-4.jpg" alt="Private Page 4">
+                <img src="portfolio/private/page-5.jpg" alt="Private Page 5">
+                <img src="portfolio/private/page-6.jpg" alt="Private Page 6">
+                <img src="portfolio/private/final.jpg" alt="Private Final">
             </div>
-
+            
             <div class="modal-footer">
-                <p>Thank you for viewing.</p>
-                <div class="modal-actions">
-                    <a href="https://form.typeform.com/to/FLnFxHJD">Schedule a Complimentary Consult with Jerry</a>
-                </div>
+                <p>Thank you for viewing. Would you like to learn more about <a href="https://blog.dawleyasphalt.com" style="color: #1A1A1A; text-decoration: underline;">previous projects completed</a> or schedule a <a href="https://form.typeform.com/to/FLnFxHJD" style="color: #1A1A1A; text-decoration: underline;">complimentary consult</a>?</p>
             </div>
         </div>
     </div>
