@@ -1,0 +1,271 @@
+[debug] [2026-03-11T23:57:23.449Z] ----------------------------------------------------------------------
+[debug] [2026-03-11T23:57:23.450Z] Command:       /usr/local/share/nvm/versions/node/v24.11.1/bin/node /home/codespace/nvm/current/bin/firebase deploy --only functions
+[debug] [2026-03-11T23:57:23.451Z] CLI Version:   15.9.1
+[debug] [2026-03-11T23:57:23.451Z] Platform:      linux
+[debug] [2026-03-11T23:57:23.451Z] Node Version:  v24.11.1
+[debug] [2026-03-11T23:57:23.451Z] Time:          Wed Mar 11 2026 23:57:23 GMT+0000 (Coordinated Universal Time)
+[debug] [2026-03-11T23:57:23.451Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-03-11T23:57:24.979Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-11T23:57:24.980Z] > authorizing via signed-in user (hello@reneahanks.com)
+[debug] [2026-03-11T23:57:24.980Z] [iam] checking project dawley-asphalt-719 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2026-03-11T23:57:24.981Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:24.981Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:24.982Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions [none]
+[debug] [2026-03-11T23:57:24.983Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions  x-goog-user-project=dawley-asphalt-719
+[debug] [2026-03-11T23:57:24.983Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-03-11T23:57:25.202Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions 200
+[debug] [2026-03-11T23:57:25.203Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2026-03-11T23:57:25.203Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.203Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.203Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/dawley-asphalt-719/serviceAccounts/dawley-asphalt-719@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2026-03-11T23:57:25.203Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/dawley-asphalt-719/serviceAccounts/dawley-asphalt-719@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2026-03-11T23:57:25.514Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/dawley-asphalt-719/serviceAccounts/dawley-asphalt-719@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2026-03-11T23:57:25.514Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/dawley-asphalt-719/serviceAccounts/dawley-asphalt-719@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'dawley-asphalt-719'...
+[info] 
+[info] i  deploying functions 
+[debug] [2026-03-11T23:57:25.517Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.517Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.517Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 [none]
+[debug] [2026-03-11T23:57:25.636Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 200
+[debug] [2026-03-11T23:57:25.636Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 {"projectNumber":"218009838215","projectId":"dawley-asphalt-719","lifecycleState":"ACTIVE","name":"Dawley Asphalt","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-03-03T20:10:54.205808Z","parent":{"type":"organization","id":"1014598915443"}}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2026-03-11T23:57:25.638Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.639Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:25.639Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dawley-asphalt-719/adminSdkConfig [none]
+[debug] [2026-03-11T23:57:25.848Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dawley-asphalt-719/adminSdkConfig 200
+[debug] [2026-03-11T23:57:25.848Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dawley-asphalt-719/adminSdkConfig {"projectId":"dawley-asphalt-719","storageBucket":"dawley-asphalt-719.firebasestorage.app"}
+[debug] [2026-03-11T23:57:25.849Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2026-03-11T23:57:26.410Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "24"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.4.1"
+  },
+  "private": true
+}
+[debug] [2026-03-11T23:57:26.410Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2026-03-11T23:57:26.414Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-03-11T23:57:26.427Z] Found firebase-functions binary at '/workspaces/dawley-asphalt/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8093
+
+[debug] [2026-03-11T23:57:26.951Z] Got response from /__/functions.yaml {"endpoints":{"processInquiry":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","secretEnvironmentVariables":[{"key":"ANTHROPIC_API_KEY"}],"labels":{},"callableTrigger":{},"entryPoint":"processInquiry"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2026-03-11T23:57:30.978Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-03-11T23:57:30.979Z] > authorizing via signed-in user (hello@reneahanks.com)
+[debug] [2026-03-11T23:57:30.979Z] [iam] checking project dawley-asphalt-719 for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2026-03-11T23:57:30.979Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:30.979Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:30.979Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions [none]
+[debug] [2026-03-11T23:57:30.980Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions  x-goog-user-project=dawley-asphalt-719
+[debug] [2026-03-11T23:57:30.980Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-03-11T23:57:31.096Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions 200
+[debug] [2026-03-11T23:57:31.096Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2026-03-11T23:57:31.097Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:31.097Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:31.097Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/dawley-asphalt-719/instances pageSize=100&pageToken=
+[debug] [2026-03-11T23:57:31.529Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/dawley-asphalt-719/instances 200
+[debug] [2026-03-11T23:57:31.529Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/dawley-asphalt-719/instances {}
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /workspaces/dawley-asphalt/functions (71.2 KB) for uploading 
+[debug] [2026-03-11T23:57:31.562Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:31.563Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:31.563Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/dawley-asphalt-719/locations/-/functions [none]
+[debug] [2026-03-11T23:57:32.023Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/dawley-asphalt-719/locations/-/functions 200
+[debug] [2026-03-11T23:57:32.023Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/dawley-asphalt-719/locations/-/functions {}
+[debug] [2026-03-11T23:57:32.024Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:32.024Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:32.024Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2026-03-11T23:57:32.590Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/-/functions 200
+[debug] [2026-03-11T23:57:32.590Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/-/functions {"functions":[{"name":"projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry","buildConfig":{"build":"projects/218009838215/locations/us-central1/builds/7fc0b440-bb38-45e4-a4b9-4937461ccd53","runtime":"nodejs24","entryPoint":"processInquiry","source":{"storageSource":{"bucket":"gcf-v2-sources-218009838215-us-central1","object":"processInquiry/function-source.zip","generation":"1773267484412644"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/dawley-asphalt-719/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-218009838215-us-central1","object":"processInquiry/function-source.zip","generation":"1773267484412644"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/dawley-asphalt-719/serviceAccounts/218009838215-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/dawley-asphalt-719/locations/us-central1/services/processinquiry","timeoutSeconds":60,"environmentVariables":{"ANTHROPIC_API_KEY":"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","FIREBASE_CONFIG":"{\"projectId\":\"dawley-asphalt-719\",\"storageBucket\":\"dawley-asphalt-719.firebasestorage.app\"}","GCLOUD_PROJECT":"dawley-asphalt-719","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dawley-asphalt-719/locations/us-central1/services/processInquiry","FUNCTION_TARGET":"processInquiry","LOG_EXECUTION_ID":"true"},"maxInstanceCount":12,"ingressSettings":"ALLOW_ALL","uri":"https://processinquiry-ogk2rsputq-uc.a.run.app","serviceAccountEmail":"218009838215-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"processinquiry-00002-bog","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2026-03-11T22:19:00.870695723Z","labels":{"deployment-callable":"true","firebase-functions-hash":"2f557f27c019ea3e43266c4cc9471e4c6f173ed5","deployment-tool":"cli-firebase"},"environment":"GEN_2","url":"https://us-central1-dawley-asphalt-719.cloudfunctions.net/processInquiry","createTime":"2026-03-03T21:17:11.719833533Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2026-03-11T23:57:32.594Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:32.594Z] Checked if tokens are valid: true, expires at: 1773274525422
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2026-03-11T23:57:32.594Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:32.594Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:32.595Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-03-11T23:57:32.595Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/pubsub.googleapis.com:generateServiceIdentity  x-goog-user-project=218009838215
+[debug] [2026-03-11T23:57:32.595Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/pubsub.googleapis.com:generateServiceIdentity {}
+[debug] [2026-03-11T23:57:32.596Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2026-03-11T23:57:32.596Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/eventarc.googleapis.com:generateServiceIdentity  x-goog-user-project=218009838215
+[debug] [2026-03-11T23:57:32.596Z] >>> [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/eventarc.googleapis.com:generateServiceIdentity {}
+[debug] [2026-03-11T23:57:33.062Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2026-03-11T23:57:33.062Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-218009838215@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"108346450662719986208"}}
+[debug] [2026-03-11T23:57:33.102Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2026-03-11T23:57:33.103Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/218009838215/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-218009838215@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"116769266675842661791"}}
+[info] i  functions: ensuring required API secretmanager.googleapis.com is enabled... 
+[debug] [2026-03-11T23:57:33.104Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.104Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.104Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY/versions/latest [none]
+[debug] [2026-03-11T23:57:33.310Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY/versions/latest 200
+[debug] [2026-03-11T23:57:33.310Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY/versions/latest {"name":"projects/218009838215/secrets/ANTHROPIC_API_KEY/versions/2","createTime":"2026-03-11T23:42:54.896033Z","state":"ENABLED","replicationStatus":{"automatic":{}},"etag":"\"164cc831eaa7a1\""}
+[debug] [2026-03-11T23:57:33.310Z] Resolved secret version of ANTHROPIC_API_KEY to 2.
+[debug] [2026-03-11T23:57:33.311Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.311Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.311Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 [none]
+[debug] [2026-03-11T23:57:33.430Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 200
+[debug] [2026-03-11T23:57:33.431Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/dawley-asphalt-719 {"projectNumber":"218009838215","projectId":"dawley-asphalt-719","lifecycleState":"ACTIVE","name":"Dawley Asphalt","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2026-03-03T20:10:54.205808Z","parent":{"type":"organization","id":"1014598915443"}}
+[debug] [2026-03-11T23:57:33.431Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.431Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.431Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/218009838215 [none]
+[debug] [2026-03-11T23:57:33.620Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/218009838215 403
+[debug] [2026-03-11T23:57:33.620Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/218009838215 {"error":{"code":403,"message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215","consumer":"projects/218009838215","serviceTitle":"Compute Engine API","service":"compute.googleapis.com","containerInfo":"218009838215"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215"}]}]}}
+[debug] [2026-03-11T23:57:33.621Z] unable to look up default compute service account. Falling back to 218009838215-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215","consumer":"projects/218009838215","serviceTitle":"Compute Engine API","service":"compute.googleapis.com","containerInfo":"218009838215"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/218009838215 had HTTP Error: 403, Compute Engine API has not been used in project 218009838215 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=218009838215 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[info] i  functions: ensuring 218009838215-compute@developer.gserviceaccount.com access to secret ANTHROPIC_API_KEY. 
+[debug] [2026-03-11T23:57:33.621Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.621Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.621Z] >>> [apiv2][query] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY:getIamPolicy [none]
+[debug] [2026-03-11T23:57:33.785Z] <<< [apiv2][status] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY:getIamPolicy 200
+[debug] [2026-03-11T23:57:33.785Z] <<< [apiv2][body] GET https://secretmanager.googleapis.com/v1/projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY:getIamPolicy {"version":1,"etag":"BwZMyDrvBqc=","bindings":[{"role":"roles/secretmanager.secretAccessor","members":["serviceAccount:218009838215-compute@developer.gserviceaccount.com"]}]}
+[info] ✔  secretmanager: Granted roles/secretmanager.secretAccessor on projects/dawley-asphalt-719/secrets/ANTHROPIC_API_KEY to 218009838215-compute@developer.gserviceaccount.com 
+[info] ✔  functions: ensured 218009838215-compute@developer.gserviceaccount.com access to ANTHROPIC_API_KEY. 
+[debug] [2026-03-11T23:57:33.786Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.786Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.787Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/dawley-asphalt-719/billingInfo [none]
+[debug] [2026-03-11T23:57:33.946Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/dawley-asphalt-719/billingInfo 200
+[debug] [2026-03-11T23:57:33.946Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/dawley-asphalt-719/billingInfo {"name":"projects/dawley-asphalt-719/billingInfo","projectId":"dawley-asphalt-719","billingAccountName":"billingAccounts/0129D0-D39D54-B6F129","billingEnabled":true}
+[debug] [2026-03-11T23:57:33.948Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.948Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:33.948Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2026-03-11T23:57:34.345Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2026-03-11T23:57:34.345Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com/db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip?GoogleAccessId=service-218009838215@gcf-admin-robot.iam.gserviceaccount.com&Expires=1773275254&Signature=Orz8wu%2BdvYrCaaiw87CNR%2B%2FQmbYbYPO2QrF%2FHRqlLM5FNkgoGkX7rONqNizCud8WU%2FCTYyimy9YO%2F%2Far356HwVA6FaZ6h8khfg5xK7M%2FVwWhs0uRJisImN8H61HiY0yYE7a2eblwlBTL2ZDttm%2B%2Bz0jxw7S5nsJONHMv3v%2FXCq%2B5KHJpN1qhmcjnyCYo1mV1AdyDhmw4lxbXvx2NhCmGWzh%2B4y8htgSu4byen7KzyjUvZCuqJwE55I5vO4JRO11saIkSFaej%2BHdXd%2B6Yn%2BBDygqH5JJXDMCpexiIY8WzloOAs7bbeODOCfsexuYPDhqsKcELVXfZCRbd6PoUhjpkAA%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com","object":"db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip"}}
+[debug] [2026-03-11T23:57:34.345Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com/db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip GoogleAccessId=service-218009838215%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1773275254&Signature=Orz8wu%2BdvYrCaaiw87CNR%2B%2FQmbYbYPO2QrF%2FHRqlLM5FNkgoGkX7rONqNizCud8WU%2FCTYyimy9YO%2F%2Far356HwVA6FaZ6h8khfg5xK7M%2FVwWhs0uRJisImN8H61HiY0yYE7a2eblwlBTL2ZDttm%2B%2Bz0jxw7S5nsJONHMv3v%2FXCq%2B5KHJpN1qhmcjnyCYo1mV1AdyDhmw4lxbXvx2NhCmGWzh%2B4y8htgSu4byen7KzyjUvZCuqJwE55I5vO4JRO11saIkSFaej%2BHdXd%2B6Yn%2BBDygqH5JJXDMCpexiIY8WzloOAs7bbeODOCfsexuYPDhqsKcELVXfZCRbd6PoUhjpkAA%3D%3D
+[debug] [2026-03-11T23:57:34.345Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com/db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip [stream]
+[debug] [2026-03-11T23:57:34.598Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com/db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip 200
+[debug] [2026-03-11T23:57:34.598Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com/db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip [omitted]
+[info] ✔  functions: functions source uploaded successfully 
+[info] i  functions: updating Node.js 24 (2nd Gen) function processInquiry(us-central1)... 
+[debug] [2026-03-11T23:57:34.602Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:34.602Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:34.603Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
+[debug] [2026-03-11T23:57:34.603Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry {"name":"projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry","buildConfig":{"runtime":"nodejs24","entryPoint":"processInquiry","source":{"storageSource":{"bucket":"gcf-v2-uploads-218009838215.us-central1.cloudfunctions.appspot.com","object":"db1ce11d-20ed-4f7f-8087-d01d21559b6a.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"ANTHROPIC_API_KEY":"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","FIREBASE_CONFIG":"{\"projectId\":\"dawley-asphalt-719\",\"storageBucket\":\"dawley-asphalt-719.firebasestorage.app\"}","GCLOUD_PROJECT":"dawley-asphalt-719","EVENTARC_CLOUD_EVENT_SOURCE":"projects/dawley-asphalt-719/locations/us-central1/services/processInquiry","FUNCTION_TARGET":"processInquiry","LOG_EXECUTION_ID":"true"},"secretEnvironmentVariables":[{"key":"ANTHROPIC_API_KEY","secret":"ANTHROPIC_API_KEY","projectId":"dawley-asphalt-719","version":"2"}],"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","deployment-callable":"true","firebase-functions-hash":"9eaac82ba580e1859a6fdbb37f05f18f818f3d87"}}
+[debug] [2026-03-11T23:57:35.217Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry 400
+[debug] [2026-03-11T23:57:35.217Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry {"error":{"code":400,"message":"Could not update Cloud Run service projects/dawley-asphalt-719/locations/us-central1/services/processinquiry. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: ANTHROPIC_API_KEY","status":"INVALID_ARGUMENT"}}
+[warn] ⚠  functions: Request to https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels had HTTP Error: 400, Could not update Cloud Run service projects/dawley-asphalt-719/locations/us-central1/services/processinquiry. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: ANTHROPIC_API_KEY 
+[warn] ⚠  functions:  failed to update function projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry 
+[error] Failed to update function projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry
+[debug] [2026-03-11T23:57:35.223Z] Total Function Deployment time: 618
+[debug] [2026-03-11T23:57:35.223Z] 1 Functions Deployed
+[debug] [2026-03-11T23:57:35.223Z] 1 Functions Errored
+[debug] [2026-03-11T23:57:35.223Z] 0 Function Deployments Aborted
+[debug] [2026-03-11T23:57:35.223Z] Average Function Deployment time: 617
+[info] 
+[info] Functions deploy had errors with the following functions:
+	processInquiry(us-central1)
+[debug] [2026-03-11T23:57:35.304Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:35.305Z] Checked if tokens are valid: true, expires at: 1773274525422
+[debug] [2026-03-11T23:57:35.305Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1/projects/dawley-asphalt-719/locations/us-central1/repositories/gcf-artifacts [none]
+[debug] [2026-03-11T23:57:35.489Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1/projects/dawley-asphalt-719/locations/us-central1/repositories/gcf-artifacts 200
+[debug] [2026-03-11T23:57:35.490Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1/projects/dawley-asphalt-719/locations/us-central1/repositories/gcf-artifacts {"name":"projects/dawley-asphalt-719/locations/us-central1/repositories/gcf-artifacts","format":"DOCKER","description":"This repository is created and used by Cloud Functions for storing function docker images.","labels":{"goog-managed-by":"cloudfunctions"},"createTime":"2026-03-03T21:17:20.294539Z","updateTime":"2026-03-11T22:30:54.446533Z","mode":"STANDARD_REPOSITORY","cleanupPolicies":{"firebase-functions-cleanup":{"id":"firebase-functions-cleanup","action":"DELETE","condition":{"tagState":"ANY","olderThan":"604800s"}}},"sizeBytes":"121858146","vulnerabilityScanningConfig":{"lastEnableTime":"2026-03-03T21:17:11.924708353Z","enablementState":"SCANNING_DISABLED","enablementStateReason":"API containerscanning.googleapis.com is not enabled."},"satisfiesPzi":true,"registryUri":"us-central1-docker.pkg.dev/dawley-asphalt-719/gcf-artifacts"}
+[debug] [2026-03-11T23:57:35.490Z] Functions deploy failed.
+[debug] [2026-03-11T23:57:35.490Z] {
+  "endpoint": {
+    "id": "processInquiry",
+    "project": "dawley-asphalt-719",
+    "region": "us-central1",
+    "entryPoint": "processInquiry",
+    "platform": "gcfv2",
+    "runtime": "nodejs24",
+    "callableTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "secretEnvironmentVariables": [
+      {
+        "key": "ANTHROPIC_API_KEY",
+        "secret": "ANTHROPIC_API_KEY",
+        "projectId": "dawley-asphalt-719",
+        "version": "2"
+      }
+    ],
+    "serviceAccount": null,
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "ANTHROPIC_API_KEY": "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",
+      "FIREBASE_CONFIG": "{\"projectId\":\"dawley-asphalt-719\",\"storageBucket\":\"dawley-asphalt-719.firebasestorage.app\"}",
+      "GCLOUD_PROJECT": "dawley-asphalt-719",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/dawley-asphalt-719/locations/us-central1/services/processInquiry",
+      "FUNCTION_TARGET": "processInquiry",
+      "LOG_EXECUTION_ID": "true"
+    },
+    "codebase": "default",
+    "runServiceId": "processinquiry",
+    "cpu": 1,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "9eaac82ba580e1859a6fdbb37f05f18f818f3d87"
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "Could not update Cloud Run service projects/dawley-asphalt-719/locations/us-central1/services/processinquiry. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: ANTHROPIC_API_KEY",
+            "status": "INVALID_ARGUMENT"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "Request to https://cloudfunctions.googleapis.com/v2/projects/dawley-asphalt-719/locations/us-central1/functions/processInquiry?updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.secretEnvironmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels had HTTP Error: 400, Could not update Cloud Run service projects/dawley-asphalt-719/locations/us-central1/services/processinquiry. spec.template.spec.containers[0].env: Secret environment variable overlaps non secret environment variable: ANTHROPIC_API_KEY",
+      "status": 400
+    },
+    "status": 400,
+    "code": 400
+  }
+}
+[debug] [2026-03-11T23:57:35.528Z] Error: Failed to update function processInquiry in region us-central1
+    at /usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:440:19
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Fabricator.updateV2Function (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:424:32)
+    at async Fabricator.updateEndpoint (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:160:13)
+    at async handle (/usr/local/share/nvm/versions/node/v24.11.1/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:91:17)
+[error] 
+[error] Error: There was an error deploying functions
