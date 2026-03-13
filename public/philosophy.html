@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philosophy | Dawley Asphalt</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
     <style>
         .philosophy-header {
@@ -30,7 +28,7 @@
         .philosophy-subheadline {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
-            font-weight: 300; /* Removed bold screaming weight */
+            font-weight: 300;
             color: #1A1A1A;
             margin-bottom: 40px;
             letter-spacing: 1px;
@@ -73,6 +71,107 @@
             padding-top: 20px;
             display: inline-block;
         }
+        @keyframes rosieFloat {
+            0%   { transform: translateY(0px); }
+            50%  { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .rosie-circle-launcher {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #1A1A1A;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: rosieFloat 3s ease-in-out infinite;
+        }
+        .rosie-initial {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .rosie-label {
+            font-size: 8px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #rosie-window {
+            display: none;
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 360px;
+            height: 560px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            z-index: 9998;
+            flex-direction: column;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+        .rosie-header {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+        }
+        .rosie-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+            color: #1a1a1a;
+        }
+        .rosie-body {
+            flex-grow: 1;
+            padding: 25px;
+            overflow-y: auto;
+            font-family: 'Source Serif Pro', serif;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #444;
+        }
+        .rosie-footer {
+            padding: 15px;
+            background: #fff;
+            border-top: 1px solid #f0f0f0;
+        }
+        .rosie-input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        #rosie-user-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #rosie-send-btn {
+            background: #1a1a1a;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+        #rosie-send-btn:hover { background: #333; }
     </style>
 </head>
 <body>
@@ -100,14 +199,11 @@
     </div>
 
     <section class="philosophy-content">
-        <p>Since 1994, Dawley Asphalt has operated under a single, unwavering principle: we are working owners. The legacy of quality started over three decades ago is not just a memory—it is the standard enforced on the ground, on every single job site today.</p>
-        
-        <p>We prioritize technical precision, absolute respect for your property, and honest communication from the first handshake to the final roll. For us, integrity is a measurable metric. Whether navigating the granitic sub-base of the Black Forest or engineering for the expansive soils of the eastern plains, our work is quiet, precise, and built to last.</p>
-        
-        <p>We don’t just pave surfaces; we build the infrastructure that supports our neighbors' homes and businesses. Treating every property as if it were our own isn't just a tagline—it is the discipline that has kept our name trusted in Colorado Springs for a generation.</p>
-
+        <p>Dawley Asphalt has been serving the Colorado Springs area for three generations. What began with a grandfather's commitment to honest work has carried forward through every decade, every project, and every handshake since 1952.</p>
+        <p>We are working owners. The standard set by the men who came before is not a memory — it is the benchmark enforced on the ground, on every job site, every day. We prioritize technical precision, absolute respect for your property, and honest communication from the first conversation to the final roll.</p>
+        <p>Whether navigating the granitic sub-base of the Black Forest or engineering for the expansive soils of the eastern plains, our work is quiet, precise, and built to last. We don't just pave surfaces — we build the infrastructure that supports our neighbors' homes and businesses. Three generations of that commitment is not a marketing line. It is a record.</p>
         <div class="signature">
-            EST. 1994 &emsp;|&emsp; COLORADO SPRINGS
+            Third Generation &emsp;|&emsp; EST. 1952 &emsp;|&emsp; COLORADO SPRINGS
         </div>
     </section>
 
@@ -122,5 +218,52 @@
         </div>
     </footer>
 
+    <div class="rosie-circle-launcher" onclick="toggleRosie()">
+        <div class="rosie-initial">R</div>
+        <div class="rosie-label">Rosie</div>
+    </div>
+
+    <div id="rosie-window">
+        <div class="rosie-header">
+            <h3>Rosie &mdash; AI Assistant</h3>
+        </div>
+        <div class="rosie-body" id="rosie-chat-history">
+            <p>Hello, I'm Rosie. How can I help you with your paving project today?</p>
+        </div>
+        <div class="rosie-footer">
+            <div class="rosie-input-row">
+                <input type="text" id="rosie-user-input" placeholder="Ask Rosie...">
+                <button id="rosie-send-btn">&#8593;</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-functions-compat.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyBtiq_VU_wZZlddZXI1Jf7kYZprFK-JBrc",
+            authDomain: "dawley-asphalt-719.firebaseapp.com",
+            projectId: "dawley-asphalt-719",
+            storageBucket: "dawley-asphalt-719.firebasestorage.app",
+            messagingSenderId: "218009838215",
+            appId: "1:218009838215:web:05716c3a34b875e1730e22"
+        });
+    </script>
+    <script src="rosie.js"></script>
+    <script>
+        function toggleRosie() {
+            const win = document.getElementById('rosie-window');
+            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('rosie-user-input').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') sendMessage();
+            });
+            document.getElementById('rosie-send-btn').addEventListener('click', function() {
+                sendMessage();
+            });
+        });
+    </script>
 </body>
 </html>

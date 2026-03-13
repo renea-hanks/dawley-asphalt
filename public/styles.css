@@ -32,7 +32,7 @@ body {
 /* NAVIGATION */
 .main-nav {
     width: 100%;
-    padding: 28px 0;
+    padding: 20px 0;
     background: transparent;
 }
 
@@ -43,10 +43,11 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+    padding: 0 20px;
 }
 
 .logo {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: 4px;
     color: #000000;
@@ -54,7 +55,9 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 28px;
 }
 
 .nav-links a {
@@ -62,7 +65,7 @@ body {
     color: #000000;
     font-weight: 300;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 13px;
     transition: color 0.2s ease;
 }
 
@@ -73,20 +76,20 @@ body {
 /* PRIMARY COPY */
 .primary-copy {
     max-width: 900px;
-    margin: 120px auto 80px auto;
-    padding: 0 40px;
+    margin: 80px auto 60px auto;
+    padding: 0 24px;
     text-align: center;
 }
 
 .primary-copy h1 {
-    font-size: 34px;
+    font-size: 28px;
     font-weight: 300;
     margin-bottom: 10px;
     letter-spacing: 0.5px;
 }
 
 .primary-copy h2 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     margin-bottom: 24px;
     color: #444;
@@ -102,13 +105,13 @@ body {
 /* THE STANDARD */
 .ledger {
     max-width: 1100px;
-    margin: 0 auto 120px auto;
-    padding: 0 40px;
+    margin: 0 auto 80px auto;
+    padding: 0 24px;
     text-align: center;
 }
 
 .ledger h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 300;
     margin-bottom: 40px;
     letter-spacing: 1px;
@@ -175,18 +178,18 @@ body {
 /* HOVER BLOCKS */
 .hover-blocks {
     max-width: 1100px;
-    margin: 0 auto 140px auto;
-    padding: 0 40px;
+    margin: 0 auto 100px auto;
+    padding: 0 24px;
     display: flex;
-    gap: 32px;
+    gap: 24px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .hover-block {
-    flex: 1 1 calc(50% - 32px);
+    flex: 1 1 calc(50% - 24px);
     background: #f7f7f7;
-    padding: 50px 30px;
+    padding: 40px 24px;
     text-decoration: none;
     color: #111111;
     border-radius: 6px;
@@ -195,7 +198,7 @@ body {
 }
 
 .hover-block:hover {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
     box-shadow: 0 14px 28px rgba(0,0,0,0.12);
 }
 
@@ -222,8 +225,8 @@ body {
 /* THE IPHONE GLASS BUTTON */
 .glass-btn {
     position: fixed;
-    bottom: 40px;
-    right: 5%;
+    bottom: 30px;
+    right: 110px;
     padding: 18px 35px;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
@@ -239,6 +242,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     z-index: 2000;
     transition: 0.4s ease;
+    white-space: nowrap;
 }
 
 .glass-btn:hover {
@@ -250,7 +254,7 @@ body {
 
 /* FOOTER */
 .footer {
-    padding: 40px 0;
+    padding: 40px 24px 80px;
     text-align: center;
     font-weight: 300;
     color: #555;
@@ -268,13 +272,36 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .primary-copy {
+        margin: 50px auto 40px;
+    }
+
+    .primary-copy h1 {
+        font-size: 22px;
+    }
+
     .ledger-columns {
         flex-direction: column;
-        text-align: left;
     }
 
     .hover-block {
         flex: 1 1 100%;
+    }
+
+    .nav-links {
+        gap: 14px 20px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .glass-btn {
+        bottom: 20px;
+        right: 100px;
+        padding: 12px 22px;
+        font-size: 8px;
     }
 }

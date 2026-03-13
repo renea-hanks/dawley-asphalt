@@ -9,6 +9,275 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* HOMEPAGE SPECIFIC */
+        .home-statement {
+            max-width: 760px;
+            margin: 100px auto 80px;
+            padding: 0 40px;
+            text-align: center;
+        }
+        .home-statement h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+            color: #111;
+        }
+        .home-statement p {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.15rem;
+            font-weight: 300;
+            line-height: 1.9;
+            color: #333;
+        }
+
+        .home-divider {
+            width: 40px;
+            height: 1px;
+            background: #ccc;
+            margin: 0 auto 90px;
+        }
+
+        /* THREE PILLARS */
+        .pillars {
+            max-width: 1100px;
+            margin: 0 auto 100px;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1px 1fr 1px 1fr;
+            gap: 0 40px;
+        }
+        .pillar {
+            text-align: center;
+            padding: 0 20px;
+        }
+        .pillar-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #999;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .pillar h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 18px;
+            color: #111;
+        }
+        .pillar p {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: #555;
+        }
+        .pillar-divider {
+            background: #e5e5e5;
+            width: 1px;
+        }
+
+        /* BOTTOM CTA */
+        .home-cta {
+            text-align: center;
+            padding: 0 40px 120px;
+        }
+        .home-cta p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            color: #999;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+        .home-cta-btn {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #111;
+            border: 1px solid #111;
+            padding: 16px 36px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s;
+        }
+        .home-cta-btn:hover {
+            background: #111;
+            color: #fff;
+        }
+
+        /* FOOTER */
+        .footer {
+            padding: 40px 24px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            color: #999;
+            border-top: 1px solid #eee;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        .footer-top {
+            margin-bottom: 10px;
+            color: #666;
+        }
+        .footer-bottom {
+            color: #aaa;
+            font-size: 11px;
+        }
+
+        /* ROSIE */
+        @keyframes rosieFloat {
+            0%   { transform: translateY(0px); }
+            50%  { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .rosie-circle-launcher {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #1A1A1A;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: rosieFloat 3s ease-in-out infinite;
+        }
+        .rosie-initial {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 200;
+        }
+        .rosie-label {
+            font-size: 8px;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        #rosie-window {
+            display: none;
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 360px;
+            height: 560px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            z-index: 9998;
+            flex-direction: column;
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+        .rosie-header {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            text-align: center;
+        }
+        .rosie-header h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+            color: #1a1a1a;
+        }
+        .rosie-body {
+            flex-grow: 1;
+            padding: 25px;
+            overflow-y: auto;
+            font-family: 'Source Serif Pro', serif;
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #444;
+        }
+        .rosie-footer {
+            padding: 15px;
+            background: #fff;
+            border-top: 1px solid #f0f0f0;
+        }
+        .rosie-input-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        #rosie-user-input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid #ccc;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 15px;
+            box-sizing: border-box;
+            outline: none;
+        }
+        #rosie-send-btn {
+            background: #1a1a1a;
+            border: none;
+            color: white;
+            padding: 12px 16px;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 1;
+        }
+        #rosie-send-btn:hover { background: #333; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .home-statement {
+                margin: 60px auto 50px;
+                padding: 0 24px;
+            }
+            .home-statement h1 {
+                font-size: 1.5rem;
+            }
+            .home-statement p {
+                font-size: 1rem;
+            }
+            .pillars {
+                grid-template-columns: 1fr;
+                gap: 0;
+                padding: 0 24px;
+                margin-bottom: 70px;
+            }
+            .pillar {
+                padding: 40px 0;
+                border-bottom: 1px solid #eee;
+            }
+            .pillar:last-child {
+                border-bottom: none;
+            }
+            .pillar-divider { display: none; }
+            .home-divider { margin-bottom: 60px; }
+            .home-cta { padding: 0 24px 100px; }
+            #rosie-window {
+                width: calc(100vw - 24px);
+                right: 12px;
+                left: 12px;
+                bottom: 100px;
+                height: 460px;
+            }
+            .rosie-circle-launcher {
+                bottom: 20px;
+                right: 20px;
+                width: 56px;
+                height: 56px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -29,28 +298,44 @@
         </div>
     </nav>
 
-    <section class="primary-copy">
+    <section class="home-statement">
         <h1>The surface is the proof.</h1>
-        <p>Integrity is a measurement, not a slogan. Built on thirty years of local expertise.</p>
+        <p>Three generations of asphalt work in Colorado Springs has taught us one thing above all else: the ground does not forgive shortcuts. Neither do we. Every project we take on becomes part of a permanent record — one that will be driven on, loaded, frozen, thawed, and judged for decades. We intend to pass that judgment.</p>
     </section>
 
-    <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
+    <div class="home-divider"></div>
 
-    <style>
-        .rosie-circle-launcher { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-        .rosie-initial { color: white; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 200; }
-        .rosie-label { font-size: 8px; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; }
-        
-        #rosie-window { display: none; position: fixed; bottom: 110px; right: 30px; width: 360px; height: 580px; background: #FFFFFF; border-radius: 8px; box-shadow: 0 25px 60px rgba(0,0,0,0.15); z-index: 9998; flex-direction: column; border: 1px solid #eee; overflow: hidden; }
-        .rosie-header { padding: 20px; border-bottom: 1px solid #f9f9f9; text-align: center; }
-        .rosie-header h3 { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin: 0; }
-        .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; font-size: 1rem; color: #444; }
-        .rosie-footer { padding: 15px; background: #fff; border-top: 1px solid #f9f9f9; display: flex; flex-direction: column; gap: 10px; }
-        
-        /* THIS IS THE CHAT BOX STYLING */
-        #rosie-user-input { width: 100%; padding: 12px; border: 1px solid #ccc; font-family: 'Source Serif Pro', serif; font-size: 15px; box-sizing: border-box; outline: none; }
-        .context-btn { display: block; width: 100%; padding: 15px; background: #111; color: #fff; text-align: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
-    </style>
+    <section class="pillars">
+        <div class="pillar">
+            <span class="pillar-label">I</span>
+            <h3>The Grade</h3>
+            <p>Proper drainage is engineered before a single ton of material is laid. Water is asphalt's primary adversary. We eliminate the path it would take to destroy your investment.</p>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar">
+            <span class="pillar-label">II</span>
+            <h3>The Mix</h3>
+            <p>Every mix is specified for its load, climate, and intended life. Colorado's freeze-thaw cycles demand precision. We do not use a general-purpose answer where an engineered one is required.</p>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar">
+            <span class="pillar-label">III</span>
+            <h3>The Record</h3>
+            <p>Our portfolio is not a collection of photographs. It is a ledger of decisions made correctly under real conditions. Every project we have built still stands as evidence of that standard.</p>
+        </div>
+    </section>
+
+    <div class="home-cta">
+        <p>Begin with a conversation</p>
+        <a href="https://form.typeform.com/to/FLnFxHJD" class="home-cta-btn">COMPLIMENTARY CONSULT</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp;&middot;&emsp; Colorado Springs, CO &emsp;&middot;&emsp; 719-632-2080</div>
+        <div class="footer-bottom">&copy; Dawley Asphalt &amp; Paving</div>
+    </footer>
+
+    <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
 
     <div class="rosie-circle-launcher" onclick="toggleRosie()">
         <div class="rosie-initial">R</div>
@@ -58,22 +343,46 @@
     </div>
 
     <div id="rosie-window">
-        <div class="rosie-header"><h3>Assistant</h3></div>
+        <div class="rosie-header">
+            <h3>Rosie &mdash; AI Assistant</h3>
+        </div>
         <div class="rosie-body" id="rosie-chat-history">
-            <p>Hello, I’m Rosie. How can I help you with your paving project today?</p>
+            <p>Hello, I'm Rosie. How can I help you with your paving project today?</p>
         </div>
         <div class="rosie-footer">
-            <input type="text" id="rosie-user-input" onkeypress="handleRosieChat(event)" placeholder="Type here and press Enter...">
-            <a href="https://form.typeform.com/to/FLnFxHJD" target="_blank" class="context-btn">Provide Property Context</a>
+            <div class="rosie-input-row">
+                <input type="text" id="rosie-user-input" placeholder="Ask Rosie...">
+                <button id="rosie-send-btn">&#8593;</button>
+            </div>
         </div>
     </div>
 
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-functions-compat.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyBtiq_VU_wZZlddZXI1Jf7kYZprFK-JBrc",
+            authDomain: "dawley-asphalt-719.firebaseapp.com",
+            projectId: "dawley-asphalt-719",
+            storageBucket: "dawley-asphalt-719.firebasestorage.app",
+            messagingSenderId: "218009838215",
+            appId: "1:218009838215:web:05716c3a34b875e1730e22"
+        });
+    </script>
     <script src="rosie.js"></script>
     <script>
         function toggleRosie() {
             const win = document.getElementById('rosie-window');
             win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
         }
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('rosie-user-input').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') sendMessage();
+            });
+            document.getElementById('rosie-send-btn').addEventListener('click', function() {
+                sendMessage();
+            });
+        });
     </script>
 </body>
 </html>

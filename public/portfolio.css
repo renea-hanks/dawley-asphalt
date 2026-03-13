@@ -11,7 +11,7 @@ body {
 /* NAVIGATION */
 .main-nav {
     width: 100%;
-    padding: 28px 0;
+    padding: 20px 0;
     background: transparent;
 }
 
@@ -22,11 +22,12 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+    padding: 0 20px;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     letter-spacing: 4px;
     color: #000000;
@@ -34,7 +35,9 @@ body {
 
 .nav-links {
     display: flex;
-    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
 }
 
 .nav-links a {
@@ -42,9 +45,8 @@ body {
     text-decoration: none;
     color: #333333;
     font-weight: 300;
-    letter-spacing: 3px;
-    font-size: 14px;
-    text-transform: none;
+    letter-spacing: 2px;
+    font-size: 13px;
     transition: color 0.2s ease;
 }
 
@@ -55,50 +57,56 @@ body {
 /* HEADER */
 .portfolio-header {
     max-width: 800px;
-    margin: 80px auto 60px;
-    padding: 0 5%;
+    margin: 60px auto 50px;
+    padding: 0 24px;
     text-align: center;
 }
+
 .portfolio-header h1 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.4rem;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     text-transform: uppercase;
     color: #555;
 }
+
 .subheadline {
     font-family: 'Montserrat', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 300; /* Revised weight */
-    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 24px;
     color: #1A1A1A;
     letter-spacing: 1px;
 }
+
 .portfolio-header p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: #555;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 /* THE TWO LEDGERS */
 .ledger-section {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 50px;
     padding: 0 5%;
     max-width: 1000px;
-    margin: 0 auto 80px;
+    margin: 0 auto 70px;
     flex-wrap: wrap;
 }
+
 .ledger-book {
-    width: 350px;
+    width: 320px;
+    max-width: 100%;
     cursor: pointer;
     text-align: center;
     transition: transform 0.4s ease;
 }
+
 .ledger-book:hover { transform: translateY(-5px); }
 
 .volume-tag {
@@ -109,24 +117,28 @@ body {
     color: #999;
     margin-bottom: 10px;
 }
+
 .ledger-book h2 {
-    font-size: 1.8rem;
-    font-weight: 300; /* Revised weight */
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 16px;
 }
+
 .book-cover {
     width: 100%;
     aspect-ratio: 4/3;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     background: #f5f5f5;
 }
+
 .book-cover img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
+
 .ledger-book:hover .book-cover img { transform: scale(1.05); }
 
 .click-instruction {
@@ -143,7 +155,7 @@ body {
     width: 60px;
     height: 1px;
     background: #ccc;
-    margin: 0 auto 80px;
+    margin: 0 auto 70px;
 }
 
 /* FEATURED PROJECTS */
@@ -155,11 +167,12 @@ body {
     padding: 0 5%;
     width: 100%;
 }
+
 .featured-heading {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem; /* Scaled down */
-    font-weight: 300; /* Revised weight */
-    margin-bottom: 60px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 50px;
     text-align: center;
     width: 100%;
     letter-spacing: 2px;
@@ -167,43 +180,46 @@ body {
 
 .featured-records {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
     width: 100%;
     max-width: 900px;
     margin: 0 auto 80px;
-    justify-content: center;
 }
+
 .record-col {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
 .record-category {
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: #777;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
 }
 
 .archival-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 44px;
     width: 100%;
 }
+
 .portrait-frame {
     width: 60%;
-    max-width: 250px;
+    max-width: 220px;
     aspect-ratio: 2/3;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     background: #f5f5f5;
 }
+
 .portrait-frame img {
     width: 100%;
     height: 100%;
@@ -211,10 +227,11 @@ body {
 }
 
 .archival-card h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 8px;
-    font-weight: 300; /* Revised weight */
+    font-weight: 300;
 }
+
 .archival-card p {
     font-family: 'Montserrat', sans-serif;
     font-size: 11px;
@@ -227,7 +244,9 @@ body {
     text-align: center;
     margin-bottom: 100px;
     width: 100%;
+    padding: 0 24px;
 }
+
 .outline-btn {
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
@@ -235,16 +254,18 @@ body {
     text-decoration: none;
     color: #1A1A1A;
     border: 1px solid #EAEAEA;
-    padding: 15px 30px;
+    padding: 14px 26px;
     transition: 0.3s;
+    display: inline-block;
 }
+
 .outline-btn:hover { border-color: #1A1A1A; }
 
 /* THE IPHONE GLASS BUTTON */
 .glass-btn {
     position: fixed;
-    bottom: 40px;
-    right: 5%;
+    bottom: 30px;
+    right: 110px;
     padding: 18px 35px;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px);
@@ -253,13 +274,14 @@ body {
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
-    font-weight: 300; /* Revised weight */
+    font-weight: 300;
     letter-spacing: 0.2rem;
     color: #000;
     text-decoration: none;
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     z-index: 2000;
     transition: 0.4s ease;
+    white-space: nowrap;
 }
 
 .glass-btn:hover {
@@ -272,17 +294,19 @@ body {
 /* FOOTER */
 .footer {
     text-align: center;
-    padding: 60px 5% 40px;
+    padding: 60px 24px 100px;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 0.1rem;
     color: #999;
     width: 100%;
 }
+
 .footer-top {
     margin-bottom: 10px;
     color: #666;
 }
+
 .footer-bottom {
     color: #aaa;
 }
@@ -290,10 +314,8 @@ body {
 /* MODALS */
 .modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(255, 255, 255, 0.98);
     z-index: 3000;
     display: none;
@@ -302,38 +324,107 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .modal-overlay.active { display: flex; opacity: 1; }
+
 .modal-content {
     max-width: 1000px;
     width: 90%;
     height: 90vh;
     overflow-y: auto;
-    padding: 60px 40px;
+    padding: 60px 24px;
     position: relative;
     text-align: center;
 }
+
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
+    top: 20px; right: 20px;
+    background: none; border: none;
     font-size: 2.5rem;
     cursor: pointer;
     font-weight: 200;
     color: #555;
 }
-.modal-content h2 { font-size: 1.8rem; font-weight: 300; margin-bottom: 40px; }
+
+.modal-content h2 { font-size: 1.6rem; font-weight: 300; margin-bottom: 40px; }
 
 .modal-gallery img {
     width: auto;
     max-width: 100%;
     max-height: 70vh;
-    margin: 0 auto 40px auto; 
-    display: block;          
+    margin: 0 auto 40px auto;
+    display: block;
     object-fit: contain;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .modal-footer { margin-top: 40px; border-top: 1px solid #EAEAEA; padding-top: 40px; }
-.modal-footer p { font-size: 1.2rem; font-weight: 300; color: #555; }
+.modal-footer p { font-size: 1.1rem; font-weight: 300; color: #555; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .portfolio-header {
+        margin: 40px auto 40px;
+    }
+
+    .subheadline {
+        font-size: 1.4rem;
+    }
+
+    .ledger-section {
+        gap: 40px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ledger-book {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .featured-heading {
+        font-size: 1.3rem;
+        margin-bottom: 36px;
+    }
+
+    .featured-records {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .glass-btn {
+        bottom: 20px;
+        right: 100px;
+        padding: 12px 22px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px 16px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 3px;
+    }
+
+    .subheadline {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-header p {
+        font-size: 0.85rem;
+    }
+
+    .ledger-book h2 {
+        font-size: 1.3rem;
+    }
+}

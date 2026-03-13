@@ -4,58 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Portfolio | Dawley Asphalt & Paving</title>
-    
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css">
-    
     <style>
-        /* THE "WHITE LEDGER" OVERRIDE */
-        .modal-overlay {
-            display: none !important;
-            opacity: 0;
-            visibility: hidden;
+
+        /* =====================
+           FLIP OVERLAY (desktop)
+           ===================== */
+        .flip-overlay {
+            display: none;
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.92) !important;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10,10,10,0.97);
+            z-index: 99999;
             justify-content: center;
             align-items: center;
-            z-index: 99999 !important;
-            transition: opacity 0.3s ease;
+            flex-direction: column;
         }
+        .flip-overlay.is-visible { display: flex; }
 
-        .modal-overlay.is-visible {
-            display: flex !important;
-            opacity: 1 !important;
-            visibility: visible !important;
+        .flip-close {
+            position: fixed;
+            top: 20px; right: 28px;
+            color: #fff; font-size: 38px;
+            background: none; border: none;
+            cursor: pointer; line-height: 1;
+            z-index: 100000;
         }
-
-        .modal-content {
-            background: #ffffff !important;
-            color: #111111 !important;
+        .flip-volume-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 5px;
+            text-transform: uppercase; color: #555;
+            margin-bottom: 18px;
+        }
+        .book-stage {
             position: relative;
-            z-index: 100000 !important;
-            width: 90%;
-            max-width: 900px;
-            max-height: 85vh;
-            overflow-y: auto;
-            padding: 40px;
-            border-radius: 2px;
-            box-shadow: 0 30px 90px rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .flip-nav {
+            display: flex; align-items: center;
+            gap: 28px; margin-top: 22px;
+        }
+        .flip-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 3px;
+            text-transform: uppercase; color: #fff;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 9px 22px; cursor: pointer;
+            transition: background 0.3s, border-color 0.3s;
+        }
+        .flip-btn:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.4); }
+        .flip-btn:disabled { opacity: 0.15; cursor: default; }
+        .flip-counter {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 2px;
+            color: #555; min-width: 70px; text-align: center;
         }
 
-        .modal-content h2 { color: #111 !important; font-family: 'Source Serif Pro', serif; margin-bottom: 20px; }
-        .close-btn { color: #999 !important; font-size: 30px; border: none; background: none; cursor: pointer; position: absolute; top: 20px; right: 20px; }
-        .modal-gallery img { width: 100%; margin-bottom: 20px; display: block; }
+        /* =====================
+           MOBILE SWIPE GALLERY
+           ===================== */
+        .swipe-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10,10,10,0.97);
+            z-index: 99999;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .swipe-overlay.is-visible { display: flex; }
+
+        .swipe-close {
+            position: fixed;
+            top: 16px; right: 22px;
+            color: #fff; font-size: 38px;
+            background: none; border: none;
+            cursor: pointer; line-height: 1;
+            z-index: 100000;
+        }
+        .swipe-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 5px;
+            text-transform: uppercase; color: #555;
+            margin-bottom: 14px;
+        }
+        .swipe-track-wrap {
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+        .swipe-track {
+            display: flex;
+            transition: transform 0.35s ease;
+            will-change: transform;
+        }
+        .swipe-slide {
+            flex: 0 0 100vw;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .swipe-slide img {
+            max-width: 96vw;
+            max-height: 62vh;
+            object-fit: contain;
+            display: block;
+        }
+        .swipe-slide .swipe-logo {
+            background: #fff;
+            width: 92vw;
+            padding: 28px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+        }
+        .swipe-slide .swipe-logo img {
+            width: 85%;
+            max-height: unset;
+        }
+        .swipe-nav {
+            display: flex; align-items: center;
+            gap: 24px; margin-top: 20px;
+        }
+        .swipe-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 3px;
+            text-transform: uppercase; color: #fff;
+            background: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 20px; cursor: pointer;
+        }
+        .swipe-btn:disabled { opacity: 0.15; }
+        .swipe-counter {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px; letter-spacing: 2px;
+            color: #555; min-width: 60px; text-align: center;
+        }
+
+        /* ROSIE */
+        @keyframes rosieFloat {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-8px); }
+        }
+        .rosie-circle-launcher {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 65px; height: 65px; background: #1A1A1A;
+            border-radius: 50%; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+            cursor: pointer; z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: rosieFloat 3s ease-in-out infinite;
+        }
+        .rosie-initial { color:#fff; font-family:'Montserrat',sans-serif; font-size:22px; font-weight:200; }
+        .rosie-label   { font-size:8px; color:#fff; text-transform:uppercase; letter-spacing:1px; font-family:'Montserrat',sans-serif; }
+        #rosie-window  {
+            display:none; position:fixed; bottom:110px; right:30px;
+            width:360px; height:560px; background:#fff;
+            border-radius:8px; box-shadow:0 25px 60px rgba(0,0,0,0.15);
+            z-index:9998; flex-direction:column; border:1px solid #eee; overflow:hidden;
+        }
+        .rosie-header  { padding:20px; border-bottom:1px solid #f0f0f0; text-align:center; }
+        .rosie-header h3 { font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:4px; text-transform:uppercase; margin:0; color:#1a1a1a; }
+        .rosie-body    { flex-grow:1; padding:25px; overflow-y:auto; font-family:'Source Serif Pro',serif; line-height:1.6; font-size:1rem; color:#444; }
+        .rosie-footer  { padding:15px; background:#fff; border-top:1px solid #f0f0f0; }
+        .rosie-input-row { display:flex; gap:8px; align-items:center; }
+        #rosie-user-input { flex:1; padding:12px; border:1px solid #ccc; font-family:'Source Serif Pro',serif; font-size:15px; box-sizing:border-box; outline:none; }
+        #rosie-send-btn { background:#1a1a1a; border:none; color:#fff; padding:12px 16px; cursor:pointer; font-size:18px; line-height:1; }
+        #rosie-send-btn:hover { background:#333; }
+
+        @media (max-width: 600px) {
+            #rosie-window {
+                width: calc(100vw - 24px);
+                right: 12px; left: 12px;
+                bottom: 100px; height: 460px;
+            }
+            .rosie-circle-launcher {
+                bottom: 20px; right: 20px;
+                width: 56px; height: 56px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <nav class="main-nav">
         <div class="nav-inner">
-            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DAWLEY ASPHALT</a></div>
+            <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">DAWLEY ASPHALT</a></div>
             <div class="nav-links">
                 <a href="philosophy.html">Philosophy</a>
                 <a href="portfolio.html">Portfolio</a>
@@ -73,7 +216,7 @@
     </header>
 
     <section class="ledger-section">
-        <div class="ledger-book" id="trigger-commercial" style="cursor: pointer;">
+        <div class="ledger-book" id="trigger-commercial" style="cursor:pointer;">
             <span class="volume-tag">VOLUME I</span>
             <h2>Commercial</h2>
             <div class="book-cover">
@@ -81,8 +224,7 @@
             </div>
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
-
-        <div class="ledger-book" id="trigger-private" style="cursor: pointer;">
+        <div class="ledger-book" id="trigger-private" style="cursor:pointer;">
             <span class="volume-tag">VOLUME II</span>
             <h2>Private Estates</h2>
             <div class="book-cover">
@@ -99,39 +241,26 @@
         <div class="featured-records">
             <div class="record-col">
                 <h3 class="record-category">Commercial</h3>
-                
                 <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex">
-                    </div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex"></div>
                     <h4>Project: Industrial Complex</h4>
                     <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
                 </div>
-
                 <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure">
-                    </div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure"></div>
                     <h4>Project: Retail Infrastructure</h4>
                     <p>Focus: High-Volume Wear Course. Precision grading for moisture drainage.</p>
                 </div>
             </div>
-
             <div class="record-col">
                 <h3 class="record-category">Private Estates</h3>
-                
                 <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines">
-                    </div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines"></div>
                     <h4>Project: Cathedral Pines</h4>
                     <p>Focus: Subgrade Stabilization. Engineered for forest terrain and freeze-thaw cycles.</p>
                 </div>
-
                 <div class="archival-card">
-                    <div class="portrait-frame">
-                        <img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate">
-                    </div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate"></div>
                     <h4>Project: Foothills Estate</h4>
                     <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
                 </div>
@@ -150,93 +279,303 @@
         <div class="footer-bottom">© Dawley Asphalt &amp; Paving</div>
     </footer>
 
-    <div id="commercial-modal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('commercial-modal')">&times;</button>
-            <h2>Volume I: Commercial</h2>
-            <div class="modal-gallery">
-                <img src="portfolio/commercial/cover.jpg">
-                <img src="portfolio/commercial/page-1.jpg">
-                <img src="portfolio/commercial/page-2.jpg">
-                <img src="portfolio/commercial/page-3.jpg">
-                <img src="portfolio/commercial/page-4.jpg">
-                <img src="portfolio/commercial/page-5.jpg">
-                <img src="portfolio/commercial/page-6.jpg">
-                <img src="portfolio/commercial/final.jpg">
+    <!-- DESKTOP FLIPBOOK: COMMERCIAL -->
+    <div id="flip-commercial" class="flip-overlay">
+        <button class="flip-close" onclick="closeFlip('commercial')">&times;</button>
+        <div class="flip-volume-label">Volume I &mdash; Commercial</div>
+        <div class="book-stage"><div id="book-commercial"></div></div>
+        <div class="flip-nav">
+            <button class="flip-btn" id="prev-commercial" onclick="flipPrev('commercial')" disabled>&#8592; PREV</button>
+            <div class="flip-counter" id="counter-commercial"></div>
+            <button class="flip-btn" id="next-commercial" onclick="flipNext('commercial')">NEXT &#8594;</button>
+        </div>
+    </div>
+
+    <!-- DESKTOP FLIPBOOK: PRIVATE -->
+    <div id="flip-private" class="flip-overlay">
+        <button class="flip-close" onclick="closeFlip('private')">&times;</button>
+        <div class="flip-volume-label">Volume II &mdash; Private Estates</div>
+        <div class="book-stage"><div id="book-private"></div></div>
+        <div class="flip-nav">
+            <button class="flip-btn" id="prev-private" onclick="flipPrev('private')" disabled>&#8592; PREV</button>
+            <div class="flip-counter" id="counter-private"></div>
+            <button class="flip-btn" id="next-private" onclick="flipNext('private')">NEXT &#8594;</button>
+        </div>
+    </div>
+
+    <!-- MOBILE SWIPE GALLERY: COMMERCIAL -->
+    <div id="swipe-commercial" class="swipe-overlay">
+        <button class="swipe-close" onclick="closeSwipe('commercial')">&times;</button>
+        <div class="swipe-label">Volume I &mdash; Commercial</div>
+        <div class="swipe-track-wrap">
+            <div class="swipe-track" id="swipe-track-commercial">
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-1.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-2.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-3.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-4.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-5.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-6.jpg" alt=""></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+            </div>
+        </div>
+        <div class="swipe-nav">
+            <button class="swipe-btn" id="swipe-prev-commercial" onclick="swipePrev('commercial')" disabled>&#8592; PREV</button>
+            <div class="swipe-counter" id="swipe-counter-commercial">1 / 8</div>
+            <button class="swipe-btn" id="swipe-next-commercial" onclick="swipeNext('commercial')">NEXT &#8594;</button>
+        </div>
+    </div>
+
+    <!-- MOBILE SWIPE GALLERY: PRIVATE -->
+    <div id="swipe-private" class="swipe-overlay">
+        <button class="swipe-close" onclick="closeSwipe('private')">&times;</button>
+        <div class="swipe-label">Volume II &mdash; Private Estates</div>
+        <div class="swipe-track-wrap">
+            <div class="swipe-track" id="swipe-track-private">
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-1.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-2.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-3.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-4.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-5.jpg" alt=""></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-6.jpg" alt=""></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+            </div>
+        </div>
+        <div class="swipe-nav">
+            <button class="swipe-btn" id="swipe-prev-private" onclick="swipePrev('private')" disabled>&#8592; PREV</button>
+            <div class="swipe-counter" id="swipe-counter-private">1 / 8</div>
+            <button class="swipe-btn" id="swipe-next-private" onclick="swipeNext('private')">NEXT &#8594;</button>
+        </div>
+    </div>
+
+    <!-- ROSIE -->
+    <div class="rosie-circle-launcher" onclick="toggleRosie()">
+        <div class="rosie-initial">R</div>
+        <div class="rosie-label">Rosie</div>
+    </div>
+    <div id="rosie-window">
+        <div class="rosie-header"><h3>Rosie &mdash; AI Assistant</h3></div>
+        <div class="rosie-body" id="rosie-chat-history">
+            <p>Hello, I'm Rosie. How can I help you with your paving project today?</p>
+        </div>
+        <div class="rosie-footer">
+            <div class="rosie-input-row">
+                <input type="text" id="rosie-user-input" placeholder="Ask Rosie...">
+                <button id="rosie-send-btn">&#8593;</button>
             </div>
         </div>
     </div>
 
-    <div id="private-modal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-btn" onclick="closeModal('private-modal')">&times;</button>
-            <h2>Volume II: Private Estates</h2>
-            <div class="modal-gallery">
-                <img src="portfolio/private/cover.jpg">
-                <img src="portfolio/private/page-1.jpg">
-                <img src="portfolio/private/page-2.jpg">
-                <img src="portfolio/private/page-3.jpg">
-                <img src="portfolio/private/page-4.jpg">
-                <img src="portfolio/private/page-5.jpg">
-                <img src="portfolio/private/page-6.jpg">
-                <img src="portfolio/private/final.jpg">
-            </div>
-        </div>
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-functions-compat.js"></script>
     <script>
-        const commModal = document.getElementById('commercial-modal');
-        const privModal = document.getElementById('private-modal');
+        firebase.initializeApp({
+            apiKey: "AIzaSyBtiq_VU_wZZlddZXI1Jf7kYZprFK-JBrc",
+            authDomain: "dawley-asphalt-719.firebaseapp.com",
+            projectId: "dawley-asphalt-719",
+            storageBucket: "dawley-asphalt-719.firebasestorage.app",
+            messagingSenderId: "218009838215",
+            appId: "1:218009838215:web:05716c3a34b875e1730e22"
+        });
+    </script>
+    <script src="rosie.js"></script>
+    <script>
+        const isMobile = () => window.innerWidth < 600;
 
-        document.getElementById('trigger-commercial').onclick = function() {
-            commModal.classList.add('is-visible');
-            document.body.style.overflow = 'hidden';
+        /* =====================
+           DESKTOP FLIPBOOK
+           using loadFromImages — most reliable method
+           ===================== */
+        const BOOK_IMAGES = {
+            commercial: [
+                'images/Dawley Asphalt.png',
+                'portfolio/commercial/page-1.jpg',
+                'portfolio/commercial/page-2.jpg',
+                'portfolio/commercial/page-3.jpg',
+                'portfolio/commercial/page-4.jpg',
+                'portfolio/commercial/page-5.jpg',
+                'portfolio/commercial/page-6.jpg',
+                'images/Dawley Asphalt.png'
+            ],
+            private: [
+                'images/Dawley Asphalt.png',
+                'portfolio/private/page-1.jpg',
+                'portfolio/private/page-2.jpg',
+                'portfolio/private/page-3.jpg',
+                'portfolio/private/page-4.jpg',
+                'portfolio/private/page-5.jpg',
+                'portfolio/private/page-6.jpg',
+                'images/Dawley Asphalt.png'
+            ]
         };
 
-        document.getElementById('trigger-private').onclick = function() {
-            privModal.classList.add('is-visible');
-            document.body.style.overflow = 'hidden';
-        };
+        const pageFlips = {};
 
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('is-visible');
+        function getBookSize() {
+            const maxW = Math.min(window.innerWidth * 0.88, 900);
+            const w    = Math.floor(maxW / 2);
+            const h    = Math.floor(w * (9 / 16));
+            return { width: w, height: h };
+        }
+
+        function updateCounter(name) {
+            const pf = pageFlips[name];
+            if (!pf) return;
+            const current = pf.getCurrentPageIndex();
+            const total   = pf.getPageCount();
+            document.getElementById('counter-' + name).textContent = (current + 1) + ' / ' + total;
+            document.getElementById('prev-' + name).disabled = current === 0;
+            document.getElementById('next-' + name).disabled = current >= total - 1;
+        }
+
+        function openFlip(name) {
+            document.getElementById('flip-' + name).classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+
+            if (pageFlips[name]) {
+                pageFlips[name].destroy();
+                delete pageFlips[name];
+            }
+
+            const container = document.getElementById('book-' + name);
+            container.innerHTML = '';
+
+            const { width, height } = getBookSize();
+            container.style.width  = (width * 2) + 'px';
+            container.style.height = height + 'px';
+
+            const pf = new St.PageFlip(container, {
+                width, height,
+                size: 'fixed',
+                minWidth: width, maxWidth: width,
+                minHeight: height, maxHeight: height,
+                drawShadow: true,
+                flippingTime: 700,
+                usePortrait: false,
+                startZIndex: 0,
+                autoSize: false,
+                showCover: false,
+                mobileScrollSupport: false,
+                swipeDistance: 30,
+                clickEventForward: true,
+                useMouseEvents: true
+            });
+
+            pf.loadFromImages(BOOK_IMAGES[name]);
+            pf.on('flip', () => updateCounter(name));
+            pf.on('changeState', () => updateCounter(name));
+            pageFlips[name] = pf;
+            setTimeout(() => updateCounter(name), 300);
+        }
+
+        function closeFlip(name) {
+            document.getElementById('flip-' + name).classList.remove('is-visible');
             document.body.style.overflow = 'auto';
         }
 
-        window.onclick = function(e) {
-            if (e.target.classList.contains('modal-overlay')) {
-                commModal.classList.remove('is-visible');
-                privModal.classList.remove('is-visible');
-                document.body.style.overflow = 'auto';
-            }
-        };
-    </script>
+        function flipNext(name) {
+            if (pageFlips[name]) { pageFlips[name].flipNext('bottom'); setTimeout(() => updateCounter(name), 750); }
+        }
+        function flipPrev(name) {
+            if (pageFlips[name]) { pageFlips[name].flipPrev('bottom'); setTimeout(() => updateCounter(name), 750); }
+        }
 
-    <style>
-        .rosie-circle-launcher { position: fixed; bottom: 126px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 10000; animation: rosieFloat 4s ease-in-out infinite; border: 1px solid rgba(255,255,255,0.1); }
-        @keyframes rosieFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        #rosie-window { display: none; position: fixed; bottom: 206px; right: 30px; width: 360px; height: 500px; background: #fff; border-radius: 4px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); z-index: 10001; flex-direction: column; border: 1px solid #eee; overflow: hidden; }
-        .rosie-header { padding: 20px; border-bottom: 1px solid #f9f9f9; text-align: center; }
-        .rosie-header h3 { font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin: 0; }
-        .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; color: #444; }
-        .rosie-input-area { padding: 20px; border-top: 1px solid #f0f0f0; }
-        .rosie-input-area input { width: 100%; padding: 12px; border: 1px solid #eee; font-family: 'Montserrat', sans-serif; font-size: 12px; margin-bottom: 10px; outline: none; }
-        .context-btn-rosie { display: block; width: 100%; padding: 15px; background: #111; color: #fff; text-align: center; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; }
-    </style>
-    <div class="rosie-circle-launcher" onclick="document.getElementById('rosie-window').style.display = (document.getElementById('rosie-window').style.display === 'flex' ? 'none' : 'flex')">
-        <div style="color:white; font-family:'Montserrat'; font-size:22px; font-weight:200;">R</div>
-        <div style="color:white; font-family:'Montserrat'; font-size:8px; text-transform:uppercase; letter-spacing:1px;">Rosie</div>
-    </div>
-    <div id="rosie-window">
-        <div class="rosie-header"><h3>Assistant</h3></div>
-        <div class="rosie-body" id="rosie-chat-history">
-            <p>Hello, I’m Rosie, your AI Assistant.</p>
-            <p>How may I assist you today?</p>
-        </div>
-        <div class="rosie-input-area">
-            <input type="text" id="rosie-user-input" placeholder="Ask a question..." onkeypress="if(event.key === 'Enter') { document.getElementById('rosie-chat-history').innerHTML += '<p style=\'text-align:right; font-style:italic; color:#888; margin-top:10px;\'>' + this.value + '</p><p>I hear you. I am being prepared with Jerry\'s engineering standards to answer you. For now, please use the button below.</p>'; this.value=''; }">
-            <a href="https://form.typeform.com/to/FLnFxHJD" class="context-btn-rosie">Provide Property Context</a>
-        </div>
-    </div>
+        /* =====================
+           MOBILE SWIPE GALLERY
+           ===================== */
+        const swipeState  = { commercial: 0, private: 0 };
+        const swipeTotals = { commercial: 8, private: 8 };
+
+        function openSwipe(name) {
+            swipeState[name] = 0;
+            document.getElementById('swipe-' + name).classList.add('is-visible');
+            document.body.style.overflow = 'hidden';
+            renderSwipe(name);
+            initSwipeTouch(name);
+        }
+
+        function closeSwipe(name) {
+            document.getElementById('swipe-' + name).classList.remove('is-visible');
+            document.body.style.overflow = 'auto';
+        }
+
+        function renderSwipe(name) {
+            const i     = swipeState[name];
+            const total = swipeTotals[name];
+            document.getElementById('swipe-track-' + name).style.transform = `translateX(-${i * 100}vw)`;
+            document.getElementById('swipe-counter-' + name).textContent   = (i + 1) + ' / ' + total;
+            document.getElementById('swipe-prev-' + name).disabled = i === 0;
+            document.getElementById('swipe-next-' + name).disabled = i >= total - 1;
+        }
+
+        function swipeNext(name) {
+            if (swipeState[name] < swipeTotals[name] - 1) { swipeState[name]++; renderSwipe(name); }
+        }
+        function swipePrev(name) {
+            if (swipeState[name] > 0) { swipeState[name]--; renderSwipe(name); }
+        }
+
+        function initSwipeTouch(name) {
+            const wrap = document.querySelector('#swipe-' + name + ' .swipe-track-wrap');
+            let startX = 0;
+            wrap.ontouchstart = e => { startX = e.touches[0].clientX; };
+            wrap.ontouchend   = e => {
+                const dx = e.changedTouches[0].clientX - startX;
+                if (dx < -40) swipeNext(name);
+                if (dx >  40) swipePrev(name);
+            };
+        }
+
+        /* =====================
+           ROUTING
+           ===================== */
+        document.getElementById('trigger-commercial').onclick = () => {
+            isMobile() ? openSwipe('commercial') : openFlip('commercial');
+        };
+        document.getElementById('trigger-private').onclick = () => {
+            isMobile() ? openSwipe('private') : openFlip('private');
+        };
+
+        document.querySelectorAll('.flip-overlay').forEach(el => {
+            el.addEventListener('click', e => {
+                if (e.target === el) closeFlip(el.id.replace('flip-', ''));
+            });
+        });
+        document.querySelectorAll('.swipe-overlay').forEach(el => {
+            el.addEventListener('click', e => {
+                if (e.target === el) closeSwipe(el.id.replace('swipe-', ''));
+            });
+        });
+
+        document.addEventListener('keydown', e => {
+            const fn = document.getElementById('flip-commercial').classList.contains('is-visible') ? 'commercial'
+                     : document.getElementById('flip-private').classList.contains('is-visible')    ? 'private' : null;
+            const sn = document.getElementById('swipe-commercial').classList.contains('is-visible') ? 'commercial'
+                     : document.getElementById('swipe-private').classList.contains('is-visible')    ? 'private' : null;
+            if (fn) {
+                if (e.key === 'ArrowRight') flipNext(fn);
+                if (e.key === 'ArrowLeft')  flipPrev(fn);
+                if (e.key === 'Escape')     closeFlip(fn);
+            }
+            if (sn) {
+                if (e.key === 'ArrowRight') swipeNext(sn);
+                if (e.key === 'ArrowLeft')  swipePrev(sn);
+                if (e.key === 'Escape')     closeSwipe(sn);
+            }
+        });
+
+        function toggleRosie() {
+            const win = document.getElementById('rosie-window');
+            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('rosie-user-input').addEventListener('keydown', e => {
+                if (e.key === 'Enter') sendMessage();
+            });
+            document.getElementById('rosie-send-btn').addEventListener('click', () => sendMessage());
+        });
+    </script>
 </body>
 </html>
