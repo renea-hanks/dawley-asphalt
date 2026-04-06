@@ -51,3 +51,29 @@ window.addEventListener('click', function(event) {
         window.closeModal(openModalId);
     }
 });
+
+// Featured Project image clicks
+document.addEventListener('DOMContentLoaded', function() {
+
+    // Commercial → main blog
+    document.querySelectorAll('.record-col:first-child .portrait-frame img').forEach(function(img) {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            window.open('https://dawleyasphalt.blog/', '_blank');
+        });
+    });
+
+    // Private Estates → private estates page
+    document.querySelectorAll('.record-col:last-child .portrait-frame img').forEach(function(img) {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            window.open('https://dawleyasphalt.blog/project-portfolio-private-estates/', '_blank');
+        });
+    });
+
+    // View More Projects → main blog
+    document.querySelector('.outline-btn').addEventListener('click', function() {
+        window.open('https://dawleyasphalt.blog/', '_blank');
+    });
+
+});
