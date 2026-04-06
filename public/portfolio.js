@@ -55,6 +55,7 @@ document.querySelectorAll('.record-col:last-child .portrait-frame img').forEach(
 });
 
 // View More Projects → main blog
-document.querySelector('.outline-btn').addEventListener('click', function() {
+document.querySelector('.outline-btn').addEventListener('click', function(e) {
+    e.preventDefault();
     window.open('https://dawleyasphalt.blog/', '_blank');
 });

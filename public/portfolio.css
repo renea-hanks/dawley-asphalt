@@ -257,6 +257,7 @@ body {
     padding: 14px 26px;
     transition: 0.3s;
     display: inline-block;
+    cursor: pointer;
 }
 
 .outline-btn:hover { border-color: #1A1A1A; }
