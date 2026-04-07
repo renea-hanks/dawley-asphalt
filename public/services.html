@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
- 
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPX3E9FRWL"></script>
     <script>
@@ -11,7 +11,7 @@
       gtag('js', new Date());
       gtag('config', 'G-HPX3E9FRWL');
     </script>
- 
+
     <!-- Schema Markup -->
     <script type="application/ld+json">
     {
@@ -88,7 +88,7 @@
       "slogan": "The surface is the proof."
     }
     </script>
- 
+
     <!-- BreadcrumbList -->
     <script type="application/ld+json">
     {
@@ -100,7 +100,7 @@
       ]
     }
     </script>
- 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Services | Dawley Asphalt</title>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -109,140 +109,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .services-header {
-            max-width: 800px;
-            margin: 100px auto 40px;
-            text-align: center;
-            padding: 0 5%;
-        }
-        .services-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
-            letter-spacing: 0.4rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: #555;
-        }
-        .services-subheadline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 300;
-            color: #1A1A1A;
-            margin-bottom: 40px;
-            letter-spacing: 1px;
-        }
-        .services-container {
-            max-width: 1000px;
-            margin: 0 auto 100px;
-            padding: 0 5%;
-        }
-        .service-block {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 40px;
-            margin-bottom: 100px;
-            align-items: start;
-        }
-        .service-label h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            letter-spacing: 0.2rem;
-            text-transform: uppercase;
-            color: #1A1A1A;
-            font-weight: 400;
-            margin-top: 8px;
-            margin-bottom: 20px;
-        }
-        .service-image-slot {
-            width: 100%;
-            aspect-ratio: 3/2;
-            background: #f7f7f7;
-            overflow: hidden;
-            border-radius: 2px;
-        }
-        .service-image-slot img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(20%);
-            transition: 0.5s ease;
-        }
-        .service-image-slot img:hover { filter: grayscale(0%); }
-        .service-detail h4 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            color: #111;
-        }
-        .service-detail p {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #444;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-        .service-list {
-            list-style: none;
-            padding: 0;
-        }
-        .service-list li {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .service-list li::before {
-            content: "—";
-            margin-right: 10px;
-            color: #ccc;
-        }
-        @media (max-width: 768px) {
-            .service-block { grid-template-columns: 1fr; gap: 30px; }
-        }
-        @keyframes rosieFloat {
-            0%   { transform: translateY(0px); }
-            50%  { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
-        .rosie-circle-launcher {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #1A1A1A;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            animation: rosieFloat 3s ease-in-out infinite;
-        }
+        .services-header { max-width: 800px; margin: 100px auto 40px; text-align: center; padding: 0 5%; }
+        .services-header h1 { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; letter-spacing: 0.4rem; font-weight: 300; margin-bottom: 20px; text-transform: uppercase; color: #555; }
+        .services-subheadline { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 300; color: #1A1A1A; margin-bottom: 40px; letter-spacing: 1px; }
+        .services-container { max-width: 1000px; margin: 0 auto 100px; padding: 0 5%; }
+        .service-block { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; margin-bottom: 100px; align-items: start; }
+        .service-label h3 { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.2rem; text-transform: uppercase; color: #1A1A1A; font-weight: 400; margin-top: 8px; margin-bottom: 20px; }
+        .service-image-slot { width: 100%; aspect-ratio: 3/2; background: #f7f7f7; overflow: hidden; border-radius: 2px; display: block; }
+        .service-image-slot img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(20%); transition: 0.5s ease; display: block; }
+        .service-image-slot:hover img { filter: grayscale(0%); }
+        .service-detail h4 { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 300; margin-bottom: 20px; color: #111; }
+        .service-detail p { font-family: 'Source Serif Pro', serif; font-size: 1.05rem; line-height: 1.8; color: #444; font-weight: 300; margin-bottom: 20px; }
+        .service-list { list-style: none; padding: 0; }
+        .service-list li { font-family: 'Montserrat', sans-serif; font-size: 12px; color: #777; margin-bottom: 10px; display: flex; align-items: center; }
+        .service-list li::before { content: "—"; margin-right: 10px; color: #ccc; }
+        @media (max-width: 768px) { .service-block { grid-template-columns: 1fr; gap: 30px; } }
+        @keyframes rosieFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .rosie-circle-launcher { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: rosieFloat 3s ease-in-out infinite; }
         .rosie-initial { color: white; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 200; }
         .rosie-label { font-size: 8px; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; }
-        #rosie-window {
-            display: none;
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            width: 360px;
-            height: 560px;
-            background: #FFFFFF;
-            border-radius: 8px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-            z-index: 9998;
-            flex-direction: column;
-            border: 1px solid #eee;
-            overflow: hidden;
-        }
+        #rosie-window { display: none; position: fixed; bottom: 110px; right: 30px; width: 360px; height: 560px; background: #FFFFFF; border-radius: 8px; box-shadow: 0 25px 60px rgba(0,0,0,0.15); z-index: 9998; flex-direction: column; border: 1px solid #eee; overflow: hidden; }
         .rosie-header { padding: 20px; border-bottom: 1px solid #f0f0f0; text-align: center; }
         .rosie-header h3 { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin: 0; color: #1a1a1a; }
         .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; font-size: 1rem; color: #444; }
@@ -254,7 +140,7 @@
     </style>
 </head>
 <body>
- 
+
     <nav class="main-nav">
         <div class="nav-inner">
             <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DAWLEY ASPHALT</a></div>
@@ -267,19 +153,21 @@
             </div>
         </div>
     </nav>
- 
+
     <header class="services-header">
         <h1>Services</h1>
         <h2 class="services-subheadline">Asphalt Paving Infrastructure with Intention.</h2>
     </header>
- 
+
     <section class="services-container">
+
+        <!-- 01 / Residential -->
         <div class="service-block">
             <div class="service-label">
                 <h3>01 / Residential</h3>
-                <div class="service-image-slot">
+                <a href="https://dawleyasphalt.blog/project-portfolio-private-estates/" target="_blank" rel="noopener" class="service-image-slot">
                     <img src="residential-service.jpg" alt="Residential Asphalt Service">
-                </div>
+                </a>
             </div>
             <div class="service-detail">
                 <h4>Private Estates & Driveways</h4>
@@ -292,13 +180,14 @@
                 </ul>
             </div>
         </div>
- 
+
+        <!-- 02 / Commercial -->
         <div class="service-block">
             <div class="service-label">
                 <h3>02 / Commercial</h3>
-                <div class="service-image-slot">
+                <a href="https://dawleyasphalt.blog/" target="_blank" rel="noopener" class="service-image-slot">
                     <img src="commercial-service.jpg" alt="Commercial Asphalt Infrastructure">
-                </div>
+                </a>
             </div>
             <div class="service-detail">
                 <h4>Industrial & Retail Infrastructure</h4>
@@ -311,13 +200,14 @@
                 </ul>
             </div>
         </div>
- 
+
+        <!-- 03 / Scope -->
         <div class="service-block">
             <div class="service-label">
                 <h3>03 / Scope</h3>
-                <div class="service-image-slot">
+                <a href="https://dawleyasphalt.blog/project-portfolio-private-estates/" target="_blank" rel="noopener" class="service-image-slot">
                     <img src="scope-service.jpg" alt="Technical Dirt Work and Grading">
-                </div>
+                </a>
             </div>
             <div class="service-detail">
                 <h4>Finish Work & Partnerships</h4>
@@ -330,21 +220,22 @@
                 </ul>
             </div>
         </div>
+
     </section>
- 
+
     <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
- 
+
     <footer class="footer">
         <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; 719-632-2080</div>
         <div class="footer-bottom">© Dawley Asphalt &amp; Paving — Colorado Springs, CO</div>
         <div class="footer-bottom"><a href="legal.html" style="color:inherit;text-decoration:none;opacity:0.5;">Privacy &amp; Terms</a></div>
     </footer>
- 
+
     <div class="rosie-circle-launcher" onclick="toggleRosie()">
         <div class="rosie-initial">R</div>
         <div class="rosie-label">Rosie</div>
     </div>
- 
+
     <div id="rosie-window">
         <div class="rosie-header">
             <h3>Rosie &mdash; AI Assistant</h3>
@@ -359,7 +250,7 @@
             </div>
         </div>
     </div>
- 
+
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-functions-compat.js"></script>
     <script>
