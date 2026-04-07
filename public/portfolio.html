@@ -4,13 +4,102 @@
     <meta charset="UTF-8">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HPX3E9FRWL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-HPX3E9FRWL');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPX3E9FRWL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HPX3E9FRWL');
+    </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "PavingContractor"],
+      "name": "Dawley Asphalt & Paving",
+      "url": "https://dawleyasphalt.com",
+      "telephone": "+17196322080",
+      "description": "Dawley Asphalt & Paving provides commercial parking lot paving and residential driveway paving in Colorado Springs, CO and surrounding areas. Licensed and insured with over 50 years of experience.",
+      "foundingYear": "1972",
+      "sameAs": [
+        "https://www.facebook.com/coloradoasphalt/",
+        "https://www.instagram.com/dawleyasphalt/",
+        "https://www.pinterest.com/dawleyasphalt/",
+        "https://www.youtube.com/@dawleyasphalt",
+        "https://www.linkedin.com/in/jerry-dawley-5920277a/",
+        "https://www.bbb.org/us/co/colorado-springs/profile/asphalt/james-dawley-asphalt-paving-services-0785-6322080"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "A+",
+        "bestRating": "A+",
+        "ratingCount": "1",
+        "reviewAspect": "BBB Accredited Business — BBB of Southern Colorado"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Colorado Springs", "sameAs": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado" },
+        { "@type": "Place", "name": "Black Forest, Colorado" },
+        { "@type": "Place", "name": "Gleneagle, Colorado" },
+        { "@type": "Place", "name": "Manitou Springs, Colorado" },
+        { "@type": "Place", "name": "Green Mountain Falls, Colorado" },
+        { "@type": "Place", "name": "Woodland Park, Colorado" },
+        { "@type": "Place", "name": "Security-Widefield, Colorado" },
+        { "@type": "Place", "name": "Fountain, Colorado" },
+        { "@type": "Place", "name": "Eastonville, Colorado" },
+        { "@type": "Place", "name": "Peyton, Colorado" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Asphalt Paving Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Parking Lot Paving",
+              "description": "Commercial parking lot paving, repair, and replacement in Colorado Springs, CO."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Driveway Paving",
+              "description": "Residential asphalt driveway paving in Colorado Springs, CO."
+            }
+          }
+        ]
+      },
+      "slogan": "The surface is the proof."
+    }
+    </script>
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dawleyasphalt.com" },
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://dawleyasphalt.com/portfolio.html" }
+      ]
+    }
+    </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Portfolio | Dawley Asphalt & Paving</title>
@@ -19,10 +108,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css">
     <style>
-
-        /* =====================
-           FLIP OVERLAY (desktop)
-           ===================== */
         .flip-overlay {
             display: none;
             position: fixed;
@@ -34,7 +119,6 @@
             flex-direction: column;
         }
         .flip-overlay.is-visible { display: flex; }
-
         .flip-close {
             position: fixed;
             top: 20px; right: 28px;
@@ -75,10 +159,6 @@
             font-size: 9px; letter-spacing: 2px;
             color: #555; min-width: 70px; text-align: center;
         }
-
-        /* =====================
-           MOBILE SWIPE GALLERY
-           ===================== */
         .swipe-overlay {
             display: none;
             position: fixed;
@@ -90,7 +170,6 @@
             justify-content: center;
         }
         .swipe-overlay.is-visible { display: flex; }
-
         .swipe-close {
             position: fixed;
             top: 16px; right: 22px;
@@ -105,46 +184,13 @@
             text-transform: uppercase; color: #555;
             margin-bottom: 14px;
         }
-        .swipe-track-wrap {
-            width: 100vw;
-            overflow: hidden;
-            position: relative;
-        }
-        .swipe-track {
-            display: flex;
-            transition: transform 0.35s ease;
-            will-change: transform;
-        }
-        .swipe-slide {
-            flex: 0 0 100vw;
-            width: 100vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .swipe-slide img {
-            max-width: 96vw;
-            max-height: 62vh;
-            object-fit: contain;
-            display: block;
-        }
-        .swipe-slide .swipe-logo {
-            background: #fff;
-            width: 92vw;
-            padding: 28px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 2px;
-        }
-        .swipe-slide .swipe-logo img {
-            width: 85%;
-            max-height: unset;
-        }
-        .swipe-nav {
-            display: flex; align-items: center;
-            gap: 24px; margin-top: 20px;
-        }
+        .swipe-track-wrap { width: 100vw; overflow: hidden; position: relative; }
+        .swipe-track { display: flex; transition: transform 0.35s ease; will-change: transform; }
+        .swipe-slide { flex: 0 0 100vw; width: 100vw; display: flex; align-items: center; justify-content: center; }
+        .swipe-slide img { max-width: 96vw; max-height: 62vh; object-fit: contain; display: block; }
+        .swipe-slide .swipe-logo { background: #fff; width: 92vw; padding: 28px 20px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
+        .swipe-slide .swipe-logo img { width: 85%; max-height: unset; }
+        .swipe-nav { display: flex; align-items: center; gap: 24px; margin-top: 20px; }
         .swipe-btn {
             font-family: 'Montserrat', sans-serif;
             font-size: 9px; letter-spacing: 3px;
@@ -154,17 +200,8 @@
             padding: 10px 20px; cursor: pointer;
         }
         .swipe-btn:disabled { opacity: 0.15; }
-        .swipe-counter {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 2px;
-            color: #555; min-width: 60px; text-align: center;
-        }
-
-        /* ROSIE */
-        @keyframes rosieFloat {
-            0%,100% { transform: translateY(0); }
-            50%      { transform: translateY(-8px); }
-        }
+        .swipe-counter { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; color: #555; min-width: 60px; text-align: center; }
+        @keyframes rosieFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         .rosie-circle-launcher {
             position: fixed; bottom: 30px; right: 30px;
             width: 65px; height: 65px; background: #1A1A1A;
@@ -175,32 +212,24 @@
             animation: rosieFloat 3s ease-in-out infinite;
         }
         .rosie-initial { color:#fff; font-family:'Montserrat',sans-serif; font-size:22px; font-weight:200; }
-        .rosie-label   { font-size:8px; color:#fff; text-transform:uppercase; letter-spacing:1px; font-family:'Montserrat',sans-serif; }
-        #rosie-window  {
+        .rosie-label { font-size:8px; color:#fff; text-transform:uppercase; letter-spacing:1px; font-family:'Montserrat',sans-serif; }
+        #rosie-window {
             display:none; position:fixed; bottom:110px; right:30px;
             width:360px; height:560px; background:#fff;
             border-radius:8px; box-shadow:0 25px 60px rgba(0,0,0,0.15);
             z-index:9998; flex-direction:column; border:1px solid #eee; overflow:hidden;
         }
-        .rosie-header  { padding:20px; border-bottom:1px solid #f0f0f0; text-align:center; }
+        .rosie-header { padding:20px; border-bottom:1px solid #f0f0f0; text-align:center; }
         .rosie-header h3 { font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:4px; text-transform:uppercase; margin:0; color:#1a1a1a; }
-        .rosie-body    { flex-grow:1; padding:25px; overflow-y:auto; font-family:'Source Serif Pro',serif; line-height:1.6; font-size:1rem; color:#444; }
-        .rosie-footer  { padding:15px; background:#fff; border-top:1px solid #f0f0f0; }
+        .rosie-body { flex-grow:1; padding:25px; overflow-y:auto; font-family:'Source Serif Pro',serif; line-height:1.6; font-size:1rem; color:#444; }
+        .rosie-footer { padding:15px; background:#fff; border-top:1px solid #f0f0f0; }
         .rosie-input-row { display:flex; gap:8px; align-items:center; }
         #rosie-user-input { flex:1; padding:12px; border:1px solid #ccc; font-family:'Source Serif Pro',serif; font-size:15px; box-sizing:border-box; outline:none; }
         #rosie-send-btn { background:#1a1a1a; border:none; color:#fff; padding:12px 16px; cursor:pointer; font-size:18px; line-height:1; }
         #rosie-send-btn:hover { background:#333; }
-
         @media (max-width: 600px) {
-            #rosie-window {
-                width: calc(100vw - 24px);
-                right: 12px; left: 12px;
-                bottom: 100px; height: 460px;
-            }
-            .rosie-circle-launcher {
-                bottom: 20px; right: 20px;
-                width: 56px; height: 56px;
-            }
+            #rosie-window { width: calc(100vw - 24px); right: 12px; left: 12px; bottom: 100px; height: 460px; }
+            .rosie-circle-launcher { bottom: 20px; right: 20px; width: 56px; height: 56px; }
         }
     </style>
 </head>
@@ -279,16 +308,16 @@
     </section>
 
     <div class="archive-action">
-    <span class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</span>
-</div>
+        <span class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</span>
+    </div>
 
     <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
 
     <footer class="footer">
-    <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; 719-632-2080</div>
-    <div class="footer-bottom">© Dawley Asphalt &amp; Paving — Colorado Springs, CO</div>
-    <div class="footer-bottom"><a href="legal.html" style="color:inherit;text-decoration:none;opacity:0.5;">Privacy &amp; Terms</a></div>
-</footer>
+        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; 719-632-2080</div>
+        <div class="footer-bottom">© Dawley Asphalt &amp; Paving — Colorado Springs, CO</div>
+        <div class="footer-bottom"><a href="legal.html" style="color:inherit;text-decoration:none;opacity:0.5;">Privacy &amp; Terms</a></div>
+    </footer>
 
     <!-- DESKTOP FLIPBOOK: COMMERCIAL -->
     <div id="flip-commercial" class="flip-overlay">
@@ -396,10 +425,6 @@
     <script>
         const isMobile = () => window.innerWidth < 600;
 
-        /* =====================
-           DESKTOP FLIPBOOK
-           using loadFromImages — most reliable method
-           ===================== */
         const BOOK_IMAGES = {
             commercial: [
                 'images/Dawley Asphalt.png',
@@ -445,36 +470,22 @@
         function openFlip(name) {
             document.getElementById('flip-' + name).classList.add('is-visible');
             document.body.style.overflow = 'hidden';
-
-            if (pageFlips[name]) {
-                pageFlips[name].destroy();
-                delete pageFlips[name];
-            }
-
+            if (pageFlips[name]) { pageFlips[name].destroy(); delete pageFlips[name]; }
             const container = document.getElementById('book-' + name);
             container.innerHTML = '';
-
             const { width, height } = getBookSize();
             container.style.width  = (width * 2) + 'px';
             container.style.height = height + 'px';
-
             const pf = new St.PageFlip(container, {
-                width, height,
-                size: 'fixed',
+                width, height, size: 'fixed',
                 minWidth: width, maxWidth: width,
                 minHeight: height, maxHeight: height,
-                drawShadow: true,
-                flippingTime: 700,
-                usePortrait: false,
-                startZIndex: 0,
-                autoSize: false,
-                showCover: false,
-                mobileScrollSupport: false,
-                swipeDistance: 30,
-                clickEventForward: true,
-                useMouseEvents: true
+                drawShadow: true, flippingTime: 700,
+                usePortrait: false, startZIndex: 0,
+                autoSize: false, showCover: false,
+                mobileScrollSupport: false, swipeDistance: 30,
+                clickEventForward: true, useMouseEvents: true
             });
-
             pf.loadFromImages(BOOK_IMAGES[name]);
             pf.on('flip', () => updateCounter(name));
             pf.on('changeState', () => updateCounter(name));
@@ -494,9 +505,6 @@
             if (pageFlips[name]) { pageFlips[name].flipPrev('bottom'); setTimeout(() => updateCounter(name), 750); }
         }
 
-        /* =====================
-           MOBILE SWIPE GALLERY
-           ===================== */
         const swipeState  = { commercial: 0, private: 0 };
         const swipeTotals = { commercial: 8, private: 8 };
 
@@ -540,9 +548,6 @@
             };
         }
 
-        /* =====================
-           ROUTING
-           ===================== */
         document.getElementById('trigger-commercial').onclick = () => {
             isMobile() ? openSwipe('commercial') : openFlip('commercial');
         };
