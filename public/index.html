@@ -123,6 +123,7 @@
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Dawley Asphalt & Paving — commercial parking lot paving and residential driveway paving in Colorado Springs, CO. Licensed, insured, BBB A+ rated. Over 50 years of experience. Call 719-632-2080.">
     <title>Dawley Asphalt & Paving | Colorado Springs</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,7 +131,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* HOMEPAGE SPECIFIC */
         .home-statement {
             max-width: 760px;
             margin: 100px auto 80px;
@@ -153,15 +153,12 @@
             color: #333;
             margin-bottom: 24px;
         }
-
         .home-divider {
             width: 40px;
             height: 1px;
             background: #ccc;
             margin: 0 auto 90px;
         }
-
-        /* THREE PILLARS */
         .pillars {
             max-width: 1100px;
             margin: 0 auto 100px;
@@ -170,278 +167,51 @@
             grid-template-columns: 1fr 1px 1fr 1px 1fr;
             gap: 0 40px;
         }
-        .pillar {
-            text-align: center;
-            padding: 0 20px;
-        }
-        .pillar-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #999;
-            margin-bottom: 20px;
-            display: block;
-        }
-        .pillar h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            margin-bottom: 18px;
-            color: #111;
-        }
-        .pillar p {
-            font-family: 'Source Serif Pro', serif;
-            font-size: 0.95rem;
-            font-weight: 300;
-            line-height: 1.8;
-            color: #555;
-        }
-        .pillar-divider {
-            background: #e5e5e5;
-            width: 1px;
-        }
-
-        /* BOTTOM CTA */
-        .home-cta {
-            text-align: center;
-            padding: 0 40px 40px;
-        }
-        .home-cta p {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 11px;
-            letter-spacing: 3px;
-            color: #999;
-            text-transform: uppercase;
-            margin-bottom: 28px;
-        }
-        .home-cta-btn {
-            display: inline-block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #111;
-            border: 1px solid #111;
-            padding: 16px 36px;
-            text-decoration: none;
-            transition: background 0.3s, color 0.3s;
-        }
-        .home-cta-btn:hover {
-            background: #111;
-            color: #fff;
-        }
-
-        /* BBB TRUST LINE */
-        .bbb-trust {
-            text-align: center;
-            padding: 28px 40px 80px;
-        }
-        .bbb-trust a {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #999;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        .bbb-trust a:hover {
-            color: #111;
-        }
-
-        /* FOOTER */
-        .footer {
-            padding: 40px 24px;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            color: #999;
-            border-top: 1px solid #eee;
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
-        .footer-top {
-            margin-bottom: 10px;
-            color: #666;
-        }
-        .footer-bottom {
-            color: #aaa;
-            font-size: 11px;
-            margin-bottom: 6px;
-        }
-
-        /* SOCIAL ICONS */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 20px;
-        }
-        .social-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: #373636;
-            border: 1px solid #373636;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: background 0.3s, border-color 0.3s;
-        }
-        .social-icon:hover {
-            background: transparent;
-        }
-        .social-icon:hover svg {
-            fill: #373636;
-        }
-        .social-icon svg {
-            width: 16px;
-            height: 16px;
-            fill: #ffffff;
-            transition: fill 0.3s;
-        }
-
-        /* ROSIE */
-        @keyframes rosieFloat {
-            0%   { transform: translateY(0px); }
-            50%  { transform: translateY(-8px); }
-            100% { transform: translateY(0px); }
-        }
-        .rosie-circle-launcher {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: #1A1A1A;
-            border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            animation: rosieFloat 3s ease-in-out infinite;
-        }
-        .rosie-initial {
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 22px;
-            font-weight: 200;
-        }
-        .rosie-label {
-            font-size: 8px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-family: 'Montserrat', sans-serif;
-        }
-        #rosie-window {
-            display: none;
-            position: fixed;
-            bottom: 110px;
-            right: 30px;
-            width: 360px;
-            height: 560px;
-            background: #FFFFFF;
-            border-radius: 8px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-            z-index: 9998;
-            flex-direction: column;
-            border: 1px solid #eee;
-            overflow: hidden;
-        }
-        .rosie-header {
-            padding: 20px;
-            border-bottom: 1px solid #f0f0f0;
-            text-align: center;
-        }
-        .rosie-header h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 10px;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin: 0;
-            color: #1a1a1a;
-        }
-        .rosie-body {
-            flex-grow: 1;
-            padding: 25px;
-            overflow-y: auto;
-            font-family: 'Source Serif Pro', serif;
-            line-height: 1.6;
-            font-size: 1rem;
-            color: #444;
-        }
-        .rosie-footer {
-            padding: 15px;
-            background: #fff;
-            border-top: 1px solid #f0f0f0;
-        }
-        .rosie-input-row {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        #rosie-user-input {
-            flex: 1;
-            padding: 12px;
-            border: 1px solid #ccc;
-            font-family: 'Source Serif Pro', serif;
-            font-size: 15px;
-            box-sizing: border-box;
-            outline: none;
-        }
-        #rosie-send-btn {
-            background: #1a1a1a;
-            border: none;
-            color: white;
-            padding: 12px 16px;
-            cursor: pointer;
-            font-size: 18px;
-            line-height: 1;
-        }
+        .pillar { text-align: center; padding: 0 20px; }
+        .pillar-label { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: #999; margin-bottom: 20px; display: block; }
+        .pillar h3 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 300; letter-spacing: 1px; margin-bottom: 18px; color: #111; }
+        .pillar p { font-family: 'Source Serif Pro', serif; font-size: 0.95rem; font-weight: 300; line-height: 1.8; color: #555; }
+        .pillar-divider { background: #e5e5e5; width: 1px; }
+        .home-cta { text-align: center; padding: 0 40px 40px; }
+        .home-cta p { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 3px; color: #999; text-transform: uppercase; margin-bottom: 28px; }
+        .home-cta-btn { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #111; border: 1px solid #111; padding: 16px 36px; text-decoration: none; transition: background 0.3s, color 0.3s; }
+        .home-cta-btn:hover { background: #111; color: #fff; }
+        .bbb-trust { text-align: center; padding: 28px 40px 80px; }
+        .bbb-trust a { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #999; text-decoration: none; transition: color 0.3s; }
+        .bbb-trust a:hover { color: #111; }
+        .footer { padding: 40px 24px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 300; color: #999; border-top: 1px solid #eee; font-size: 12px; letter-spacing: 1px; }
+        .footer-top { margin-bottom: 10px; color: #666; }
+        .footer-bottom { color: #aaa; font-size: 11px; margin-bottom: 6px; }
+        .social-icons { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
+        .social-icon { width: 36px; height: 36px; border-radius: 50%; background: #373636; border: 1px solid #373636; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: background 0.3s, border-color 0.3s; }
+        .social-icon:hover { background: transparent; }
+        .social-icon:hover svg { fill: #373636; }
+        .social-icon svg { width: 16px; height: 16px; fill: #ffffff; transition: fill 0.3s; }
+        @keyframes rosieFloat { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .rosie-circle-launcher { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: rosieFloat 3s ease-in-out infinite; }
+        .rosie-initial { color: white; font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 200; }
+        .rosie-label { font-size: 8px; color: #fff; text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; }
+        #rosie-window { display: none; position: fixed; bottom: 110px; right: 30px; width: 360px; height: 560px; background: #FFFFFF; border-radius: 8px; box-shadow: 0 25px 60px rgba(0,0,0,0.15); z-index: 9998; flex-direction: column; border: 1px solid #eee; overflow: hidden; }
+        .rosie-header { padding: 20px; border-bottom: 1px solid #f0f0f0; text-align: center; }
+        .rosie-header h3 { font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; margin: 0; color: #1a1a1a; }
+        .rosie-body { flex-grow: 1; padding: 25px; overflow-y: auto; font-family: 'Source Serif Pro', serif; line-height: 1.6; font-size: 1rem; color: #444; }
+        .rosie-footer { padding: 15px; background: #fff; border-top: 1px solid #f0f0f0; }
+        .rosie-input-row { display: flex; gap: 8px; align-items: center; }
+        #rosie-user-input { flex: 1; padding: 12px; border: 1px solid #ccc; font-family: 'Source Serif Pro', serif; font-size: 15px; box-sizing: border-box; outline: none; }
+        #rosie-send-btn { background: #1a1a1a; border: none; color: white; padding: 12px 16px; cursor: pointer; font-size: 18px; line-height: 1; }
         #rosie-send-btn:hover { background: #333; }
-
-        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .home-statement {
-                margin: 60px auto 50px;
-                padding: 0 24px;
-            }
+            .home-statement { margin: 60px auto 50px; padding: 0 24px; }
             .home-statement h1 { font-size: 1.5rem; }
             .home-statement p { font-size: 1rem; }
-            .pillars {
-                grid-template-columns: 1fr;
-                gap: 0;
-                padding: 0 24px;
-                margin-bottom: 70px;
-            }
-            .pillar {
-                padding: 40px 0;
-                border-bottom: 1px solid #eee;
-            }
+            .pillars { grid-template-columns: 1fr; gap: 0; padding: 0 24px; margin-bottom: 70px; }
+            .pillar { padding: 40px 0; border-bottom: 1px solid #eee; }
             .pillar:last-child { border-bottom: none; }
             .pillar-divider { display: none; }
             .home-divider { margin-bottom: 60px; }
             .home-cta { padding: 0 24px 40px; }
-            #rosie-window {
-                width: calc(100vw - 24px);
-                right: 12px;
-                left: 12px;
-                bottom: 100px;
-                height: 460px;
-            }
-            .rosie-circle-launcher {
-                bottom: 20px;
-                right: 20px;
-                width: 56px;
-                height: 56px;
-            }
+            #rosie-window { width: calc(100vw - 24px); right: 12px; left: 12px; bottom: 100px; height: 460px; }
+            .rosie-circle-launcher { bottom: 20px; right: 20px; width: 56px; height: 56px; }
         }
     </style>
 </head>
@@ -508,47 +278,22 @@
         <div class="footer-bottom">© Dawley Asphalt &amp; Paving — Colorado Springs, CO</div>
         <div class="footer-bottom"><a href="legal.html" style="color:inherit;text-decoration:none;opacity:0.5;">Privacy &amp; Terms</a></div>
 
-        <!-- Social Icons -->
         <div class="social-icons">
-
-            <!-- Facebook -->
             <a href="https://www.facebook.com/coloradoasphalt/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-
-            <!-- Instagram -->
             <a href="https://www.instagram.com/dawleyasphalt/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.746.08-3.29.66-4.434 1.807C1.474 2.926.894 4.47.814 6.216.756 7.496.742 7.904.742 12c0 4.096.014 4.504.072 5.784.08 1.746.66 3.29 1.807 4.434 1.144 1.147 2.688 1.727 4.434 1.807 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.746-.08 3.29-.66 4.434-1.807 1.147-1.144 1.727-2.688 1.807-4.434.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.08-1.746-.66-3.29-1.807-4.434C19.237.894 17.693.314 15.947.234 14.667.176 14.259.162 12 .162zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
-    </svg>
-</a>
-
-            <!-- Pinterest -->
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.746.08-3.29.66-4.434 1.807C1.474 2.926.894 4.47.814 6.216.756 7.496.742 7.904.742 12c0 4.096.014 4.504.072 5.784.08 1.746.66 3.29 1.807 4.434 1.144 1.147 2.688 1.727 4.434 1.807 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.746-.08 3.29-.66 4.434-1.807 1.147-1.144 1.727-2.688 1.807-4.434.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.08-1.746-.66-3.29-1.807-4.434C19.237.894 17.693.314 15.947.234 14.667.176 14.259.162 12 .162zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+            </a>
             <a href="https://www.pinterest.com/dawleyasphalt/" target="_blank" rel="noopener" class="social-icon" aria-label="Pinterest">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.564 0-2.387-1.715-4.057-4.163-4.057-2.838 0-4.503 2.128-4.503 4.33 0 .858.33 1.776.741 2.279a.3.3 0 0 1 .069.286c-.076.313-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.564 0-2.387-1.715-4.057-4.163-4.057-2.838 0-4.503 2.128-4.503 4.33 0 .858.33 1.776.741 2.279a.3.3 0 0 1 .069.286c-.076.313-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.966-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
             </a>
-
-            <!-- YouTube -->
             <a href="https://www.youtube.com/@dawleyasphalt" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-                    <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1a1a1a"/></svg>
             </a>
-
-            <!-- LinkedIn -->
             <a href="https://www.linkedin.com/in/jerry-dawley-5920277a/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect x="2" y="9" width="4" height="12"/>
-                    <circle cx="4" cy="4" r="2"/>
-                </svg>
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
             </a>
-
         </div>
     </footer>
 

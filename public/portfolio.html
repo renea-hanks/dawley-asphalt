@@ -102,88 +102,27 @@
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="View the Dawley Asphalt & Paving portfolio — commercial parking lot paving and private estate driveway projects in Colorado Springs, CO.">
     <title>Portfolio | Dawley Asphalt & Paving</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="portfolio.css">
     <style>
-        .flip-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10,10,10,0.97);
-            z-index: 99999;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
+        .flip-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.97); z-index: 99999; justify-content: center; align-items: center; flex-direction: column; }
         .flip-overlay.is-visible { display: flex; }
-        .flip-close {
-            position: fixed;
-            top: 20px; right: 28px;
-            color: #fff; font-size: 38px;
-            background: none; border: none;
-            cursor: pointer; line-height: 1;
-            z-index: 100000;
-        }
-        .flip-volume-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 5px;
-            text-transform: uppercase; color: #555;
-            margin-bottom: 18px;
-        }
-        .book-stage {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .flip-nav {
-            display: flex; align-items: center;
-            gap: 28px; margin-top: 22px;
-        }
-        .flip-btn {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 3px;
-            text-transform: uppercase; color: #fff;
-            background: none;
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 9px 22px; cursor: pointer;
-            transition: background 0.3s, border-color 0.3s;
-        }
+        .flip-close { position: fixed; top: 20px; right: 28px; color: #fff; font-size: 38px; background: none; border: none; cursor: pointer; line-height: 1; z-index: 100000; }
+        .flip-volume-label { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: #555; margin-bottom: 18px; }
+        .book-stage { position: relative; display: flex; justify-content: center; align-items: center; }
+        .flip-nav { display: flex; align-items: center; gap: 28px; margin-top: 22px; }
+        .flip-btn { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: none; border: 1px solid rgba(255,255,255,0.2); padding: 9px 22px; cursor: pointer; transition: background 0.3s, border-color 0.3s; }
         .flip-btn:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.4); }
         .flip-btn:disabled { opacity: 0.15; cursor: default; }
-        .flip-counter {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 2px;
-            color: #555; min-width: 70px; text-align: center;
-        }
-        .swipe-overlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(10,10,10,0.97);
-            z-index: 99999;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
+        .flip-counter { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; color: #555; min-width: 70px; text-align: center; }
+        .swipe-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(10,10,10,0.97); z-index: 99999; flex-direction: column; align-items: center; justify-content: center; }
         .swipe-overlay.is-visible { display: flex; }
-        .swipe-close {
-            position: fixed;
-            top: 16px; right: 22px;
-            color: #fff; font-size: 38px;
-            background: none; border: none;
-            cursor: pointer; line-height: 1;
-            z-index: 100000;
-        }
-        .swipe-label {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 5px;
-            text-transform: uppercase; color: #555;
-            margin-bottom: 14px;
-        }
+        .swipe-close { position: fixed; top: 16px; right: 22px; color: #fff; font-size: 38px; background: none; border: none; cursor: pointer; line-height: 1; z-index: 100000; }
+        .swipe-label { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 5px; text-transform: uppercase; color: #555; margin-bottom: 14px; }
         .swipe-track-wrap { width: 100vw; overflow: hidden; position: relative; }
         .swipe-track { display: flex; transition: transform 0.35s ease; will-change: transform; }
         .swipe-slide { flex: 0 0 100vw; width: 100vw; display: flex; align-items: center; justify-content: center; }
@@ -191,34 +130,14 @@
         .swipe-slide .swipe-logo { background: #fff; width: 92vw; padding: 28px 20px; display: flex; align-items: center; justify-content: center; border-radius: 2px; }
         .swipe-slide .swipe-logo img { width: 85%; max-height: unset; }
         .swipe-nav { display: flex; align-items: center; gap: 24px; margin-top: 20px; }
-        .swipe-btn {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 9px; letter-spacing: 3px;
-            text-transform: uppercase; color: #fff;
-            background: none;
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 10px 20px; cursor: pointer;
-        }
+        .swipe-btn { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: none; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; cursor: pointer; }
         .swipe-btn:disabled { opacity: 0.15; }
         .swipe-counter { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; color: #555; min-width: 60px; text-align: center; }
         @keyframes rosieFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-        .rosie-circle-launcher {
-            position: fixed; bottom: 30px; right: 30px;
-            width: 65px; height: 65px; background: #1A1A1A;
-            border-radius: 50%; display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            cursor: pointer; z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            animation: rosieFloat 3s ease-in-out infinite;
-        }
+        .rosie-circle-launcher { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: rosieFloat 3s ease-in-out infinite; }
         .rosie-initial { color:#fff; font-family:'Montserrat',sans-serif; font-size:22px; font-weight:200; }
         .rosie-label { font-size:8px; color:#fff; text-transform:uppercase; letter-spacing:1px; font-family:'Montserrat',sans-serif; }
-        #rosie-window {
-            display:none; position:fixed; bottom:110px; right:30px;
-            width:360px; height:560px; background:#fff;
-            border-radius:8px; box-shadow:0 25px 60px rgba(0,0,0,0.15);
-            z-index:9998; flex-direction:column; border:1px solid #eee; overflow:hidden;
-        }
+        #rosie-window { display:none; position:fixed; bottom:110px; right:30px; width:360px; height:560px; background:#fff; border-radius:8px; box-shadow:0 25px 60px rgba(0,0,0,0.15); z-index:9998; flex-direction:column; border:1px solid #eee; overflow:hidden; }
         .rosie-header { padding:20px; border-bottom:1px solid #f0f0f0; text-align:center; }
         .rosie-header h3 { font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:4px; text-transform:uppercase; margin:0; color:#1a1a1a; }
         .rosie-body { flex-grow:1; padding:25px; overflow-y:auto; font-family:'Source Serif Pro',serif; line-height:1.6; font-size:1rem; color:#444; }
@@ -424,175 +343,32 @@
     <script src="portfolio.js"></script>
     <script>
         const isMobile = () => window.innerWidth < 600;
-
         const BOOK_IMAGES = {
-            commercial: [
-                'images/Dawley Asphalt.png',
-                'portfolio/commercial/page-1.jpg',
-                'portfolio/commercial/page-2.jpg',
-                'portfolio/commercial/page-3.jpg',
-                'portfolio/commercial/page-4.jpg',
-                'portfolio/commercial/page-5.jpg',
-                'portfolio/commercial/page-6.jpg',
-                'images/Dawley Asphalt.png'
-            ],
-            private: [
-                'images/Dawley Asphalt.png',
-                'portfolio/private/page-1.jpg',
-                'portfolio/private/page-2.jpg',
-                'portfolio/private/page-3.jpg',
-                'portfolio/private/page-4.jpg',
-                'portfolio/private/page-5.jpg',
-                'portfolio/private/page-6.jpg',
-                'images/Dawley Asphalt.png'
-            ]
+            commercial: ['images/Dawley Asphalt.png','portfolio/commercial/page-1.jpg','portfolio/commercial/page-2.jpg','portfolio/commercial/page-3.jpg','portfolio/commercial/page-4.jpg','portfolio/commercial/page-5.jpg','portfolio/commercial/page-6.jpg','images/Dawley Asphalt.png'],
+            private: ['images/Dawley Asphalt.png','portfolio/private/page-1.jpg','portfolio/private/page-2.jpg','portfolio/private/page-3.jpg','portfolio/private/page-4.jpg','portfolio/private/page-5.jpg','portfolio/private/page-6.jpg','images/Dawley Asphalt.png']
         };
-
         const pageFlips = {};
-
-        function getBookSize() {
-            const maxW = Math.min(window.innerWidth * 0.88, 900);
-            const w    = Math.floor(maxW / 2);
-            const h    = Math.floor(w * (9 / 16));
-            return { width: w, height: h };
-        }
-
-        function updateCounter(name) {
-            const pf = pageFlips[name];
-            if (!pf) return;
-            const current = pf.getCurrentPageIndex();
-            const total   = pf.getPageCount();
-            document.getElementById('counter-' + name).textContent = (current + 1) + ' / ' + total;
-            document.getElementById('prev-' + name).disabled = current === 0;
-            document.getElementById('next-' + name).disabled = current >= total - 1;
-        }
-
-        function openFlip(name) {
-            document.getElementById('flip-' + name).classList.add('is-visible');
-            document.body.style.overflow = 'hidden';
-            if (pageFlips[name]) { pageFlips[name].destroy(); delete pageFlips[name]; }
-            const container = document.getElementById('book-' + name);
-            container.innerHTML = '';
-            const { width, height } = getBookSize();
-            container.style.width  = (width * 2) + 'px';
-            container.style.height = height + 'px';
-            const pf = new St.PageFlip(container, {
-                width, height, size: 'fixed',
-                minWidth: width, maxWidth: width,
-                minHeight: height, maxHeight: height,
-                drawShadow: true, flippingTime: 700,
-                usePortrait: false, startZIndex: 0,
-                autoSize: false, showCover: false,
-                mobileScrollSupport: false, swipeDistance: 30,
-                clickEventForward: true, useMouseEvents: true
-            });
-            pf.loadFromImages(BOOK_IMAGES[name]);
-            pf.on('flip', () => updateCounter(name));
-            pf.on('changeState', () => updateCounter(name));
-            pageFlips[name] = pf;
-            setTimeout(() => updateCounter(name), 300);
-        }
-
-        function closeFlip(name) {
-            document.getElementById('flip-' + name).classList.remove('is-visible');
-            document.body.style.overflow = 'auto';
-        }
-
-        function flipNext(name) {
-            if (pageFlips[name]) { pageFlips[name].flipNext('bottom'); setTimeout(() => updateCounter(name), 750); }
-        }
-        function flipPrev(name) {
-            if (pageFlips[name]) { pageFlips[name].flipPrev('bottom'); setTimeout(() => updateCounter(name), 750); }
-        }
-
-        const swipeState  = { commercial: 0, private: 0 };
+        function getBookSize() { const maxW = Math.min(window.innerWidth * 0.88, 900); const w = Math.floor(maxW / 2); const h = Math.floor(w * (9 / 16)); return { width: w, height: h }; }
+        function updateCounter(name) { const pf = pageFlips[name]; if (!pf) return; const current = pf.getCurrentPageIndex(); const total = pf.getPageCount(); document.getElementById('counter-' + name).textContent = (current + 1) + ' / ' + total; document.getElementById('prev-' + name).disabled = current === 0; document.getElementById('next-' + name).disabled = current >= total - 1; }
+        function openFlip(name) { document.getElementById('flip-' + name).classList.add('is-visible'); document.body.style.overflow = 'hidden'; if (pageFlips[name]) { pageFlips[name].destroy(); delete pageFlips[name]; } const container = document.getElementById('book-' + name); container.innerHTML = ''; const { width, height } = getBookSize(); container.style.width = (width * 2) + 'px'; container.style.height = height + 'px'; const pf = new St.PageFlip(container, { width, height, size: 'fixed', minWidth: width, maxWidth: width, minHeight: height, maxHeight: height, drawShadow: true, flippingTime: 700, usePortrait: false, startZIndex: 0, autoSize: false, showCover: false, mobileScrollSupport: false, swipeDistance: 30, clickEventForward: true, useMouseEvents: true }); pf.loadFromImages(BOOK_IMAGES[name]); pf.on('flip', () => updateCounter(name)); pf.on('changeState', () => updateCounter(name)); pageFlips[name] = pf; setTimeout(() => updateCounter(name), 300); }
+        function closeFlip(name) { document.getElementById('flip-' + name).classList.remove('is-visible'); document.body.style.overflow = 'auto'; }
+        function flipNext(name) { if (pageFlips[name]) { pageFlips[name].flipNext('bottom'); setTimeout(() => updateCounter(name), 750); } }
+        function flipPrev(name) { if (pageFlips[name]) { pageFlips[name].flipPrev('bottom'); setTimeout(() => updateCounter(name), 750); } }
+        const swipeState = { commercial: 0, private: 0 };
         const swipeTotals = { commercial: 8, private: 8 };
-
-        function openSwipe(name) {
-            swipeState[name] = 0;
-            document.getElementById('swipe-' + name).classList.add('is-visible');
-            document.body.style.overflow = 'hidden';
-            renderSwipe(name);
-            initSwipeTouch(name);
-        }
-
-        function closeSwipe(name) {
-            document.getElementById('swipe-' + name).classList.remove('is-visible');
-            document.body.style.overflow = 'auto';
-        }
-
-        function renderSwipe(name) {
-            const i     = swipeState[name];
-            const total = swipeTotals[name];
-            document.getElementById('swipe-track-' + name).style.transform = `translateX(-${i * 100}vw)`;
-            document.getElementById('swipe-counter-' + name).textContent   = (i + 1) + ' / ' + total;
-            document.getElementById('swipe-prev-' + name).disabled = i === 0;
-            document.getElementById('swipe-next-' + name).disabled = i >= total - 1;
-        }
-
-        function swipeNext(name) {
-            if (swipeState[name] < swipeTotals[name] - 1) { swipeState[name]++; renderSwipe(name); }
-        }
-        function swipePrev(name) {
-            if (swipeState[name] > 0) { swipeState[name]--; renderSwipe(name); }
-        }
-
-        function initSwipeTouch(name) {
-            const wrap = document.querySelector('#swipe-' + name + ' .swipe-track-wrap');
-            let startX = 0;
-            wrap.ontouchstart = e => { startX = e.touches[0].clientX; };
-            wrap.ontouchend   = e => {
-                const dx = e.changedTouches[0].clientX - startX;
-                if (dx < -40) swipeNext(name);
-                if (dx >  40) swipePrev(name);
-            };
-        }
-
-        document.getElementById('trigger-commercial').onclick = () => {
-            isMobile() ? openSwipe('commercial') : openFlip('commercial');
-        };
-        document.getElementById('trigger-private').onclick = () => {
-            isMobile() ? openSwipe('private') : openFlip('private');
-        };
-
-        document.querySelectorAll('.flip-overlay').forEach(el => {
-            el.addEventListener('click', e => {
-                if (e.target === el) closeFlip(el.id.replace('flip-', ''));
-            });
-        });
-        document.querySelectorAll('.swipe-overlay').forEach(el => {
-            el.addEventListener('click', e => {
-                if (e.target === el) closeSwipe(el.id.replace('swipe-', ''));
-            });
-        });
-
-        document.addEventListener('keydown', e => {
-            const fn = document.getElementById('flip-commercial').classList.contains('is-visible') ? 'commercial'
-                     : document.getElementById('flip-private').classList.contains('is-visible')    ? 'private' : null;
-            const sn = document.getElementById('swipe-commercial').classList.contains('is-visible') ? 'commercial'
-                     : document.getElementById('swipe-private').classList.contains('is-visible')    ? 'private' : null;
-            if (fn) {
-                if (e.key === 'ArrowRight') flipNext(fn);
-                if (e.key === 'ArrowLeft')  flipPrev(fn);
-                if (e.key === 'Escape')     closeFlip(fn);
-            }
-            if (sn) {
-                if (e.key === 'ArrowRight') swipeNext(sn);
-                if (e.key === 'ArrowLeft')  swipePrev(sn);
-                if (e.key === 'Escape')     closeSwipe(sn);
-            }
-        });
-
-        function toggleRosie() {
-            const win = document.getElementById('rosie-window');
-            win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none';
-        }
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('rosie-user-input').addEventListener('keydown', e => {
-                if (e.key === 'Enter') sendMessage();
-            });
-            document.getElementById('rosie-send-btn').addEventListener('click', () => sendMessage());
-        });
+        function openSwipe(name) { swipeState[name] = 0; document.getElementById('swipe-' + name).classList.add('is-visible'); document.body.style.overflow = 'hidden'; renderSwipe(name); initSwipeTouch(name); }
+        function closeSwipe(name) { document.getElementById('swipe-' + name).classList.remove('is-visible'); document.body.style.overflow = 'auto'; }
+        function renderSwipe(name) { const i = swipeState[name]; const total = swipeTotals[name]; document.getElementById('swipe-track-' + name).style.transform = `translateX(-${i * 100}vw)`; document.getElementById('swipe-counter-' + name).textContent = (i + 1) + ' / ' + total; document.getElementById('swipe-prev-' + name).disabled = i === 0; document.getElementById('swipe-next-' + name).disabled = i >= total - 1; }
+        function swipeNext(name) { if (swipeState[name] < swipeTotals[name] - 1) { swipeState[name]++; renderSwipe(name); } }
+        function swipePrev(name) { if (swipeState[name] > 0) { swipeState[name]--; renderSwipe(name); } }
+        function initSwipeTouch(name) { const wrap = document.querySelector('#swipe-' + name + ' .swipe-track-wrap'); let startX = 0; wrap.ontouchstart = e => { startX = e.touches[0].clientX; }; wrap.ontouchend = e => { const dx = e.changedTouches[0].clientX - startX; if (dx < -40) swipeNext(name); if (dx > 40) swipePrev(name); }; }
+        document.getElementById('trigger-commercial').onclick = () => { isMobile() ? openSwipe('commercial') : openFlip('commercial'); };
+        document.getElementById('trigger-private').onclick = () => { isMobile() ? openSwipe('private') : openFlip('private'); };
+        document.querySelectorAll('.flip-overlay').forEach(el => { el.addEventListener('click', e => { if (e.target === el) closeFlip(el.id.replace('flip-', '')); }); });
+        document.querySelectorAll('.swipe-overlay').forEach(el => { el.addEventListener('click', e => { if (e.target === el) closeSwipe(el.id.replace('swipe-', '')); }); });
+        document.addEventListener('keydown', e => { const fn = document.getElementById('flip-commercial').classList.contains('is-visible') ? 'commercial' : document.getElementById('flip-private').classList.contains('is-visible') ? 'private' : null; const sn = document.getElementById('swipe-commercial').classList.contains('is-visible') ? 'commercial' : document.getElementById('swipe-private').classList.contains('is-visible') ? 'private' : null; if (fn) { if (e.key === 'ArrowRight') flipNext(fn); if (e.key === 'ArrowLeft') flipPrev(fn); if (e.key === 'Escape') closeFlip(fn); } if (sn) { if (e.key === 'ArrowRight') swipeNext(sn); if (e.key === 'ArrowLeft') swipePrev(sn); if (e.key === 'Escape') closeSwipe(sn); } });
+        function toggleRosie() { const win = document.getElementById('rosie-window'); win.style.display = (win.style.display === 'none' || win.style.display === '') ? 'flex' : 'none'; }
+        document.addEventListener('DOMContentLoaded', () => { document.getElementById('rosie-user-input').addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); }); document.getElementById('rosie-send-btn').addEventListener('click', () => sendMessage()); });
     </script>
 </body>
 </html>
