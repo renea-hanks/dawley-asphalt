@@ -1,1 +1,2 @@
-.env
+.envfunctions/.env
+functions/firebase-debug.log
