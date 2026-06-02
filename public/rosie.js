@@ -32,7 +32,7 @@ async function callRosie() {
     historyEl.scrollTop = historyEl.scrollHeight;
 
     try {
-        const fn = firebase.functions().httpsCallable('processInquiry');
+        const fn = firebase.app().functions('us-central1').httpsCallable('processInquiry');
         const result = await fn({ messages: conversationHistory });
         const reply = result.data.text;
         conversationHistory.push({ role: 'assistant', content: reply });

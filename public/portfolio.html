@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KPS2Z9D7');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPX3E9FRWL"></script>
@@ -12,31 +21,29 @@
       gtag('config', 'G-HPX3E9FRWL');
     </script>
 
-    <!-- Schema Markup -->
+    <!-- Schema: LocalBusiness -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "PavingContractor"],
+      "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
       "name": "Dawley Asphalt & Paving",
       "url": "https://dawleyasphalt.com",
       "telephone": "+17196322080",
       "description": "Dawley Asphalt & Paving provides commercial parking lot paving and residential driveway paving in Colorado Springs, CO and surrounding areas. Licensed and insured with over 50 years of experience.",
-      "foundingYear": "1972",
-      "sameAs": [
-        "https://www.facebook.com/coloradoasphalt/",
-        "https://www.instagram.com/dawleyasphalt/",
-        "https://www.pinterest.com/dawleyasphalt/",
-        "https://www.youtube.com/@dawleyasphalt",
-        "https://www.linkedin.com/in/jerry-dawley-5920277a/",
-        "https://www.bbb.org/us/co/colorado-springs/profile/asphalt/james-dawley-asphalt-paving-services-0785-6322080"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "A+",
-        "bestRating": "A+",
-        "ratingCount": "1",
-        "reviewAspect": "BBB Accredited Business — BBB of Southern Colorado"
+      "foundingDate": "1972",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Colorado Springs",
+        "addressRegion": "CO",
+        "postalCode": "80903",
+        "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "38.8339",
+        "longitude": "-104.8214"
+      },
+      "serviceType": ["Asphalt Paving","Driveway Paving","Parking Lot Paving","Asphalt Repair","Sealcoating","Commercial Paving","Residential Paving"],
       "areaServed": [
         { "@type": "City", "name": "Colorado Springs", "sameAs": "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado" },
         { "@type": "Place", "name": "Black Forest, Colorado" },
@@ -44,66 +51,57 @@
         { "@type": "Place", "name": "Manitou Springs, Colorado" },
         { "@type": "Place", "name": "Green Mountain Falls, Colorado" },
         { "@type": "Place", "name": "Woodland Park, Colorado" },
-        { "@type": "Place", "name": "Security-Widefield, Colorado" },
-        { "@type": "Place", "name": "Fountain, Colorado" },
         { "@type": "Place", "name": "Eastonville, Colorado" },
         { "@type": "Place", "name": "Peyton, Colorado" }
       ],
       "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "08:00",
-          "closes": "17:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "13:00"
-        }
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
       ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Asphalt Paving Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Parking Lot Paving",
-              "description": "Commercial parking lot paving, repair, and replacement in Colorado Springs, CO."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Driveway Paving",
-              "description": "Residential asphalt driveway paving in Colorado Springs, CO."
-            }
-          }
-        ]
-      },
-      "slogan": "The surface is the proof."
+      "slogan": "The surface is the proof.",
+      "sameAs": [
+        "https://www.facebook.com/coloradoasphalt/",
+        "https://www.instagram.com/dawleyasphalt/",
+        "https://www.pinterest.com/dawleyasphalt/",
+        "https://www.youtube.com/@dawleyasphalt",
+        "https://www.linkedin.com/in/jerry-dawley-5920277a/",
+        "https://www.bbb.org/us/co/colorado-springs/profile/asphalt/james-dawley-asphalt-paving-services-0785-6322080"
+      ]
     }
     </script>
 
-    <!-- BreadcrumbList -->
+    <!-- Schema: BreadcrumbList -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dawleyasphalt.com" },
-        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://dawleyasphalt.com/portfolio.html" }
+        { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://dawleyasphalt.com/portfolio" }
       ]
     }
     </script>
 
+    <link rel="canonical" href="https://dawleyasphalt.com/portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="View the Dawley Asphalt & Paving portfolio — commercial parking lot paving and private estate driveway projects in Colorado Springs, CO.">
     <title>Portfolio | Dawley Asphalt & Paving</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dawleyasphalt.com/portfolio">
+    <meta property="og:title" content="Portfolio | Dawley Asphalt & Paving">
+    <meta property="og:description" content="Commercial parking lot paving and private estate driveway projects in Colorado Springs, CO. 50+ years of documented work.">
+    <meta property="og:image" content="https://dawleyasphalt.com/images/Dawley%20Asphalt.png">
+    <meta property="og:site_name" content="Dawley Asphalt & Paving">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio | Dawley Asphalt & Paving">
+    <meta name="twitter:description" content="Commercial parking lot paving and private estate driveway projects in Colorado Springs, CO. 50+ years of documented work.">
+    <meta name="twitter:image" content="https://dawleyasphalt.com/images/Dawley%20Asphalt.png">
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Source+Serif+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
@@ -133,13 +131,16 @@
         .swipe-btn { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #fff; background: none; border: 1px solid rgba(255,255,255,0.2); padding: 10px 20px; cursor: pointer; }
         .swipe-btn:disabled { opacity: 0.15; }
         .swipe-counter { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 2px; color: #555; min-width: 60px; text-align: center; }
+        .footer { padding: 40px 24px; text-align: center; font-family: 'Montserrat', sans-serif; font-weight: 300; color: #999; border-top: 1px solid #eee; font-size: 12px; letter-spacing: 1px; }
+        .footer-top { margin-bottom: 10px; color: #666; }
+        .footer-bottom { color: #777; font-size: 11px; margin-bottom: 6px; }
         @keyframes rosieFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
         .rosie-circle-launcher { position: fixed; bottom: 30px; right: 30px; width: 65px; height: 65px; background: #1A1A1A; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.2); animation: rosieFloat 3s ease-in-out infinite; }
         .rosie-initial { color:#fff; font-family:'Montserrat',sans-serif; font-size:22px; font-weight:200; }
         .rosie-label { font-size:8px; color:#fff; text-transform:uppercase; letter-spacing:1px; font-family:'Montserrat',sans-serif; }
         #rosie-window { display:none; position:fixed; bottom:110px; right:30px; width:360px; height:560px; background:#fff; border-radius:8px; box-shadow:0 25px 60px rgba(0,0,0,0.15); z-index:9998; flex-direction:column; border:1px solid #eee; overflow:hidden; }
-        .rosie-header { padding:20px; border-bottom:1px solid #f0f0f0; text-align:center; }
-        .rosie-header h3 { font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:4px; text-transform:uppercase; margin:0; color:#1a1a1a; }
+        .rosie-header { padding:20px; background:#1a1a1a; text-align:center; }
+        .rosie-header h3 { font-family:'Montserrat',sans-serif; font-size:10px; letter-spacing:4px; text-transform:uppercase; margin:0; color:#ffffff; }
         .rosie-body { flex-grow:1; padding:25px; overflow-y:auto; font-family:'Source Serif Pro',serif; line-height:1.6; font-size:1rem; color:#444; }
         .rosie-footer { padding:15px; background:#fff; border-top:1px solid #f0f0f0; }
         .rosie-input-row { display:flex; gap:8px; align-items:center; }
@@ -153,11 +154,16 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPS2Z9D7"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <nav class="main-nav">
         <div class="nav-inner">
-            <div class="logo"><a href="index.html" style="text-decoration:none;color:inherit;">DAWLEY ASPHALT</a></div>
+            <div class="logo"><a href="/" style="text-decoration:none;color:inherit;">DAWLEY ASPHALT</a></div>
             <div class="nav-links">
+                <a href="/driveway-paving">Driveway Paving</a>
+                <a href="/parking-lot-paving">Parking Lot Paving</a>
                 <a href="philosophy.html">Philosophy</a>
                 <a href="portfolio.html">Portfolio</a>
                 <a href="quality.html">Quality</a>
@@ -178,7 +184,7 @@
             <span class="volume-tag">VOLUME I</span>
             <h2>Commercial</h2>
             <div class="book-cover">
-                <img src="portfolio/commercial/cover.jpg" alt="Commercial Portfolio Cover">
+                <img src="portfolio/commercial/cover.jpg" alt="Commercial asphalt paving portfolio — Dawley Asphalt & Paving Colorado Springs" loading="lazy">
             </div>
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
@@ -186,7 +192,7 @@
             <span class="volume-tag">VOLUME II</span>
             <h2>Private Estates</h2>
             <div class="book-cover">
-                <img src="portfolio/private/cover.jpg" alt="Private Portfolio Cover">
+                <img src="portfolio/private/cover.jpg" alt="Residential driveway paving portfolio — Dawley Asphalt & Paving Colorado Springs" loading="lazy">
             </div>
             <span class="click-instruction">CLICK TO OPEN LEDGER</span>
         </div>
@@ -200,12 +206,12 @@
             <div class="record-col">
                 <h3 class="record-category">Commercial</h3>
                 <div class="archival-card">
-                    <div class="portrait-frame"><img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial Complex"></div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/industrial-complex.jpg" alt="Industrial complex parking lot paving — Dawley Asphalt Colorado Springs" loading="lazy"></div>
                     <h4>Project: Industrial Complex</h4>
                     <p>Focus: Heavy-Load Resilience. Engineering for 80,000-lb freight rotations.</p>
                 </div>
                 <div class="archival-card">
-                    <div class="portrait-frame"><img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail Infrastructure"></div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/retail-infrastructure.jpg" alt="Retail parking lot paving — Dawley Asphalt Colorado Springs" loading="lazy"></div>
                     <h4>Project: Retail Infrastructure</h4>
                     <p>Focus: High-Volume Wear Course. Precision grading for moisture drainage.</p>
                 </div>
@@ -213,12 +219,12 @@
             <div class="record-col">
                 <h3 class="record-category">Private Estates</h3>
                 <div class="archival-card">
-                    <div class="portrait-frame"><img src="portfolio/highlights/cathedral-pines.jpg" alt="Cathedral Pines"></div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/cathedral-pines.jpg" alt="Private estate driveway paving Cathedral Pines Colorado Springs" loading="lazy"></div>
                     <h4>Project: Cathedral Pines</h4>
                     <p>Focus: Subgrade Stabilization. Engineered for forest terrain and freeze-thaw cycles.</p>
                 </div>
                 <div class="archival-card">
-                    <div class="portrait-frame"><img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills Estate"></div>
+                    <div class="portrait-frame"><img src="portfolio/highlights/foothills-estate.jpg" alt="Foothills estate asphalt driveway Colorado Springs" loading="lazy"></div>
                     <h4>Project: Foothills Estate</h4>
                     <p>Focus: Grade Stability. Managing a 12% slope through native granite.</p>
                 </div>
@@ -230,12 +236,12 @@
         <span class="outline-btn">VIEW MORE PROJECTS IN OUR PORTFOLIO</span>
     </div>
 
-    <a href="https://form.typeform.com/to/FLnFxHJD" class="glass-btn">COMPLIMENTARY CONSULT</a>
+    <a href="/contact" class="glass-btn">COMPLIMENTARY CONSULT</a>
 
     <footer class="footer">
-        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; 719-632-2080</div>
+        <div class="footer-top">Dawley Asphalt &amp; Paving &emsp; Colorado Springs, CO | Licensed &amp; Insured &emsp; <a href="tel:+17196322080" style="color:inherit;text-decoration:none;">719-632-2080</a></div>
         <div class="footer-bottom">© Dawley Asphalt &amp; Paving — Colorado Springs, CO</div>
-        <div class="footer-bottom"><a href="legal.html" style="color:inherit;text-decoration:none;opacity:0.5;">Privacy &amp; Terms</a></div>
+        <div class="footer-bottom"><a href="/legal" style="color:#777;text-decoration:none;">Privacy &amp; Terms</a></div>
     </footer>
 
     <!-- DESKTOP FLIPBOOK: COMMERCIAL -->
@@ -268,14 +274,14 @@
         <div class="swipe-label">Volume I &mdash; Commercial</div>
         <div class="swipe-track-wrap">
             <div class="swipe-track" id="swipe-track-commercial">
-                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-1.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-2.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-3.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-4.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-5.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/commercial/page-6.jpg" alt=""></div>
-                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt & Paving"></div></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-1.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-2.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-3.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-4.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-5.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/commercial/page-6.jpg" alt="Commercial paving project Colorado Springs"></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt & Paving"></div></div>
             </div>
         </div>
         <div class="swipe-nav">
@@ -291,14 +297,14 @@
         <div class="swipe-label">Volume II &mdash; Private Estates</div>
         <div class="swipe-track-wrap">
             <div class="swipe-track" id="swipe-track-private">
-                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-1.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-2.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-3.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-4.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-5.jpg" alt=""></div>
-                <div class="swipe-slide"><img src="portfolio/private/page-6.jpg" alt=""></div>
-                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt"></div></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt & Paving"></div></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-1.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-2.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-3.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-4.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-5.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><img src="portfolio/private/page-6.jpg" alt="Residential driveway paving Colorado Springs"></div>
+                <div class="swipe-slide"><div class="swipe-logo"><img src="images/Dawley Asphalt.png" alt="Dawley Asphalt & Paving"></div></div>
             </div>
         </div>
         <div class="swipe-nav">

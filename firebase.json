@@ -1,10 +1,199 @@
 {
   "hosting": {
     "public": "public",
+    "cleanUrls": true,
+    "trailingSlash": false,
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/home",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/home/",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/about-us",
+        "destination": "/philosophy",
+        "type": 301
+      },
+      {
+        "source": "/about-us/",
+        "destination": "/philosophy",
+        "type": 301
+      },
+      {
+        "source": "/blog-posts-all",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/blog-posts-all/",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/blog/:path*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/tag/:path*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/2023/:path*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/2022/:path*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/2021/:path*",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/texas-roadhouse-parking-lot-paving-dawley-asphalt-colorado-springs",
+        "destination": "/portfolio",
+        "type": 301
+      },
+      {
+        "source": "/texas-roadhouse-parking-lot-paving-dawley-asphalt-colorado-springs/",
+        "destination": "/portfolio",
+        "type": 301
+      },
+      {
+        "source": "/ada-accessible-parking-lot-dawley-asphalt-colorado-springs",
+        "destination": "/portfolio",
+        "type": 301
+      },
+      {
+        "source": "/ada-accessible-parking-lot-dawley-asphalt-colorado-springs/",
+        "destination": "/portfolio",
+        "type": 301
+      },
+      {
+        "source": "/asphalt-vs-concrete",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/asphalt-vs-concrete/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/top-driveway-options-for-colorado-springs-a-comprehensive-guide",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/top-driveway-options-for-colorado-springs-a-comprehensive-guide/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/20-inspiring-driveway-ideas-for-your-home",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/20-inspiring-driveway-ideas-for-your-home/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/how-thick-should-driveway-paving-be-in-colorado-springs",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/how-thick-should-driveway-paving-be-in-colorado-springs/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/how-to-find-the-best-sealcoating-contractor-in-colorado-springs",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/how-to-find-the-best-sealcoating-contractor-in-colorado-springs/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-best-time-to-sealcoat-your-driveway-in-colorado-springs-colorado",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-best-time-to-sealcoat-your-driveway-in-colorado-springs-colorado/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-ultimate-guide-to-asphalt-parking-lots-in-colorado",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-ultimate-guide-to-asphalt-parking-lots-in-colorado/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-top-6-benefits-of-an-asphalt-driveway-for-luxury-properties-in-colorado-springs",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/the-top-6-benefits-of-an-asphalt-driveway-for-luxury-properties-in-colorado-springs/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/5-creative-ways-to-incorporate-geometric-tile-patterns-as-borders-on-your-asphalt-driveway",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/5-creative-ways-to-incorporate-geometric-tile-patterns-as-borders-on-your-asphalt-driveway/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/5-creative-ideas-for-a-stunning-entrance-to-elevate-your-colorado-springs-asphalt-driveway",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/5-creative-ideas-for-a-stunning-entrance-to-elevate-your-colorado-springs-asphalt-driveway/",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/creative-use-of-grass-borders-to-enhance-your-colorado-springs-asphalt-driveway",
+        "destination": "/services",
+        "type": 301
+      },
+      {
+        "source": "/creative-use-of-grass-borders-to-enhance-your-colorado-springs-asphalt-driveway/",
+        "destination": "/services",
+        "type": 301
+      }
     ]
   },
   "functions": [
